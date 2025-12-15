@@ -1,0 +1,34 @@
+.block--selection
+  display: flex
+  align-items: center
+  flex-grow: 1
+  position: relative
+  padding: 24px 16px
+  margin: 0 -16px 0
+  color: currentColor
+  overflow: auto
+  gap: 8px
+  @media(min-width: 1024px)
+    justify-content: center
+  &:empty
+    display: none
+  a
+    white-space: nowrap
+    font-size: var(--interactive-l)
+    padding: 8px 16px
+    border-radius: 50px
+    border: 1px solid  #ECF7FD
+    box-shadow: 0 2px 6px 0 var(--shadow-light)
+    color: var(--c-text-default)
+    background: var(--text-secondary)
+    @media(min-width: 1024px)
+      padding: 12px 22px
+    &:hover
+      box-shadow: none
+    &.is_active
+      background:  rgba(49, 81, 98, 1)
+      box-shadow: 0 2px 3px 1px #133546 inset
+      color: var(--text-secondary)
+
+
+

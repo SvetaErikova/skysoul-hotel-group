@@ -1,0 +1,59 @@
+.dropdown
+  position: relative
+  &:hover
+    @media(min-width: 769px)
+      .dropdown--wrapper
+        opacity: 1
+        visibility: visible
+        pointer-events: auto
+        transform: translateY(0)
+  @media(max-width: 768px)
+    & > a
+      pointer-events: none
+  &.is_active
+    .dropdown--wrapper
+      opacity: 1
+      visibility: visible
+      pointer-events: auto
+      transform: translateY(0)
+  &--wrapper
+    position: absolute
+    top: 100%
+    padding-top: 8px
+    right: 0
+    min-width: 215px
+    opacity: 0
+    visibility: hidden
+    pointer-events: none
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease
+    transform: translateY(-10px)
+    z-index: 1000
+    @media(max-width: 768px)
+      position: fixed
+      top: auto
+      left: 0
+      right: 0
+      min-width: auto
+      width: 100%
+      border-radius: var(--border-corner)
+      max-height: 80vh
+      overflow-y: auto
+
+  &--list
+    background: #FFFFFF
+    border-radius: var(--border-corner)
+    box-shadow: 0px 10px 40px 0px #0054A81F
+    padding: 20px
+    display: flex
+    flex-direction: column
+    gap: 12px
+
+  &--item
+    display: flex
+    flex-direction: column
+    gap: 8px
+    &:hover
+      color: var(--accent)
+
+
+

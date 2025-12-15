@@ -1,0 +1,226 @@
+.block--search
+  width: max-content
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 49
+  border-top: none
+  pointer-events: none
+  margin: auto
+
+  .booking
+    width: 100%
+    position: relative
+    transition: var(--transition)
+    display: flex
+    gap: 6px
+    padding: 6px
+    background: linear-gradient(180deg, var(--grey-020) 0%, var(--white-015) 100%)
+    border: 1px solid var(--white-001)
+    backdrop-filter: blur(32px)
+    box-shadow: 0 4px 24px 0 var(--black-030), 0 1px 1px 0 var(--white-030) inset
+    flex-direction: column
+    border-radius: 16px
+    @media(min-width: 769px)
+      flex-direction: row
+      border-radius: 50px
+      gap: 4px
+      padding: 10px
+
+    input
+      border: none
+      outline: none
+      &[type='number']
+        -webkit-appearance: textarea
+        -moz-appearance: textfield
+        background-color: transparent
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button
+        margin: 0
+        -webkit-appearance: none
+    &__calendar
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      gap: 4px
+      height: max-content
+      padding: 0  0  0 var(--g-xxs)
+      grid-column: span 2
+      @media(max-width: 768px)
+        backdrop-filter: blur(32px)
+        width: 100%
+        border-radius: 24px
+        flex-direction: row
+        padding: 6px
+        background: #4646461C
+        box-shadow: 0 2px 10.1px 0 #0000003D inset, 0px -1px 1px 0px #FFFFFF1C
+      &-item
+        display: flex
+        width: 100%
+        min-height: 100%
+        cursor: pointer
+        align-items: center
+        justify-content: flex-start
+        text-align: center
+        background-color: transparent
+        color: var(--booking-text-color)
+        &:placeholder-shown,
+        &::placeholder
+          color: var(--booking-text-color)
+          opacity: .8
+      &--item
+        display: flex
+        flex-direction: column
+        min-height: auto
+        max-width: 100px
+    &__guests
+      position: relative
+      padding: 0 var(--g-xxs)
+      @media(max-width: 768px)
+        backdrop-filter: blur(32px)
+        flex-direction: row
+        padding: 6px
+        background: #4646461C
+        box-shadow: 0 2px 10.1px 0 #0000003D inset, 0px -1px 1px 0px #FFFFFF1C
+        width: 100%
+        border-radius: 24px
+      &-input
+        font-weight: 400
+        display: flex
+        gap: 4px
+        align-items: center
+        width: 100%
+        min-height: 100%
+        cursor: pointer
+        text-overflow: ellipsis
+        overflow: hidden
+        justify-content: center
+        line-height: 1em
+
+      &-popover
+        position: absolute
+        display: none
+        background-color: var(--bg-default)
+        color: var(--text-primary)
+        padding: 12px
+        border-radius: var(--border-corner-s)
+        box-shadow: 0 3px 6px -3px rgba(23, 24, 24, .08), 0 8px 20px -4px rgba(23, 24, 24, .12)
+        z-index: 10
+        &.is_active
+          display: block
+        &-input
+          display: flex
+          align-items: center
+          gap: 8px
+          padding: 8px 0
+          justify-content: space-between
+          &-number
+            width: 4em
+            text-align: center
+        &-item
+          margin-bottom: 16px
+        &-children
+          margin: 16px 0
+          display: flex
+          flex-direction: column
+          gap: 10px
+          &.is_hidden
+            display: none
+          &-select
+            display: flex
+            align-items: center
+            gap: 12px
+            span
+              white-space: nowrap
+            &-item
+              font-weight: 400
+              display: flex
+              min-height: 100%
+              padding: 12px 16px
+              cursor: pointer
+              align-items: center
+              justify-content: flex-start
+              text-overflow: ellipsis
+              overflow: hidden
+              outline: none
+              border: none
+              flex-grow: 1
+              background-color: transparent
+          &-selects
+            display: flex
+            flex-direction: column
+            gap: 10px
+        &-button
+          width: 100%
+          .button
+            width: 100%
+      &__button
+        &--button
+          padding-bottom: 12px
+          gap: 8px
+    &__inputs
+      border-radius: 50px
+      display: flex
+      align-items: center
+      gap: 6px
+      color: var(--white-100)
+      flex-direction: column
+      @media(min-width: 769px)
+        backdrop-filter: blur(32px)
+        flex-direction: row
+        padding: 6px
+        background: var(--black-030)
+        border: 1px solid var(--black-020)
+        box-shadow: 0 1px 4px 1px var(--black-020) inset, 0 -1px 1px 0 var(--white-015)
+    &__button
+      @media(max-width: 768px)
+        .button
+          width: 100%
+  &.block--search-sticky
+    position: sticky
+    bottom: 16px
+    transform: translate3d(0, 120%, 0)
+    opacity: 0
+    transition: transform var(--transition), opacity var(--transition)
+    pointer-events: none
+    margin-bottom: 32px
+    @media(max-width: 768px)
+      display: none
+    &.is_visible
+      transform: translate3d(0, 0, 0)
+      opacity: 1
+      pointer-events: auto
+
+.block--search:not(.block--search-sticky)
+  pointer-events: auto
+.block_banner ~ .block--search,
+.pin-spacer ~ .block--search
+  position: absolute
+  translate: -50% calc(-100% - 16px )
+  left: 50%
+  width: 90vw
+  @media(min-width: 769px)
+    width: max-content
+    translate: -50% calc(-100% - var(--g-m) )
+
+.block_banner:has(+ .block--search),
+.pin-spacer:has(+ .block--search)
+  .block--head
+    margin-bottom: 130px
+    @media(min-width: 769px)
+      margin-bottom: calc(56px + var(--g-m))
+
+.is_pin_hidden ~ .pin-spacer ~ .block--search
+  opacity: 0
+
+.litepicker
+  .container__footer
+    margin: 0
+    display: flex
+    justify-content: space-between
+    .button-apply
+      background: radial-gradient(130.95% 100% at 50% 0%, #5CBDEC 0%, #3094D2 33.81%, #0D5287 75.55%)
+      color: #FFFFFF
+    .preview-date-range
+      display: none

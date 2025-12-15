@@ -1,0 +1,91 @@
+.page-career
+  --bg-default: #FFF1E8
+  --bg-color: #FFF1E8
+  --bg-content: #FFE8D4
+  --c-text-default: #5D3B36
+  --text-primary: #5D3B36
+  --shadow: rgba(190, 152, 138, 0.25)
+  --shadow-light: rgba(190, 152, 138, 0.25)
+  --accent-light: #BE4F00
+  --text-primary-subhead: #7F5F55
+
+  .content_personnel .card--text,
+  .content_awards .card--text
+    color: var(--text-primary-subhead)
+  .popup-menu
+    --hover-title: #ED9237
+    .header--actions_container
+      --header-bck: #FFE8D4
+      --header-shadow: var(--shadow-light)
+    .header--weather_degrees
+      background: radial-gradient(304.64% 100% at 50% 0%, #FFDD9E 0%, #FF9C55 67.99%)
+      background-clip: text
+
+  .labels
+    &--item
+      background: radial-gradient(130.95% 100% at 50% 0%, #FFF8F2 0%, #FFEFE1 42.31%, #FFDABA 90.61%)
+      border: 1px solid #FFDABA
+      box-shadow: 0 2px 4px 1px #FFCEAE inset
+      color: var(--text-primary)
+      display: flex
+      align-items: center
+      gap: 4px
+      font-weight: 540
+      &.-accent
+        background: radial-gradient(65.11% 100% at 50% 0%, #FFF8F2 0%, #FFDABA 100%)
+        border: 1px solid #FFDABA
+        box-shadow: 0 2px 4px 0 #FFCEAE inset
+        color: var(--text-primary)
+
+
+  .-pattern
+    --bg-pattern:  linear-gradient(90deg, #FCE7D9 0%, #FFF1E8 20.19%, #FFFFFF 50.2%, #FFF1E8 79.97%, #FCE7D9 100%)
+    &:after
+      mask-image: url('../img/pattern.svg'),linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 90%), linear-gradient(to bottom, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 15%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 1) 95%)
+      background:  radial-gradient(62.22% 50% at 50% 50%, #FFFFFF 6.93%, #FFF1E8 65.32%, #FFF1E8 100%)
+  .popup-menu
+    background: linear-gradient(90deg, #FCE7D9 0%, #FFF1E8 20.19%, #FFFFFF 50.2%, #FFF1E8 79.97%, #FCE7D9 100%)
+    &:after
+      mask-image: url('../img/pattern.svg'),linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 90%), linear-gradient(to bottom, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 15%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 1) 95%)
+      background:  radial-gradient(62.22% 50% at 50% 50%, #FFFFFF 6.93%, #FFF1E8 65.32%, #FFF1E8 100%)
+
+  .cards-scrolling .card:after
+    color: #CC6C39
+
+  .block--head_subtitle-icon:after,
+  .content_advantages.advantages-grid .block--elements:after,
+  .popup-menu .menu--nav_item.is-active:before,
+  .popup-menu .menu--mobile_item.is-open .menu--mobile_toggle:before
+    background: radial-gradient(304.64% 100% at 50% 0%, #FFDD9E 0%, #FF9C55 67.99%)
+    background-clip: text
+
+
+  .button-primary
+    &.button-filled
+      --button-shadow: 0px -1px 7px 0px #3094D2 inset, 0px -1px 2px 0px #4AB5EA inset
+      --button-color: var(--text-secondary)
+      &:before
+        background:  radial-gradient(304.64% 100% at 50% 0%, #FFA742 0%, #EA7A2A 67.99%)
+      &:after
+        background:  radial-gradient(130.95% 100% at 50% 0%, #FFF8F2 0%, #FFEFE1 42.31%, #FFDABA 90.61%)
+      &:hover,
+      &:focus,
+      &:active
+        --button-color: var(--c-text-default)
+  .button-secondary
+    &.button-filled
+      --button-shadow:  0px -1px 2px 0px #FFB79D inset
+      --button-color: var(--c-text-default)
+      &:before
+        background: radial-gradient(130.95% 100% at 50% 0%, #FFF8F2 0%, #FFEFE1 42.31%, #FFDABA 90.61%)
+      &:after
+        background: radial-gradient(304.64% 100% at 50% 0%, #FFA742 0%, #EA7A2A 67.99%)
+      &:hover,
+      &:focus,
+      &:active
+        --button-color: var(--text-secondary)
+
+  .button-secondary, .button-primary
+    &.button-link:hover
+      --button-bg-color: radial-gradient(304.64% 100% at 50% 0%, #FFA742 0%, #EA7A2A 67.99%)
+

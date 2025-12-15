@@ -1,0 +1,33 @@
+.block_list
+  overflow: hidden
+  color: var(--text-primary)
+  --col: 1
+  @media(min-width: 640px)
+    --col: 2
+  @media(min-width: 998px)
+    --col: 3
+  @media(min-width: 1440px)
+    --col: 4
+  &.-col-3 .block--elements
+    @media(min-width: 1140px)
+      --col: 3
+      //.card
+      //  aspect-ratio: initial
+  &.-col-4 .block--elements
+    @media(min-width: 1440px)
+      --col: 4
+      //.card
+      //  aspect-ratio: initial
+  .block--elements
+    display: grid
+    place-items: start
+    grid-auto-rows: minmax(min-content, max-content)
+    grid-template-columns: repeat(var(--col, 4), 1fr)
+    gap: 14px
+    overflow: initial
+    @media(min-width: 998px)
+      gap: 20px
+  .block--wrapper
+    display: flex
+    flex-direction: column
+

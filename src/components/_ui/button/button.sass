@@ -1,0 +1,127 @@
+/* Buttons */
+.button
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  width: fit-content
+  gap: 6px
+  flex-shrink: 0
+  cursor: pointer
+  z-index: 1
+  overflow: hidden
+  transition: var(--transition)
+  padding: var(--button-padding)
+  font-size: var(--button-fs)
+  background: var(--button-bg-color, transparent)
+  border: 1px solid var(--button-border-color, transparent)
+  color: var(--button-color)
+  span
+    //transition: var(--transition)
+    color: inherit
+  span:not([class])
+    white-space: nowrap
+    text-align: center
+    line-height: 1
+
+  span[class^="icon-"],
+  span[class*=" icon-"],
+  svg[class^="icon"],
+  svg
+    color: inherit
+    line-height: 1
+    width: 1.2em
+    height: 1.2em
+    font-size: 1em
+    display: flex
+    align-items: center
+    justify-content: center
+  &[disabled],
+  &.is_disabled
+    cursor: initial
+    pointer-events: none
+    span
+      opacity: 0.6
+
+.button-filled, .button-outlined
+  border-radius: 8px
+  position: relative
+  overflow: hidden
+
+/* Button  colors  */
+
+.button-primary
+  &.button-filled
+    --button-bg-color: var(--accent)
+    --button-border-color: var(--accent)
+    --button-color: var(--text-secondary)
+    &:hover,
+    &:focus,
+    &:active
+      --button-color: var(--text-secondary)
+    &[disabled],
+    &.is_disabled
+    &.button-dark
+      --button-shadow: 0px -1px 7px 0px #3094D2 inset, 0px -1px 2px 0px #4AB5EA inset, 0px 1px 2px 0px rgba(0,0,0,.4)
+      --button-color: var(--text-secondary)
+      &:hover,
+      &:focus,
+      &:active
+  &.button-outlined
+    --button-bg-color: transparent
+    --button-border-color: #A0A8B1
+    --button-color: rgba(18, 26, 34, 0.85)
+    &:hover,
+    &:focus,
+    &:active
+      --button-bg-color: var(--accent)
+      --button-border-color: var(--accent)
+      --button-color: var(--text-secondary)
+  &.button-link
+    --button-color: var(--text-secondary)
+    &:hover,
+    &:focus,
+    &:active
+      --button-color: var(--text-secondary)
+    &.button-dark
+      --button-color: var(--text-secondary)
+      &:hover,
+      &:focus,
+      &:active
+        --button-color: var(--text-secondary)
+
+.button-secondary
+  &.button-filled
+    --button-color: #216DA3
+    &:hover,
+    &:focus,
+    &:active
+      --button-color: var(--text-secondary)
+    &[disabled],
+    &.is_disabled
+
+    &.button-dark
+      --button-color: var(--text-secondary)
+      &:hover,
+      &:focus,
+      &:active
+        --button-color: var(--text-secondary)
+
+      &[disabled],
+      &.is_disabled
+        --button-color: var(--text-secondary)
+
+  &.button-link
+
+
+    &:hover,
+    &:focus,
+    &:active
+
+
+    &.button-dark
+
+    &:hover,
+    &:focus,
+    &:active
+

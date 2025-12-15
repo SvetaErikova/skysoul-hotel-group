@@ -1,0 +1,112 @@
+select
+  -moz-appearance: none
+  -webkit-appearance: none
+  appearance: none
+  display: none
+
+
+
+.form--input_select
+  max-width: 100%
+  display: flex
+  & + .form--input_select
+    margin-top: 12px
+  option
+    display: none
+
+.select
+  position: relative
+  width: 100%
+  &:hover
+    .select--button
+      border-color: var(--border-input_hover)
+  &--button
+    position: relative
+    font-size: var(--caption-s)
+    cursor: pointer
+    transition: var(--transition)
+    color: var(--text-subnead)
+    width: 100%
+    max-width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    overflow: hidden
+    border: 1px solid var(--border-input)
+    border-radius: var(--border-corner-s)
+    padding: 10px 20px
+    background-color: var(--bck-input)
+
+    p
+      margin: 0
+      max-width: 100%
+      text-overflow: ellipsis
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+    &:after
+      font-family: 'icomoon' !important
+      content: "\e906"
+      transform: scaleY(1)
+      transition: var(--transition)
+      transform-origin: center
+      font-size: 1em
+      width: 1em
+      height: 1em
+      display: flex
+      align-items: center
+  &--option_wrapper
+    opacity: 0
+    pointer-events: none
+    padding-top: 8px
+    position: absolute
+    width: 100%
+    max-width: 100%
+    height: fit-content
+    max-height: 320px
+    z-index: 3
+    &.is_opened
+      opacity: 1
+      pointer-events: all
+      .select--option_list
+        transform: translateY(0)
+
+  &--option_list
+    width: 100%
+    background-color: #FFFFFF
+    transition: var(--transition)
+    transform: translateY(-8px)
+    border-radius: var(--border-corner-s)
+    display: flex
+    flex-direction: column
+    box-shadow: 0px 2px 52px 0px rgba(0, 0, 0, 0.14)
+    overflow: hidden
+    max-height: 320px
+    overflow-y: auto
+    &_title
+      padding: 20px 20px 8px
+      font-weight: 500
+      font-size: var(--body-s)
+  &--option
+    padding: 10px 12px
+    transition: var(--transition)
+    cursor: pointer
+    font-size: var(--caption-s)
+    font-weight: 500
+    display: flex
+    align-items: center
+    @media(min-width: 768px)
+      padding: 12px 16px
+    &:hover,
+    &:active,
+    &:focus
+      background-color: var(--border-input)
+    &.is_selected
+      background-color: var(--border-input_hover)
+
+
+
+    &[data-disabled="true"]
+      pointer-events: none
+      opacity: 0.4

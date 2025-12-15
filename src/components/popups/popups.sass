@@ -1,0 +1,124 @@
+.popup
+  place-items: end center
+  background-color: rgba(0, 0, 0, 0.3)
+  padding: var(--headerHeight) 8px
+  overflow: auto
+  --p-content-x: clamp(16px, calc(16px + (40 - 16) * ((100vw - 768px) / (1440 - 768))), 40px)
+  --p-content-y: clamp(24px, calc(24px + (32 - 24) * ((100vw - 768px) / (1440 - 768))), 32px)
+  @media(max-width: 768px)
+    place-items: center
+    height: calc(100 * var(--vh, 1lvh))
+  @media(min-width: 1024px)
+    place-items: start center
+    padding: var(--headerHeight) var(--container)
+
+  &--content
+    width: 100%
+    max-width: 720px
+    background-color: #FFFFFF
+    color: var(--text-primary)
+    max-height: 100%
+    padding: var(--p-content-x) var(--p-content-y)
+    border-radius: var(--border-corner)
+  &--close
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 32px
+    height: 32px
+    z-index: 3
+    cursor: pointer
+    transition: var(--transition)
+
+    line-height: 1
+    padding: 0
+    margin-left: auto
+    color: #64788F
+    border-radius: 50%
+    font-size: 1em
+    @media(min-width: 1024px)
+      font-size: 24px
+      width: 48px
+      height: 48px
+      position: absolute
+      left: auto
+      top: 0
+      right: calc(var(--p-content-x) * -1 - 32px  )
+      color: #FFFFFF
+    @media(max-width: 1025px)
+      &.button-arrow.button-dark:before
+        background-color: rgba(0,0,0,0.2)
+
+
+.popup
+  .is_cascade
+    overflow: initial
+    --m-head-top: clamp(40px, calc(40px + (48 - 40) * ((100vw - 375px) / (1440 - 375))), 48px)
+    --m-bottom: clamp(20px, calc(20px + (24 - 20) * ((100vw - 375px) / (1440 - 375))), 24px)
+    --m-text-top: clamp(40px, calc(40px + (48 - 40) * ((100vw - 375px) / (1440 - 375))), 48px)
+    .gallery
+      margin: 0 calc(clamp(16px, calc(16px + (40 - 16) * ((100vw - 768px) / (1440 - 768))), 40px) * -1)
+      @media(max-width: 1023px)
+        max-width: 100vw
+
+[data-popup="popup_for_menu"]
+  background-color: var(--bg-default)
+  z-index: 49
+  bottom: 0
+  padding: 0
+  .popup--content
+    max-width: initial
+    opacity: 1
+    //height: 100%
+    padding: 0
+    gap: 0
+    background-color: transparent
+    @media(max-width: 1023px)
+      height: 100vh
+      overflow: auto
+  [data-closepopup="popup_for_menu"]
+    @media(max-width: 420px)
+      width: 100%
+  .nav
+    padding: 0 var(--container)
+  .header--main
+    pointer-events: none
+  .header--weather
+    display: flex
+    justify-content: center
+    //font-size: var(--interactive-m)
+
+[data-popup="popup_for_menu"].is_active
+  .popup--content
+    display: flex
+    flex-direction: column
+    gap: 16px
+  .header--main
+    pointer-events: auto
+
+
+[data-popup="popup_for_cookies"]
+  place-items: end center
+  background: transparent
+  justify-content: start
+  padding: 12px
+  .popup--content
+    max-width: 380px
+    z-index: 101
+    box-shadow: 0 4px 32px 0 var(--shadow-dark)
+    padding: var(--g-xxs)
+    border: 1px solid #370E130F
+    display: flex
+    flex-direction: column
+    gap: 8px
+
+
+[data-popup="popup_for_cookies"].is_active
+  pointer-events: none
+  .popup--content
+    pointer-events: all
+[data-popup="popup_for_contacts"]
+  .popup--content
+    display: flex
+    flex-direction: column
+    gap: 12px

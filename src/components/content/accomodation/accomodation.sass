@@ -1,0 +1,138 @@
+.content_accommodation
+  --col: 1
+  .block--elements
+    gap: 8px 16px
+    @media(min-width: 769px)
+      gap: 20px 32px
+    @media(min-width: 1240px)
+      --col: 2
+
+.content_room
+  position: relative
+  overflow: hidden
+  color: #FFFFFF
+  --text-primary-subhead: #fff
+  background-color: #000
+  .swiper-pagination
+    position: absolute
+    top: 16px
+    left: 50%
+    translate: -50% 0
+  .block--elements
+    gap: 24px
+  .block--head,
+  .block--selection
+    position: relative
+    z-index: 2
+  .block--selection
+    a
+      color: #FFFFFF
+      background: #2323234D
+      backdrop-filter: blur(24px)
+      box-shadow: 0 3px 4px 0 #0000002B inset
+      &.is_active
+        color: #1F3640
+        background-color: #FFFFFF
+  &__thumbs
+    position: absolute
+    inset: 0
+    z-index: 0
+    pointer-events: none
+    .swiper-wrapper,
+    .swiper-slide
+      height: 100%
+    .swiper-slide
+      background-size: cover
+      background-position: center
+      background-repeat: no-repeat
+      transition: var(--transition)
+  &:before
+    content: ''
+    position: absolute
+    inset: 0
+    background: rgba(0, 0, 0, 0.3)
+    z-index: 1
+  .card
+    position: relative
+    z-index: 2
+    aspect-ratio: 1320/720
+    justify-content: flex-end
+    display: flex
+    background: transparent
+    box-shadow: 0 4px 27.7px 0 #0000004F, 0 0 45.8px 19px #FFFFFF59 inset, 0 4px 4px 0 #FFFFFF40 inset
+    color: #FFFFFF
+    min-height: 512px
+    transition: scale 0.18s ease-in-out
+    &:not(.swiper-slide-active)
+      scale: 0.8
+    &:after
+      content: ''
+      position: absolute
+      inset: 0
+      background: rgba(255, 255, 255, 0.1)
+      pointer-events: none
+    &:before
+      content: ''
+      position: absolute
+      bottom: 0
+      height: 40%
+      left: 0
+      right: 0
+      background: linear-gradient(0deg,rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%)
+    &--courp
+      position: absolute
+      left: auto
+      top: clamp(16px, calc(16px + (44 - 16) * ((100vw - 768px) / (1140 - 768))), 44px)
+      right: clamp(16px, calc(16px + (44 - 16) * ((100vw - 768px) / (1140 - 768))), 44px)
+      aspect-ratio: 66/84
+      max-width: 66px
+      @media(min-width: 769px)
+        max-width: 66px
+    &--content
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      padding: clamp(16px, calc(16px + (44 - 16) * ((100vw - 768px) / (1140 - 768))), 44px)
+      align-items: end
+      opacity: 0
+      transition: var(--transition)
+    &--image
+      display: none
+    &--title
+      font-size: var(--heading-1)
+      margin: 16px 0
+    &--text
+      color: #FFFFFF
+      font-size: var(--subtitle-l)
+    &--info
+      font-size: var(--interactive-s)
+      display: flex
+      flex-wrap: wrap
+      gap: 6px
+      max-width: 500px
+      @media(min-width: 769px)
+        gap: 16px
+      &_item
+        display: flex
+        align-items: center
+        gap: 4px
+        border: 1px solid rgba(255, 255, 255, 0.16)
+        padding: 6px 8px
+        height: max-content
+        border-radius: 8px
+        @media(min-width: 769px)
+          padding: 7px 10px
+        span[class*="icon"]
+          opacity: .5
+          font-size: 1.2em
+    &.swiper-slide-active
+      .card--content
+        opacity: 1
+  .slider_controls
+    @media(max-width: 768px)
+      display: flex
+      position: initial
+      order: 1
+      justify-content: center
+      translate: 0
+      width: 100%
+

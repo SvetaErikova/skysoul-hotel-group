@@ -1,0 +1,44 @@
+.block--sidebar
+  display: flex
+  flex-direction: column
+  gap: 16px
+  height: 100%
+  grid-column: 2
+  grid-row: span 2
+  .is_cascade
+    position: sticky
+    top: 16px
+    height: max-content
+    background-color: var(--bg-content)
+    box-shadow: 0 2px 6px 0 var(--shadow-light) inset
+    border-radius: var(--border-corner)
+    padding: var(--g-s)
+
+  .icon-list
+    gap: 0
+    .item
+      padding: 12px 8px
+      border-radius: 8px
+      transition: var(--transition )
+      @media(min-width: 769px)
+        padding: 18px 12px
+      &:hover
+        box-shadow: 0px 1px 6px 0px var(--shadow-light)
+        background-color: var(--bg-color)
+
+.block:has(.block--sidebar) .block--wrapper
+  display: flex
+  flex-direction: column
+  gap: var(--g-m)
+  padding: var(--container)
+  @media(min-width: 999px)
+    display: grid
+    grid-template-columns: 5fr 2fr
+  .block--sidebar
+    @media(max-width: 998px)
+      order: -1
+  .block--head
+    justify-content: flex-start
+    text-align: left
+    max-width: initial
+

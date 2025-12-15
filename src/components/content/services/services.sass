@@ -1,0 +1,133 @@
+.content_services,
+.content_services-slider
+  position: relative
+  color: #FFFFFF
+  .block--wrapper
+    padding: var(--g-container-vertical) 24px
+  .block--image
+    position: absolute
+    inset: 0
+    overflow: hidden
+    pointer-events: none
+    img
+      position: absolute
+      inset: 0
+      width: 100%
+      height: 100%
+      object-position: center
+      object-fit: cover
+      filter: brightness(0.57)
+      opacity: 0
+      transition: opacity 0.6s ease
+      &.is_visible
+        opacity: 1
+
+
+.content_services
+  .block--head
+    z-index: 2
+    position: relative
+    &_caption
+      color: #FFFFFF
+  .block--elements
+    display: flex
+    flex-direction: column
+    @media(min-width: 769px)
+      flex-direction: row
+    .card
+      color: #FFFFFF
+      transition: 0.3s linear
+      @media(min-width: 769px)
+        flex: 1 1 25%
+        min-width: 0
+      &.is_active
+        box-shadow: 0 4px 28px 0px rgba(0, 0, 0, 0.18), 0px -8px 77.7px 19px rgba(255, 255, 255, 0.11) inset, 0px 4px 4px 0px rgba(255, 255, 255, 0.24) inset
+        @media(min-width: 769px)
+          flex: 1 1 35%
+        .card--title
+          font-size: var(--heading-3)
+        .card--text,
+        .card--action
+          transition: max-height 0.18s linear, opacity 0.18s linear 0.3s
+          opacity: 1
+          max-height: 320px
+        .card--action
+          margin-top: 8px
+
+.content_services-slider
+  overflow: hidden
+  &:after
+    content: ''
+    position: absolute
+    inset: 0
+    z-index: 1
+    pointer-events: none
+  .block--wrapper
+    height: 100svh
+    @media(max-width: 768px)
+      padding: 48px var(--container) 80px
+  .block--elements
+    margin-top: 0
+    border-radius: var(--border-corner)
+    justify-content: flex-end
+    display: flex
+    background: transparent
+    box-shadow: 0 4px 27.7px 0 #0000004F, 0 0 45.8px 19px #FFFFFF59 inset, 0 4px 4px 0 #FFFFFF40 inset
+    color: #FFFFFF
+    min-height: 512px
+    position: relative
+    z-index: 2
+    padding: var(--g-xl)
+    //overflow: hidden
+    height: 100%
+    &:after
+      content: ''
+      position: absolute
+      inset: 0
+      background: rgba(255, 255, 255, 0.1)
+      pointer-events: none
+
+  .card
+    color: #fff
+    max-width: max-content
+    //height: max-content
+    position: relative
+    overflow: initial
+    &--content
+      justify-content: center
+      text-align: center
+      width: 680px
+      max-width: 80vw
+      opacity: 0
+      pointer-events: none
+      position: absolute
+      top: 50%
+      z-index: 1
+      left: 50%
+      translate: -50% -50%
+    &--title
+      font-size: var(--display-0)
+    &--text
+      font-size: var(--subtitle-l)
+    &--action
+      justify-content: center
+    &.swiper-slide-active
+      .card--content
+        transition: opacity 0.18s linear 0.3s
+        opacity: 1
+        pointer-events: auto
+  .slider_controls
+    top: 100%
+    translate:  -50% 0
+    left: 50%
+    width: calc(100% - var(--container))
+    z-index: 2
+    justify-content: center
+    @media(min-width: 1240px)
+      translate: -50% -50%
+      left: 50%
+      top: 50%
+      width: calc(100% - 56px - 32px)
+      justify-content: space-between
+
+.content_services-scrolling

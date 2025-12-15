@@ -1,0 +1,65 @@
+.is_cascade--accordion
+  display: flex
+  flex-direction: column
+  gap: 16px
+  background: var(--bg-content)
+  border-radius: var(--border-corner)
+  padding: 8px
+  @media(min-width: 769px)
+    padding: 16px
+.accordion
+  position: relative
+  box-shadow: 0px 3px 12px 0px var(--shadow-dark)
+  padding: var(--g-s)
+  border-radius: var(--border-corner-s)
+  @media(max-width: 768px)
+    padding: 4px
+  &.is_open
+    .accordion--content
+      pointer-events: auto
+      grid-template-rows: 1fr
+      opacity: 1
+      padding-top: 16px
+    span[class^="icon-"]
+      rotate: 180deg
+
+  &--button
+    transition: var(--transition)
+    cursor: pointer
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    position: relative
+    gap: 24px
+    .accordion--button_text
+      transition: var(--transition)
+      font-size: var(--heading-5)
+      margin-bottom: 0
+      font-family: 'LTRemark'
+      text-transform: uppercase
+    span[class^="icon-"]
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-shrink: 0
+      flex-grow: 0
+      transition: var(--transition)
+      aspect-ratio: 1/1
+      font-size: 1.4em
+
+  &--content
+    opacity: 0
+    display: grid
+    grid-template-rows: 0fr
+    line-height: 1.5
+    pointer-events: none
+    overflow: hidden
+    transition: grid-template-rows 0.21s ease-out
+
+    .is_cascade
+      width: 100%
+      grid-row: 1 / span 2
+      overflow: hidden
+      & > *:first-child
+        margin-top: 0

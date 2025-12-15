@@ -1,0 +1,41 @@
+.content_gallery
+  overflow: hidden
+  .gallery
+    height: auto
+    //max-height: calc(100vh - var(--headerHeight))
+    &--item
+      border-radius: var(--border-corner)
+      aspect-ratio: 1400/800
+    &:not(.js-gallerySwiper)
+      display: grid
+      grid-template-columns: repeat(var(--col, 1), 1fr)
+      gap: var(--g-16)
+      .gallery--item
+        width: 100%
+
+.gallery
+  position: relative
+  --text-secondary: #FFF6E9
+  --col: 1
+  .gallery--item
+    overflow: hidden
+    width: 100%
+    height: 100%
+    flex-shrink: 0
+    flex-grow: 0
+    display: flex
+    img, video, a
+      display: inherit
+      max-width: 100% !important
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
+  &.col-2
+    @media(min-width: 769px)
+      --col: 2
+  &.col-3
+    @media(min-width: 769px)
+      --col: 2
+    @media(min-width: 1240px)
+      --col: 3

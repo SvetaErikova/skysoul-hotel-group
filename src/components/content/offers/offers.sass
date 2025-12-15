@@ -1,0 +1,25 @@
+.content_offers
+  --col: 1
+  .block--elements
+    gap: 8px
+    @media(min-width: 769px)
+      --col: 2
+      gap: 20px
+    @media(min-width: 1240px)
+      --col: 3
+
+  &:not(.block_list-slider)
+    @media(max-width: 768px)
+      .card
+        aspect-ratio: 328/176
+        &--action
+          display: none
+        &--title
+          margin-top: auto
+        &--text
+          display: none
+        &:after
+          background-blend-mode: multiply
+          background-color: #0000004D
+          background-image: linear-gradient(90deg, rgba(51, 51, 51, 0.3) 50.82%, rgba(51, 51, 51, 0) 67.64%)
+

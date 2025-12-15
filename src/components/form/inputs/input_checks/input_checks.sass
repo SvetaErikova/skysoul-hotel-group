@@ -1,0 +1,128 @@
+.form--input
+  position: relative
+  input[type="radio"],
+  input[type="checkbox"]
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+    order: -1
+    & ~ span
+      order: 1
+      font-size: var(--body-m)
+      line-height: 1.5
+      margin-left: 16px
+      color: var(--text-primary)
+    & ~ .radio,
+    & ~ .checkbox,
+    & ~ .toggle
+      flex-shrink: 0
+      flex-grow: 0
+      cursor: pointer
+
+  input[type="checkbox"]
+    & ~ .checkbox
+      transition: var(--transition)
+      width: 20px
+      height: 20px
+      border: 1.92px solid rgba(15, 80, 132, 0.1)
+      background-color: #D9EFFB
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: center
+      box-shadow: 0px -2px 2px 0px #FFFFFF, 0px 1px 2px 1px var(--shadow-light) inset
+      border-radius: 6px
+      @media(min-width: 768px)
+        width: 24px
+        height: 24px
+      &:after
+        content: ""
+        transition: 0.18s cubic-bezier(.36,.25,.56,1)
+        scale: 0
+        width: 12px
+        height: 13px
+        border-radius: 2px
+        background-color: #FFFFFF
+
+      &:hover,
+      &:focus
+        background-color: #3094D2
+
+    & ~ .toggle
+      width: 42px
+      height: 24px
+      border: 1.92px solid rgba(15, 80, 132, 0.1)
+      box-shadow: 0px -2px 2px 0px #FFFFFF, 0px 1px 2px 1px var(--shadow-light) inset
+
+      position: relative
+      transition: var(--transition)
+      display: flex
+      align-items: center
+      justify-content: center
+      cursor: pointer
+      background-color: #D9EFFB
+      border-radius: 50px
+      &:after
+        content: ""
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 12px
+        height: 12px
+        position: absolute
+        left: 4px
+        top: 5px
+        border-radius: 50px
+        background-color: #FFFFFF
+        transition: var(--transition)
+        z-index: 2
+        flex-shrink: 0
+        flex-grow: 0
+      &:hover,
+      &:focus
+        background-color: #3094D2
+
+    &:checked
+      & ~ .checkbox
+        background-color: #216DA3
+        &:after
+          transition: 0.18s cubic-bezier(.36,.25,.56,1.82)
+          scale: 1
+      & ~ .toggle
+        background-color: #216DA3
+        &:after
+          transform: translateX(20px)
+
+  input[type="radio"]
+    & ~ .radio
+      transition: var(--transition)
+      width: 20px
+      height: 20px
+      border: 1.92px solid rgba(15, 80, 132, 0.1)
+      background-color: #D9EFFB
+      border-radius: 50%
+      display: flex
+      align-items: center
+      justify-content: center
+      position: relative
+      @media(min-width: 768px)
+        width: 24px
+        height: 24px
+      &:after
+        content: ""
+        transition: 0.18s cubic-bezier(.36,.25,.56,1)
+        scale: 0
+        width: 12px
+        height: 13px
+        background-color: #FFFFFF
+        border-radius: 50px
+      &:hover,
+      &:focus
+        background-color: #3094D2
+    &:checked
+      & ~ .radio
+        background-color: #216DA3
+        &:after
+          transition: 0.18s cubic-bezier(.36,.25,.56,1.82)
+          scale: 1

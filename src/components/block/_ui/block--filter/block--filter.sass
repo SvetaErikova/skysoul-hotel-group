@@ -1,0 +1,58 @@
+.filter
+  align-self: flex-start
+  max-width: 100%
+  display: flex
+  flex-direction: column
+  padding: 32px 24px
+  gap: 24px
+  &--title
+    font-size: var(--heading-5)
+    font-family: "LTRemark"
+    display: flex
+    align-items: center
+    text-transform: uppercase
+    justify-content: space-between
+  &--buttons
+    display: flex
+    gap: 16px
+  .form
+    display: flex
+    flex-direction: column
+    gap: var(--g-m)
+    &--input
+      margin-bottom: 0
+
+
+.block_list:has(.block--filter)
+  .block--wrapper
+    gap: 20px
+    @media(min-width: 999px)
+      display: grid
+      grid-template-columns: 1fr 2fr
+      .block--head
+        grid-column: span 2
+  .block--pagination
+    @media(min-width: 999px)
+      grid-column: 2
+  .block--elements
+    margin-top: 0
+    display: flex
+    flex-direction: column
+    .card
+      height: initial
+  [data-openpopup="popup_for_filters"]
+    width: 100%
+
+  .filter
+    border-radius: var(--border-corner)
+    padding: var(--g-m)
+    height: 100%
+    border-bottom: 1px solid var(--border-1)
+    background-color: var(--bg-content)
+    box-shadow: 0 4px 24px 0 var(--shadow-light)
+    display: none
+    @media(min-width: 769px)
+      display: flex
+    .form
+      position: sticky
+      top: calc(var(--headerHeight) + 16px)

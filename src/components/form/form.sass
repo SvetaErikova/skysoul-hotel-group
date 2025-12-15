@@ -1,0 +1,99 @@
+input, textarea, select
+  border: none
+  outline: none
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+/* Firefox */
+input[type='number']
+  -moz-appearance: textfield
+
+textarea
+  resize: vertical
+
+input[type="date"]
+  appearance: none
+
+.-dark-mode .form
+  --text-subhead: #64788F
+  --border-input: rgba(15, 80, 132, 0.1)
+  --border-input_hover: #A3DCF7
+  --bck-input: #ECF7FD
+
+.form
+  --text-subhead: #64788F
+  --border-input: rgba(15, 80, 132, 0.1)
+  --border-input_hover: #A3DCF7
+  --bck-input: #ECF7FD
+
+  fieldset
+    padding: 0
+    border-color: transparent
+    display: flex
+    flex-direction: column
+    gap: 0
+  &--input
+    & > span
+      order: -1
+      font-size: var(--heading-8)
+      font-weight: 700
+      transition: var(--transition)
+      color: var(--text-primary)
+      margin-bottom: 8px
+      font-family: 'LTRemark'
+    label + label
+      margin-top: 16px
+
+
+
+.form--title
+  font-size: var(--heading-4)
+  font-family: 'LTRemark'
+  font-weight: 300
+  line-height: 1.2
+  text-transform: uppercase
+  margin-bottom: 16px
+.form--subtitle
+  font-size: var(--heading-8)
+  margin-bottom: clamp(24px, calc(24px + (32 - 24) * ((100vw - 1024px) / (1920 - 1024))), 32px)
+
+.form--policy
+  font-size: var(--body-m)
+  color: var(--text-primary)
+  margin: clamp(24px, calc(24px + (32 - 24) * ((100vw - 1024px) / (1920 - 1024))), 32px) 0
+  a:not(.button)
+    color: var(--accent)
+    text-decoration: underline
+  .form--input
+    margin-bottom: 0
+
+.form--subscription
+  display: flex
+  gap: 6px
+  align-items: center
+  padding: 6px
+  border-radius: 100px
+  border: 1px solid #FFFFFF1A
+  backdrop-filter: blur(24px)
+  box-shadow: 0 4px 20px 0 #00000066,  0 1px 1px 0 #FFFFFF26 inset
+  @media(min-width: 769px)
+    width: max-content
+  .form--input
+    margin-bottom: 0
+    &> span
+      display: none
+    input
+      border-radius: 100px
+      &::placeholder
+        color: #203750
+
+.is_sending
+  button[type="submit"]
+    background: var(--surface-accent-3-disabled) !important
+    pointer-events: none
+    cursor: wait
+

@@ -1,0 +1,190 @@
+.form--input_date,
+.form--input_date-range
+  font-size: var(--fs-md)
+  border-radius: var(--border-radius-md)
+  border: 1px solid transparent
+  background-color: var(--neutral-container-soft)
+  transition: var(--transition)
+  width: 100%
+  position: relative
+  &:after
+    content: "\e904"
+    font-family: 'icomoon'
+    margin-left: auto
+    font-size: var(--fs-md)
+    position: absolute
+    top: 12px
+    right: 16px
+    color: var(--fg-muted)
+  input
+    line-height: 1.2
+    font-size: var(--fs-md)
+    border-radius: 12px
+    border: 1px solid var(--border-primary-2)
+    background-color: #fff
+    transition: var(--transition)
+    width: 100%
+    padding: 14px 12px
+    @media(min-width: 768px)
+      padding: 12px 16px
+    &::placeholder,
+    &:placeholder-shown
+      color: var(--fg-muted)
+    &:not(:placeholder-shown)
+      color: var(--fg-default)
+    &:hover,
+    &:focus,
+    &:focus-within
+      border-color: var(--neutral-container-default)
+
+
+
+.air-datepicker
+  color: var(--fg-default)
+  --adp-font-family: inherit
+  --adp-font-size: var(--fs-button-l)
+  --adp-width: 416px
+  --adp-z-index: 60
+  --adp-padding: 12px
+  --adp-grid-areas: "nav" "body" "timepicker" "buttons"
+  --adp-transition-duration: .3s
+  --adp-transition-ease: ease-out
+  --adp-transition-offset: 8px
+  --adp-background-color: #fff
+  --adp-background-color-hover: transparent
+  --adp-background-color-active: transparent
+  --adp-background-color-in-range: rgba(31, 93, 100, 1)
+  --adp-background-color-in-range-focused: #194850
+  --adp-background-color-selected-other-month-focused: var(--neutral-default)
+  --adp-background-color-selected-other-month: var(--neutral-default)
+  --adp-color: #464849
+  --adp-color-secondary: #9c9c9c
+  --adp-accent-color: #194850
+  --adp-color-current-date: #194850
+  --adp-color-other-month: #464849
+  --adp-color-disabled: #B9BABC
+  --adp-color-disabled-in-range: rgba(185, 186, 188, 1)
+  --adp-color-other-month-hover: #c5c5c5
+  --adp-border-color: transparent
+  --adp-border-color-inner: transparent
+  --adp-border-radius: 4px
+  --adp-border-color-inline: var(--neutral-container-default)
+  --adp-nav-height: 32px
+  --adp-nav-arrow-color: var(--fg-default)
+  --adp-nav-action-size: 32px
+  --adp-nav-color-secondary: var(--fg-default)
+  --adp-day-name-color: var(--neutral-soft)
+  --adp-day-name-color-hover: var(--neutral-default)
+  --adp-day-cell-width: 1fr
+  --adp-day-cell-height: 56px
+  --adp-month-cell-height: 42px
+  --adp-year-cell-height: 56px
+  --adp-pointer-size: 10px
+  --adp-poiner-border-radius: 2px
+  --adp-pointer-offset: 14px
+  --adp-cell-border-radius: 4px
+  --adp-cell-background-color-hover: var(--adp-background-color-hover)
+  --adp-cell-background-color-selected: var(--neutral-default)
+  --adp-cell-background-color-selected-hover: var(--neutral-default)
+  --adp-cell-background-color-in-range: var(--neutral-container-soft)
+  --adp-cell-background-color-in-range-hover: var(--neutral-container-soft)
+  --adp-cell-border-color-in-range: var(--neutral-default)
+
+  --adp-btn-height: 48px
+  --adp-btn-color: var(--accent-on-accent)
+  --adp-btn-color-hover: var(--accent-on-accent)
+  --adp-btn-border-radius: var(--adp-border-radius)
+  --adp-btn-background-color-hover: var(--accent-default)
+  --adp-btn-background-color-active: var(--accent-default)
+
+  --adp-time-track-height: 1px
+  --adp-time-track-color: #dedede
+  --adp-time-track-color-hover: #b1b1b1
+  --adp-time-thumb-size: 12px
+  --adp-time-padding-inner: 10px
+  --adp-time-day-period-color: var(--adp-color-secondary)
+  --adp-mobile-font-size: 16px
+  --adp-mobile-nav-height: 40px
+  --adp-mobile-width: 320px
+  --adp-mobile-day-cell-height: 42px
+  --adp-mobile-month-cell-height: 48px
+  --adp-mobile-year-cell-height: 64px
+  --adp-border-color-inline: rgba(255, 252, 250, 0.15)
+
+.air-datepicker
+  padding: 12px
+  border-radius: 16px
+  border: 1px solid rgba(243, 243, 244, 1)
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.12)
+
+.air-datepicker-body--day-name
+  height: 40px
+
+.air-datepicker-body--day-names
+  margin-top: 20px
+  padding: 0
+
+.air-datepicker-nav
+  padding: 8px 12px 0
+
+.air-datepicker--content
+  padding: 0
+
+.air-datepicker-cell.-selected-
+  color: #FFFFFF
+  background-color: #194850
+
+.air-datepicker-cell.-day-.-focus-,
+.air-datepicker-cell.-selected-.-focus-
+  color: #FFFFFF
+  background-color: #194850
+
+.air-datepicker-cell.-selected-.-current-
+  color: #FFFFFF
+  background-color: #194850
+
+.air-datepicker-button.airpicker_button_apply
+  min-width: 100%
+  border-radius: 12px
+  background: var(--accent-default)
+  color: var(--accent-on-accent)
+  &:hover
+    background: var(--accent-hover)
+    color: var(--accent-on-accent)
+
+.air-datepicker--buttons
+  padding-top: 16px
+
+
+.air-datepicker-body--day-name
+  font-size: var(--fs-button-l)
+  color: #194850
+  font-weight: 500
+
+.air-datepicker-nav--title
+  font-weight: 600
+  font-size: var(--fs-h4)
+
+.-disabled-.-focus-.air-datepicker-cell.-day-.-other-month-,
+.-disabled-.-focus-.air-datepicker-cell.-year-.-other-decade-,
+.air-datepicker-cell.-day-.-other-month-.-disabled-,
+.air-datepicker-cell.-year-.-other-decade-.-disabled-
+  color: var(--primary-disabled)
+
+.air-datepicker-nav--action
+  font-size: 24px
+
+.air-datepicker-cell.-current-.-in-range-
+  color: #fff
+
+.-in-range-.air-datepicker-cell.-year-.-other-decade-, .-in-range-.air-datepicker-cell.-day-.-other-month-
+  color: rgba(255,255,255,0.6)
+
+
+.air-datepicker-cell.-range-from-,
+.air-datepicker-cell.-range-to-
+  color: #FFFFFF !important
+  background-color: #194850 !important
+.air-datepicker-cell.-in-range-
+  background-color: #0E5D6B
+  color: #fff

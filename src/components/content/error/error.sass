@@ -1,0 +1,24 @@
+.content_error
+  height: calc(100lvh - var(--headerHeight) - 60px )
+  min-height: min-content
+  .block--head
+    max-width: 900px
+    margin: auto
+    justify-content: center
+    align-items: center
+    text-align: center
+    padding: 22px 16px
+    gap: var(--g-m)
+    &_title
+      position: relative
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      h2
+        line-height: 1.2
+        font-size: clamp(112px, calc(112px + (244 - 112) * ((100vw - 992px) / (1440 - 992))), 244px)
+    .block--actions
+      justify-content: center
+
+

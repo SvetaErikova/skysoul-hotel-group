@@ -1,0 +1,50 @@
+.block--head
+  display: flex
+  flex-direction: column
+  gap: var(--g-heading)
+  align-content: center
+  margin: auto
+  max-width: 1024px
+  text-align: center
+  &_subtitle
+    text-transform: uppercase
+    font-weight: 500
+    font-size: var(--subheading)
+    color: var(--accent-light)
+    &-icon
+      &:after
+        content: "\e90d"
+        font-family: 'icomoon'
+        font-size: 3em
+        line-height: 1
+        display: flex
+        justify-content: center
+        margin: auto
+        background: radial-gradient(121.77% 100% at 50% 0%, #A3DCF7 0%, #53BAEC 58.65%, #3094D2 100%), radial-gradient(130.95% 100% at 50% 0%, #6CC4EF 0%, #4AB5EA 33.81%, #216DA3 75.55%)
+        -webkit-background-clip: text
+        background-clip: text
+        -webkit-text-fill-color: transparent
+        color: transparent
+      p
+        display: none
+
+  &_title
+    font-weight: 500
+    font-size: var(--heading-1)
+    text-transform: uppercase
+    letter-spacing: 0.03em
+    .-accent
+      color: var(--accent)
+  &_caption
+    font-weight: 520
+    font-size: var(--subtitle-xl)
+    color: var(--text-primary-subhead)
+
+  .block--actions
+    margin-top: 0
+
+
+.block--wrapper > .block--head
+  .block--actions
+    margin: 16px auto 0
+    justify-content: center
