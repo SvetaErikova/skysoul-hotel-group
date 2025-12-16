@@ -8,25 +8,17 @@
   margin-top: var(--g-l)
   color: rgba(0, 0, 0, 0.7)
   .button:not(:only-child)
-    font-size: var(--interactive-l)
-    background: rgba(255, 255, 255, 0.8)
-    border-radius: 12px
-    width: 40px
-    -webkit-text-fill-color: rgba(0, 0, 0, 0.7)
-    color: rgba(0, 0, 0, 0.7)
-    --text-shadow: 0px -1px 1px 0px rgba(255, 255, 255, 1), 0px 0.5px 0.5px 0px rgba(0, 0, 0, 0.43) inset
-    @media(min-width: 769px)
-      width: 44px
-    span:not([class^="icon-"])
-      text-shadow: var(--text-shadow)
-      -webkit-background-clip: text
-      background-clip: text
+    font-size: 14px
+    border-radius: var(--border-corner)
+    padding: 4px 10px
+    line-height: 1.5
+    width: 28px
+    height: 28px
     &:not(.is_active):hover
-      opacity: .8
+      --button-border-color: rgba(168, 177, 185, 0.5)
     &.is_active
-      -webkit-text-fill-color: #0D5287
-      color: #0D5287
-      background: #C6E8F8
-      --text-shadow: 0px -1px 1px 0px rgba(255, 255, 255, 1), 0px 0.5px 0.5px 0px rgba(0, 0, 0, 0.43) inset
+      --button-bg-color: var(--accent)
+      --button-border-color: var(--accent)
+      --button-color: var(--text-secondary)
     &:has(span[class^="icon-"])
-      border-radius: 50px
+      font-size: 24px

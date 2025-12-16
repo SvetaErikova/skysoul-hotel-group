@@ -17,7 +17,7 @@ const renderField = (content, className) => {
   return <div class={className}>{content}</div>;
 };
 
-export const Card = ({link, popup, images = [], title, text, action, image, labels = [], announce, children}) => {
+export const Card = ({link, popup, images = [], title,subtitle, text, action, image, labels = [], children, actionsout = false }) => {
   const cardContent = (
     <>
 
@@ -39,8 +39,9 @@ export const Card = ({link, popup, images = [], title, text, action, image, labe
       <div class="card--content">
         <Labels items={labels}/>
         {renderField(title, 'card--title')}
+        {renderField(subtitle, 'card--subtitle')}
         {renderField(text, 'card--text')}
-        {action && <div class="card--action">{action}</div>}
+        {action && !actionsout && <div class="card--action">{action}</div>}
         {children}
       </div>
     </>
@@ -49,35 +50,40 @@ export const Card = ({link, popup, images = [], title, text, action, image, labe
   return link ? (
     <a class="card" href={link}>
       {cardContent}
+      {action && actionsout && <div class="card--action">{action}</div>}
     </a>
   ) : (
     <div class="card" data-openpopup={popup}>
       {cardContent}
+      {action && actionsout && <div class="card--action">{action}</div>}
     </div>
   );
 };
-
-
-export const Card_offers = ({link, popup, image, title, text, labels = [], action}) => {
-  return <Card title={title} text={text} image={image} popup={popup} link={link} labels={labels} action={action}></Card>;
-};
-
-
-
-export const Card_article = ({image, title, text, labels, action, link}) => {
+export const Card_resort =({image, title, subtitle, text, action, labels, link='/'}) => {
   return (
-    <Card title={title} text={text} image={image} labels={labels} action={action} link={link}></Card>
+    <a className="card" href={link}>
+        <div class="card--image">
+          <img src={image} alt="" loading="lazy"/>
+        </div>
+      <div class="card--content">
+        {renderField(title, 'card--title')}
+        {renderField(subtitle, 'card--subtitle')}
+        {renderField(text, 'card--text')}
+      </div>
+      <Labels items={labels}/>
+      {action && <div class="card--action">{action}</div>}
+    </a>
   )
 }
 
 export const Card_personnel = ({title, text}) => {
   return (
-    <Card title={title} text={text} image={'/assets/img/2.jpg'} popup={'popup_for_cascade'} action={<Button icon={'icon-eye'} className={'button-arrow button-dark'}/>} labels={[{text: 'Специальность', accent: true}, 'Категория']}></Card>
+    <Card title={title} text={text} image={'/assets/img/2.jpg'} popup={'popup_for_cascade'} actionsout={true} action={<Button type={'outlined'} color={'primary'} icon={'icon-eye'} />}></Card>
   )
 }
 export const Card_job = ({title, text}) => {
   return (
-    <Card title={title} text={text} link={'/'} labels={[{text: 'Зарплата', accent: true, icon: 'icon-calendar'}, {text: 'Зарплата', icon: 'icon-calendar'}]}>
+    <Card title={title} text={text} link={'/'} labels={[{text: 'Зарплата'}, {text: 'Зарплата'}]} actionsout={true} action={<Button type={'outlined'} color={'primary'} icon={'icon-eye'} />}>
       <div class="card--list">
         <p>Условие работы 1</p>
         <p>Условие работы 2</p>

@@ -8,6 +8,7 @@
   transform: translateY(0)
   transition: 0.18s linear
   will-change: tranform
+
   @media(max-width: 1024px)
     transition: var(--transition)
   @media(max-width: 768px)
@@ -37,6 +38,8 @@
     color: var(--text-secondary)
 
 .header--main
+  background-color: #FFFFFF
+  border-radius: var(--border-corner)
   padding: 4px
   display: flex
   justify-content: space-between
@@ -46,8 +49,8 @@
   pointer-events: auto
   margin: 8px var(--container) 0
   @media(min-width: 769px)
-    margin: 0 var(--container) 0
-    padding: clamp(4px, calc(4px + (16 - 4) * ((100vw - 768px) / (1440 - 768))), 16px) 0
+    margin: 0 16px 0
+    padding: 8px
 
 .header--nav
   .nav

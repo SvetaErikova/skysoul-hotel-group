@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import {Button} from '../_ui/button/button.jsx';
 import {Nav} from '../nav/nav.jsx';
-import {Dropdown} from '../_ui/dropdown/dropdown.jsx';
+
 
 export const Header = ({transparent = false}) => {
   return (
@@ -93,10 +93,7 @@ export const Header = ({transparent = false}) => {
 
 
           <div class="header--actions">
-            <Button type={'filled'} color="primary" link={'tel:8 800 888 88 88'}>
-              8 800 888 88 88
-            </Button>
-            <Button type={'filled'} color="primary" popup={'popup_for_menu'} icon={'icon-burger'}>
+            <Button type={'filled'} color="secondary" popup={'popup_for_menu'} icon={'icon-burger'}>
               Меню
             </Button>
           </div>

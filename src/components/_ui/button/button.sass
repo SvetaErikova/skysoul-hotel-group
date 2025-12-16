@@ -44,7 +44,7 @@
       opacity: 0.6
 
 .button-filled, .button-outlined
-  border-radius: 8px
+  border-radius: var(--border-corner)
   position: relative
   overflow: hidden
 
@@ -58,18 +58,18 @@
     &:hover,
     &:focus,
     &:active
-      --button-color: var(--text-secondary)
-    &[disabled],
-    &.is_disabled
+      opacity: 0.7
     &.button-dark
-      --button-shadow: 0px -1px 7px 0px #3094D2 inset, 0px -1px 2px 0px #4AB5EA inset, 0px 1px 2px 0px rgba(0,0,0,.4)
-      --button-color: var(--text-secondary)
+      --button-bg-color: #fff
+      --button-border-color: #fff
+      --button-color: var(--accent)
       &:hover,
       &:focus,
       &:active
+        opacity: 0.7
   &.button-outlined
     --button-bg-color: transparent
-    --button-border-color: #A0A8B1
+    --button-border-color: rgba(168, 177, 185, 0.5)
     --button-color: rgba(18, 26, 34, 0.85)
     &:hover,
     &:focus,
@@ -77,51 +77,57 @@
       --button-bg-color: var(--accent)
       --button-border-color: var(--accent)
       --button-color: var(--text-secondary)
+    &.button-dark
+      --button-color: #fff
   &.button-link
+    --button-color: var(--text-primary)
+    &:hover,
+    &:focus,
+    &:active
+      --button-color: var(--accent)
+    &.button-dark
+      --button-color: var(--text-secondary)
+      &:hover,
+      &:focus,
+      &:active
+        --button-color: var(--accent)
+
+.button-secondary
+  &.button-filled
+    --button-bg-color: #004E9D
+    --button-border-color: #004E9D
     --button-color: var(--text-secondary)
     &:hover,
     &:focus,
     &:active
-      --button-color: var(--text-secondary)
+      opacity: 0.7
     &.button-dark
-      --button-color: var(--text-secondary)
+      --button-bg-color: #D9ECFF
+      --button-border-color: #D9ECFF
+      --button-color: var(--accent)
       &:hover,
       &:focus,
       &:active
-        --button-color: var(--text-secondary)
-
-.button-secondary
-  &.button-filled
-    --button-color: #216DA3
+        opacity: 0.7
+  &.button-outlined
+    --button-bg-color: transparent
+    --button-border-color: var(--accent)
+    --button-color: var(--accent)
     &:hover,
     &:focus,
     &:active
-      --button-color: var(--text-secondary)
-    &[disabled],
-    &.is_disabled
-
-    &.button-dark
-      --button-color: var(--text-secondary)
-      &:hover,
-      &:focus,
-      &:active
-        --button-color: var(--text-secondary)
-
-      &[disabled],
-      &.is_disabled
-        --button-color: var(--text-secondary)
+      opacity: 0.7
 
   &.button-link
-
-
+    --button-color: var(--text-primary)
     &:hover,
     &:focus,
     &:active
-
-
+      --button-color: var(--accent)
     &.button-dark
-
-    &:hover,
-    &:focus,
-    &:active
+      --button-color: var(--text-secondary)
+      &:hover,
+      &:focus,
+      &:active
+        --button-color: var(--accent)
 

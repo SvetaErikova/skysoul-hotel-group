@@ -14,6 +14,7 @@ import "../../components/swiper/swiper.js";
 import "../../components/scheme/scheme.js";
 import "../../components/map/map.js";
 import "../../components/gallery/gallery.js";
+import "../../components/content/steps/steps.js";
 
 
 // form

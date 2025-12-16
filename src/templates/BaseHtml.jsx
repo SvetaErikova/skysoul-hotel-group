@@ -13,6 +13,7 @@ export default function BaseHtml({ children, meta, colorMode = '', className, li
     </head>
     <body class={clsx(lightmode ? "-light" : "", colorMode, className)}>
     {children}
+    <script src="https://cdn.jsdelivr.net/npm/leader-line@1.0.7/leader-line.min.js"></script>
     <script src="/assets/js/main.libs.js"></script>
     <script src="/assets/js/main.js"></script>
     </body>

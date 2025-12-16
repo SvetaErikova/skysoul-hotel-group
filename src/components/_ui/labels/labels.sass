@@ -2,27 +2,13 @@
   display: flex
   flex-wrap: wrap
   gap: 8px
-  font-size: var(--interactive-s)
+  font-size: var(--fs-labels-card)
   &--item
-    border-radius: 50px
-    background: linear-gradient(180deg, #C3E8FA 0%, #D9EFFB 100%)
-    border: 1px solid #C3E8FA
-    box-shadow: 0px 2px 4px 1px #A3DCF7 inset
-    padding: 6px 12px
-    color: #003662
+    border-radius: var(--border-corner)
+    padding: 8px 12px
     display: flex
     align-items: center
-    gap: 4px
-    font-weight: 540
-    &.-accent
-      background: radial-gradient(65.11% 100% at 50% 0%, #5CBDEC 0%, #3094D2 100%)
-      border: 1px solid rgba(92, 189, 236, 1)
-      box-shadow: 0px 2px 4px 0px #216DA3 inset
-      backdrop-filter: none
-      color: #FFFFFF
-    &.-dark
-      border: 1px solid rgba(255, 255, 255, 0.2)
-      background: radial-gradient(50% 100% at 50% 0%, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.4) 100%)
-      color: #FFFFFF
-      backdrop-filter: blur(24px)
-      box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2) inset
+    gap: 10px
+    transition: var(--transition)
+
+

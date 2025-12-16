@@ -4,20 +4,12 @@
   --col: 1
   @media(min-width: 640px)
     --col: 2
-  @media(min-width: 998px)
+  @media(min-width: 768px)
     --col: 3
-  @media(min-width: 1440px)
+  @media(min-width: 1024px)
     --col: 4
-  &.-col-3 .block--elements
-    @media(min-width: 1140px)
-      --col: 3
-      //.card
-      //  aspect-ratio: initial
-  &.-col-4 .block--elements
-    @media(min-width: 1440px)
-      --col: 4
-      //.card
-      //  aspect-ratio: initial
+  @media(min-width: 1441px)
+    --col: 5
   .block--elements
     display: grid
     place-items: start
@@ -31,3 +23,30 @@
     display: flex
     flex-direction: column
 
+.content_article,
+.content_media,
+.content_blog
+  @media(min-width: 1024px)
+    --col: 3
+  @media(min-width: 1441px)
+    --col: 4
+
+.content_resorts
+  @media(min-width: 769px)
+    --col: 2
+  @media(min-width: 1024px)
+    --col: 3
+  @media(min-width: 1441px)
+    --col: 4
+.content_services
+  @media(min-width: 769px)
+    --col: 2
+  @media(min-width: 1024px)
+    --col: 2
+  @media(min-width: 1441px)
+    --col: 3
+.content_steps
+  .block--elements
+    gap: 150px
+  @media(min-width: 1024px)
+  --col: 3

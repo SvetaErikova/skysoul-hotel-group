@@ -14,21 +14,25 @@
     display: none
   a
     white-space: nowrap
-    font-size: var(--interactive-l)
+    font-size: clamp(14px, calc(14px + (12 - 14) * ((100vw - 768px) / (1440 - 768))), 12px)
     padding: 8px 16px
-    border-radius: 50px
-    border: 1px solid  #ECF7FD
-    box-shadow: 0 2px 6px 0 var(--shadow-light)
-    color: var(--c-text-default)
-    background: var(--text-secondary)
+    border-radius: var(--border-corner)
+    border: 1px solid  var(--button-border-color)
+    background: var(--button-bg-color)
+    color: var(--button-color)
+    --button-bg-color: transparent
+    --button-border-color: rgba(168, 177, 185, 0.5)
+    --button-color: var(--text-primary)
     @media(min-width: 1024px)
       padding: 12px 22px
     &:hover
-      box-shadow: none
+      --button-bg-color: transparent
+      --button-border-color: var(--accent)
+      --button-color: var(--accent)
     &.is_active
-      background:  rgba(49, 81, 98, 1)
-      box-shadow: 0 2px 3px 1px #133546 inset
-      color: var(--text-secondary)
+      --button-bg-color: var(--accent)
+      --button-border-color: var(--accent)
+      --button-color: var(--text-secondary)
 
 
 

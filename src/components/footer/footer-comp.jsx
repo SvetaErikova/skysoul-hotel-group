@@ -16,7 +16,7 @@ export const Footer = () => {
             <FooterLogo />
             <div className="button--wrapper">
               <Button type={'filled'} color={'primary'}>Передать в управление</Button>
-              <Button type={'outlined'} color={'primary'}>Передать в управление</Button>
+              <Button type={'outlined'} color={'secondary'}>Передать в управление</Button>
             </div>
           </div>
           <div className="footer--main">

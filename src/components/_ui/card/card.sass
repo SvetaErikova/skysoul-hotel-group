@@ -14,6 +14,7 @@
   --_nb-curve-pos: var(--_nb-curve-pos-tr)
   --_nb-mask-position: var(--_nb-mask-position-tr)
   &--content
+    position: static
     display: flex
     flex-direction: column
     gap: 8px
@@ -26,8 +27,6 @@
     -webkit-line-clamp: 3
     -webkit-box-orient: vertical
     transition: var(--transition)
-    font-family: 'LTRemark'
-    text-transform: uppercase
   &--text
     line-height: 1.3
   &--action
@@ -76,8 +75,8 @@
 
 .content_card,
 .content_personnel,
-.content_corps,
-.content_cards-mini
+.content_resorts,
+.content_blog
   .card--image
     mask-image: var(--_nb-mask-image)
     mask-size: var(--_nb-mask-size)
@@ -85,8 +84,11 @@
     mask-repeat: no-repeat
     --_nb-curve-pos: var(--_nb-curve-pos-tr)
     --_nb-mask-position: var(--_nb-mask-position-tr)
+    border-radius: var(--nb-r)
+
 .content_vacancies,
-.content_article
+.content_article,
+.content_steps
   .card--content
     mask-image: var(--_nb-mask-image)
     mask-size: var(--_nb-mask-size)
@@ -94,132 +96,244 @@
     mask-repeat: no-repeat
     --_nb-curve-pos: var(--_nb-curve-pos-tr)
     --_nb-mask-position: var(--_nb-mask-position-tr)
+    border-radius: var(--nb-r)
 
 .content_card,
 .content_personnel,
-.content_corps,
-.content_cards-mini,
+.content_resorts,
+.content_services,
+.content_directions,
 .content_vacancies,
-.content_article
+.content_article,
+.content_blog,
+.content_steps
   .card
-    /* Настройка переменных nebo для выемки */
     --nb-r: 8px
-    --nb-w: 36px
-    --nb-h: 36px
+    --nb-w: clamp(28px, calc(40px + (28 - 40) * ((100vw - 768px) / (1440 - 768))), 40px)
+    --nb-h: clamp(28px, calc(40px + (28 - 40) * ((100vw - 768px) / (1440 - 768))), 40px)
     --nb-cor1-rw: 8px
     --nb-cor1-rh: 8px
     --nb-cor2-rw: 8px
     --nb-cor2-rh: 8px
     --nb-curve-rw: 16px
     --nb-curve-rh: 16px
-  .card--action
-    position: absolute
-    top: 0
-    right: 0
-    margin-top: 0
-    z-index: 3
-    .button
-      aspect-ratio: 1/1
-      width: 46px
-
-.content_article
-  .card
-    gap: 0
-    background-color: var(--bg-content)
-    box-shadow: 0px 4px 16px 0px var(--shadow-light)
-    &--image
-      border-radius: var(--border-corner)
-      aspect-ratio: 439/272
-    &--content
-      position: initial
-      padding: clamp(20px, calc(20px + (24 - 20) * ((100vw - 992px) / (1440 - 992))), 24px)
-    &--title
-      font-size: var(--heading-7)
-    &--text
-      color: #4C647E
-      text-overflow: ellipsis
-      overflow: hidden
-      display: -webkit-box
-      -webkit-line-clamp: 3
-      -webkit-box-orient: vertical
-      transition: var(--transition)
     &--action
-      align-items: center
-      .button-arrow
-        position: absolute
-        top: 16px
-        left: auto
-        right: 16px
-    &--labels
-      order: 1
+      position: absolute
+      top: 0
+      right: 0
+      margin-top: 0
+      z-index: 3
+      .button
+        padding: 0
+        aspect-ratio: 1/1
+        width: clamp(46px, calc(54px + (46 - 54) * ((100vw - 768px) / (1440 - 768))), 54px)
+    &:hover
+      .button
+        --button-bg-color: var(--accent)
+        --button-border-color: var(--accent)
+        --button-color: var(--text-secondary)
+.content_card,
+.content_personnel,
+.content_partners,
+.content_article,
+.content_advantages,
+.content_directions,
+.content_media
+  .card:hover
+    .card--title
+      color: var(--accent)
 
+.content_card,
 .content_personnel
   .card
-    background-color: var(--bg-content)
-    gap: 0
+    gap: 24px
     &--image
-      border-radius: var(--border-corner)
-      overflow: hidden
-      aspect-ratio: 430/352
+      aspect-ratio: 300/420
+    &--title
+      font-size: var(--title-s)
+      font-weight: 600
+    &--text
+      font-size: var(--text-m)
+
+
+.content_resorts
+  .card
+    aspect-ratio: 416/631
+    color: #FFFFFF
+    &--image
+      position: absolute
+      inset: 0
+      aspect-ratio: initial
       &:after
         content: ""
         position: absolute
         inset: 0
-        background: linear-gradient(180deg, #000000 9.3%, rgba(0, 0, 0, 0) 42.81%)
-        opacity: 0.2
+        background: linear-gradient(180deg, rgba(18, 26, 34, 0) 58.16%, rgba(18, 26, 34, 0.6) 84.8%), linear-gradient(180deg, rgba(18, 26, 34, 0.55) 0%, rgba(18, 26, 34, 0) 29.4%)
     &--content
-      padding: var(--g-xxs) var(--g-s)
+      backdrop-filter: blur(45px)
+      border-radius: var(--border-corner)
+      margin: auto 14px 14px
+      padding: 16px 18px
+      justify-content: flex-end
+      transition: var(--transition)
+      background: linear-gradient(105.77deg, rgba(255, 255, 255, 0.4) 17.3%, rgba(255, 255, 255, 0.152) 100%)
+      @media(min-width: 769px)
+        padding: 24px 18px
     &--title
-      font-size: var(--heading-6)
+      font-family: 'Forum'
+      font-size: 30px
+    &--subtitle
+      font-weight: 400
+      font-size: clamp(20px, calc(20px + (18 - 20) * ((100vw - 768px) / (1440 - 768))), 18px)
     &--text
-      color: #4C647E
-    &--action
-      position: absolute
-      top: 16px
-      left: auto
-      right: 16px
+      font-size: var(--subtitle-xs)
+      font-weight: 400
     .labels
-      order: 1
-      margin-top: auto
+      position: absolute
+      top: 14px
+      left: 14px
       &--item
+        border: 1px solid #fff
+        color: #FFFFFF
+    &:hover
+      .card--content
+        background-color: #FFFFFF
+        color: var(--text-primary)
+.content_services
+  .card
+    color: #FFFFFF
+    height: 420px
+    &--image
+      position: absolute
+      inset: 0
+      height: 100%
+    &--content
+      backdrop-filter: blur(45px)
+      border-radius: var(--border-corner)
+      margin: auto 14px 14px
+      padding: 16px 18px
+      justify-content: flex-end
+      background: linear-gradient(105.77deg, rgba(255, 255, 255, 0.4) 17.3%, rgba(255, 255, 255, 0.152) 100%)
+      transition: var(--transition)
+      @media(min-width: 769px)
+        padding: 24px 18px
+    &--title
+      font-size: 20px
+    &--text
+      font-size: 16px
+      line-height: 1.6
+
+    &:hover
+      .card--content
+        background-color: #FFFFFF
+        color: var(--text-primary)
+
+.content_article,
+.content_media
+  .card
+
+    &--content
+      position: initial
+
+      & > span
+        color: #A0A8B1
+        font-size: clamp(14px, calc(16px + (14 - 16) * ((100vw - 768px) / (1440 - 768))), 16px)
+        margin-top: 16px
+    &--title
+      font-size: 20px
+    &--text
+      color: var(--text-primary-subhead)
+      font-size: 16px
+      line-height: 1.6
+    .labels
+      &--item
+        background: linear-gradient(94.81deg, rgba(174, 181, 190, 0.4) 1.94%, rgba(201, 210, 217, 0.24) 97.77%)
+        font-size: var(--subtitle-xxs)
+        text-transform: uppercase
+    &:hover
+      .card--content
+        background-color: var(--bg-content)
+      .labels--item
+        background: linear-gradient(93.47deg, rgba(221, 236, 250, 0.5) 0%, rgba(191, 222, 250, 0.5) 113.14%)
+        color: var(--accent)
+.content_article
+  .card
+    &--content
+      padding: 90px 24px 20px
+    .labels
+      position: absolute
+      top: 20px
+      left: 20px
+.content_media
+  .card
+    &--content
+      padding: 20px 24px
+      gap: 24px
+  .labels
+    &--item
+      background: linear-gradient(93.47deg, rgba(221, 236, 250, 0.5) 0%, rgba(191, 222, 250, 0.5) 113.14%)
+      color: var(--accent)
+      gap: 4px
+      &:before
+        content: 'Источник: '
+        color: rgba(18, 26, 34, 0.6)
+
+.content_blog
+  .card
+    &--image
+      aspect-ratio: 416/180
+    &--title
+      font-weight: 600
+      font-size: clamp(18px, calc(20px + (18 - 20) * ((100vw - 768px) / (1440 - 768))), 20px)
+    &--text
+      font-size: 16px
+      line-height: 1.6
+      color: var(--text-primary-subhead)
+    &--content
+      & > span
+        color: #A0A8B1
+        font-size: clamp(14px, calc(16px + (14 - 16) * ((100vw - 768px) / (1440 - 768))), 16px)
         margin-top: 16px
 
 .content_vacancies
   .card
-    box-shadow: 0px 4px 24px 0px var(--shadow-light)
-    background-color: var(--bg-content)
+
     &--content
+      transition: var(--transition)
       padding: clamp(16px, calc(16px + (28 - 16) * ((100vw - 992px) / (1440 - 992))), 28px) var(--g-s)
       gap: clamp(12px, calc(12px + (16 - 12) * ((100vw - 992px) / (1440 - 992))), 16px)
     &--title
-      font-size: var(--heading-6)
-      order: -1
-      &:after
-        content: "\e901"
-        font-family: 'icomoon' !important
+      font-size: 24px
     &--text
-      font-size: var(--body-s)
-      color: #4C647E
-      font-weight: 500
-    &--labels
+      font-size: 16px
+    .labels
+      &--item
+        background: linear-gradient(94.81deg, rgba(174, 181, 190, 0.4) 1.94%, rgba(201, 210, 217, 0.24) 97.77%)
+        color: rgba(18, 26, 34, 0.6)
+        font-size: var(--subtitle-xxs)
+        text-transform: uppercase
     &--list
       display: flex
       gap: 4px
-      font-size: var(--interactive-xs)
+      font-size: var(--subtitle-xs)
       flex-wrap: wrap
       p
         display: flex
-        color: transparent
-        -webkit-background-clip: text
-        background-clip: text
-        -webkit-text-fill-color: transparent
-        background-image: linear-gradient(180deg, #7E8D9E 39.91%, #4C647E 100%)
-        text-shadow: 0 0.5px 0.5px rgba(0, 0, 0, 0.43)
+        color: #A0A8B1
         &:not(:last-child):after
           content: "\e90e"
           display: flex
           align-items: center
           font-family: 'icomoon' !important
     &:hover
-      .card--title
-        color: #3094D2
+      .card--content
+        background-color: var(--bg-content)
+      .labels--item
+        background: linear-gradient(93.47deg, rgba(221, 236, 250, 0.5) 0%, rgba(191, 222, 250, 0.5) 113.14%)
+        color: var(--accent)
+
+.content_steps
+  .card
+    &--content
+      background-color: var(--bg-content)
+      padding: 90px 20px 20px

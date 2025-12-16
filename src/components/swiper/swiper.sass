@@ -113,7 +113,6 @@
 
 .block_list-slider,
 .content_gallery .js-gallerySwiper,
-.content_room,
 .block_banner:not(.block_banner-hero)
   position: relative
   .block--elements
@@ -141,21 +140,10 @@
     left: 50%
     top: 50%
     width: calc(100% - var(--container))
+
 .block_image_text
   .swiper--prev, .swiper--next
     width: 44px
     height: 44px
     font-size: 24px
 
-.block_list.block_list-slider
-  .card
-    transition: 0.18s opacity ease-out
-    height: auto
-    &.hide
-      opacity: 0
-.block_banner.block_banner-group:not(.block_banner-hero)
-  .banner
-    transition: 0.18s opacity ease-out
-    height: auto
-    &.hide
-      opacity: 0
