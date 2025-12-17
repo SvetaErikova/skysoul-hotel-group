@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 
-export const Block = ({ children, title, className, link, filter, pagination, selection,}) => {
+export const Block = ({ children, title, className, link, filter, pagination, selection, colorMode='',}) => {
   return (
-    <section className={clsx("block", className)}>
+    <section className={clsx("block", className, colorMode? colorMode: null)}>
       <div className="block--wrapper">
         {title && title}
 

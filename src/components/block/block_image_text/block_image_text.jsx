@@ -7,13 +7,15 @@ export const Block_image_text = ({
   content,
   reversed = false,
   backgroundMode = '' | '-light-mode' | '-dark-mode' | '-accent-mode',
-  rarioFill = false,
+  contentBottom = false
+  // rarioFill = false,
 }) => {
   const wrapperClasses = clsx(
     'block block_image_text',
     reversed && 'block_image_text-reversed',
     backgroundMode && `${backgroundMode}`,
-    rarioFill && 'block_image_text-ratio-fill'
+    contentBottom && 'block_image_text-position-bottom',
+    // rarioFill && 'block_image_text-ratio-fill'
   );
 
   const renderMedia = () => {

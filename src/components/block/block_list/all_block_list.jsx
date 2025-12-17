@@ -13,6 +13,7 @@ import {Block_Head} from "../_ui/block--head/block--head.jsx";
 import {Block_pagination} from "../_ui/block--pagination/block--pagination.jsx";
 import {Block_selection} from "../_ui/block--selection/block--selection-comp.jsx";
 import {Block_List} from "./block_list.jsx";
+import {Steps} from "../../content/steps/steps-comp.jsx";
 
 export const All_block_list = () => {
   const tabs = [
@@ -346,20 +347,7 @@ export const All_block_list = () => {
       </Block_List>
       <br></br>
       {/*Картчки пошаговые грид*/}
-      <Block_List
-        className="content_steps"
-        title={
-          <Block_Head
-            title={"грид "}
-            subtitle={"Блок-список стандартный"}
-            caption={"Карточки пошаговые "}
-            headingLevel={2}
-          ></Block_Head>
-        }
-      >
-        <All_card_steps></All_card_steps>
-
-      </Block_List>
+      <Steps></Steps>
       <br></br>
       </>
   );

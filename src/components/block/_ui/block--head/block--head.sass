@@ -3,48 +3,53 @@
   flex-direction: column
   gap: var(--g-heading)
   align-content: center
-  margin: auto
-  max-width: 1024px
-  text-align: center
   &_subtitle
-    text-transform: uppercase
-    font-weight: 500
+    //grid-area: subtitle
     font-size: var(--subheading)
     color: var(--accent-light)
-    &-icon
-      &:after
-        content: "\e90d"
-        font-family: 'icomoon'
-        font-size: 3em
-        line-height: 1
-        display: flex
-        justify-content: center
-        margin: auto
-        background: radial-gradient(121.77% 100% at 50% 0%, #A3DCF7 0%, #53BAEC 58.65%, #3094D2 100%), radial-gradient(130.95% 100% at 50% 0%, #6CC4EF 0%, #4AB5EA 33.81%, #216DA3 75.55%)
-        -webkit-background-clip: text
-        background-clip: text
-        -webkit-text-fill-color: transparent
-        color: transparent
-      p
-        display: none
 
   &_title
-    font-weight: 500
+    //grid-area: title
     font-size: var(--heading-1)
     text-transform: uppercase
     letter-spacing: 0.03em
     .-accent
       color: var(--accent)
   &_caption
-    font-weight: 520
-    font-size: var(--subtitle-xl)
+    //grid-area: caption
+    font-size: 20px
+    font-weight: 500
+    line-height: 1.6
     color: var(--text-primary-subhead)
 
   .block--actions
+    //grid-area: actions
     margin-top: 0
 
-
-.block--wrapper > .block--head
+  &_subtitle,
+  &_title,
+  &_caption,
   .block--actions
-    margin: 16px auto 0
-    justify-content: center
+    &:empty
+      display: none
+
+.block_list
+  .block--head
+    @media(min-width: 1024px)
+      display: grid
+      grid-template-columns: 1.3fr 1fr
+      grid-template-rows: auto 1fr auto
+      &_subtitle,
+      &_title
+        grid-column: 1
+      &_caption,
+      .block--actions
+        grid-column: 2
+      &_caption
+        display: flex
+        align-content: flex-end
+        margin-top: auto
+      &_title
+        grid-row:  2 / span 2
+      &_subtitle
+        grid-column: span 2

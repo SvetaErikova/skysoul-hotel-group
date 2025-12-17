@@ -28,7 +28,9 @@
     -webkit-box-orient: vertical
     transition: var(--transition)
   &--text
-    line-height: 1.3
+    line-height: 1.5
+    @media(min-width: 769px)
+      line-height: 1.6
   &--action
     display: flex
     align-items: center
@@ -76,7 +78,9 @@
 .content_card,
 .content_personnel,
 .content_resorts,
-.content_blog
+.content_blog,
+.content_services
+
   .card--image
     mask-image: var(--_nb-mask-image)
     mask-size: var(--_nb-mask-size)
@@ -221,7 +225,6 @@
       font-size: 20px
     &--text
       font-size: 16px
-      line-height: 1.6
 
     &:hover
       .card--content
@@ -244,7 +247,6 @@
     &--text
       color: var(--text-primary-subhead)
       font-size: 16px
-      line-height: 1.6
     .labels
       &--item
         background: linear-gradient(94.81deg, rgba(174, 181, 190, 0.4) 1.94%, rgba(201, 210, 217, 0.24) 97.77%)
@@ -334,6 +336,26 @@
 
 .content_steps
   .card
+    position: relative
+    @for $i from 1 through 6
+      &:nth-child(#{$i})
+        &::after
+          content: "#{if($i < 10, '0', '')}#{$i}"
+          position: absolute
+          top: 20px
+          left: 20px
+          z-index: 2
+          font-size: var(--subtitle-xxs)
+          color: var(--accent)
     &--content
       background-color: var(--bg-content)
       padding: 90px 20px 20px
+    &--title
+      font-weight: 600
+      font-size: 22px
+    &--text
+      font-size: clamp(16px, calc(18px + (16 - 18) * ((100vw - 768px) / (1440 - 768))), 18px)
+    .button
+      --button-bg-color: var(--accent)
+      --button-border-color: var(--accent)
+      --button-color: var(--text-secondary)

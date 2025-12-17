@@ -29,9 +29,9 @@ import "../../components/form/inputs/input_tel/input_tel.js";
 import "../../components/form/form.js";
 
 
-import "../../components/booking/booking.js";
+// import "../../components/booking/booking.js";
 // content
-import "../../components/content/services/services.js";
+// import "../../components/content/services/services.js";
 // import "../../components/content/reviews/review.js";
 
 

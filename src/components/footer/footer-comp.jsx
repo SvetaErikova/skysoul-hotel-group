@@ -9,7 +9,10 @@ import { FooterForm } from './footer-form.jsx';
 export const Footer = () => {
   return (
     <>
-      <Booking className={'block--search-sticky'}></Booking>
+      <div class="main--actions">
+        <Button type={'filled'} color={'primary'}>Личный кабинет></Button>
+        <Button type={'filled'} color={'secondary'} dark={true}>Передать в управление></Button>
+      </div>
       <footer className="footer">
         <div className="footer--wrapper">
           <div className="footer--top">

@@ -54,14 +54,17 @@
 
 .header--nav
   .nav
-    display: flex
-    gap: 26px
-    font-size: 16px
-    .nav--item
-      &> a
-        white-space: nowrap
-      a:hover
-        color: var(--accent)
+    display: none
+    @media(min-width: 769px)
+      display: flex
+      gap: 26px
+      font-size: 16px
+      .nav--item
+        &> a
+          color: var(--text-primary)
+          white-space: nowrap
+        a:hover
+          color: var(--accent)
 
 .header--actions
   display: flex

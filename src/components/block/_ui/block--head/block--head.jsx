@@ -5,7 +5,8 @@ export const Block_Head = ({
   headingLevel = 2,
   action,
   headingSize = 'f-h2',
-  accentTitle,
+  accentTitleBefore,
+  accentTitleAfter,
 }) => {
   const HeadingTag = `h${headingLevel}`;
 
@@ -15,13 +16,17 @@ export const Block_Head = ({
           <p>{subtitle}</p>
         </div>
       <div className="block--head_title">
-        {accentTitle ? (
-          <HeadingTag class={headingSize}>
-            <span className="-accent">{accentTitle}</span>
+        {accentTitleBefore || accentTitleAfter ? (
+          <HeadingTag className={headingSize}>
+            {accentTitleBefore && <span className="-accent">{accentTitleBefore}</span>}
             <span>{title}</span>
+            {accentTitleAfter && <span className="-accent">{accentTitleAfter}</span>}
           </HeadingTag>
         ) : (
-          <HeadingTag class={headingSize} dangerouslySetInnerHTML={{ __html: title }}></HeadingTag>
+          <HeadingTag
+            className={headingSize}
+            dangerouslySetInnerHTML={{ __html: title }}
+          />
         )}
       </div>
 

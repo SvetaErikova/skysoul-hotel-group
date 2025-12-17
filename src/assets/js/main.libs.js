@@ -6,6 +6,7 @@ import "../../libs/swiper/swiper.min.js";
 import "../../libs/inputmask/inputmask.min.js";
 import "../../libs/fancybox/fancybox.umd.js";
 import "../../libs/datepicker/lightpicker.js";
+import "../../libs/leader-line/leader-line.min.js";
 
 
 // import "../../libs/gsap/gsap.min.js";

@@ -56,17 +56,17 @@ export const All_block_image_text = () => {
         content={demoContent}
         reversed
       />
+
       <Block_image_text
+
         images={[
           { src: '../../assets/img/1.jpg' },
         ]}
-        title={demoHead('Блок с высотой картинки в высоту контента')}
+        title={demoHead('контент по низу')}
         content={demoContent}
         reversed
-        rarioFill={true}
+        contentBottom
       />
-
-
       {/* С видео */}
       <Block_image_text
         images={[
@@ -84,14 +84,6 @@ export const All_block_image_text = () => {
         title={demoHead('Дефолт фон')}
         content={demoContent}
 
-      />
-      <Block_image_text
-        images={[
-          { src: '../../assets/img/1.jpg' },
-        ]}
-        title={demoHead('Темный фон')}
-        content={demoContent}
-        backgroundMode={'-dark-mode'}
       />
       <Block_image_text
         images={[

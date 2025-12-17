@@ -15,7 +15,7 @@
     display: flex
     flex-direction: column
     gap: 64px
-    @media(min-width: 769px)
+    @media(min-width: 999px)
       display: grid
       grid-template-columns: 5.5fr 3.25fr 3.25fr
 
@@ -44,13 +44,15 @@
     width: 100%
     @media(min-width: 769px)
       max-width: 190px
+  &--main
+
   &--nav
     display: grid
     grid-template-columns: 50% 50%
     gap: var(--g-m)
     font-size: var(--body-xs)
     order: 1
-    @media(min-width: 769px)
+    @media(min-width: 1025px)
       grid-column: 2 / span 2
       display: flex
       gap: var(--g-l)
@@ -106,8 +108,24 @@
       color: var(--accent)
     &_nav
       display: flex
+      flex-wrap: wrap
+      white-space: nowrap
       gap: 12px
+      @media(max-width: 575px)
+        flex-direction: column
     &_bottom
       color: var(--text-subhead)
       padding-top: 12px
       border-top: 1px solid rgba(255, 255, 255, .2)
+.main--actions
+  position: sticky
+  bottom: 16px
+  pointer-events: none
+  width: 100%
+  display: flex
+  justify-content: center
+  z-index: 10
+  gap: 16px
+  margin-block: 32px
+  .button
+    pointer-events: auto

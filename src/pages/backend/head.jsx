@@ -26,8 +26,9 @@ export default function Home() {
                         <Button type="filled" color="primary">Кнопка 2</Button>
           </>}></Block_Head>
           <br></br>
-          {/*Заголовок с акцентным цветом*/}
-          <Block_Head accentTitle={'Акцентный заголовок '} title={'обычный заголвоок '} headingSize={'f-h5'} caption={'Особым гостям — особые условия. Чем чаще вы с нами, тем больше получаете.'} subtitle={'subtitle'}></Block_Head>
+          {/*Заголовки с акцентом*/}
+          <Block_Head accentTitleAfter={'Акцентный заголовок '} title={'обычный заголвоок '} headingSize={'f-h5'} caption={'Особым гостям — особые условия. Чем чаще вы с нами, тем больше получаете.'} subtitle={'subtitle'}></Block_Head>
+          <Block_Head accentTitleBefore={'Акцентный заголовок '} title={'обычный заголвоок '} headingSize={'f-h5'} caption={'Особым гостям — особые условия. Чем чаще вы с нами, тем больше получаете.'} subtitle={'subtitle'}></Block_Head>
 
         </div>
       </section>

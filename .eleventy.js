@@ -228,6 +228,8 @@ async function buildJS() {
           target: ["es2020"],
           treeShaking: true,
           metafile: false,
+          format: "esm", // Добавьте эту строку
+          globalName: undefined, // Убедитесь, что это не установлено
         })
         .then(() => {
           buildCache.js.set(filename, inputMtime);

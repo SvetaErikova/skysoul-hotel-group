@@ -3,3 +3,27 @@
 
 .-no-padding .block--wrapper
   padding: 0 var(--container)
+
+.-light-mode:after
+  border-radius: var(--border-corner)
+
+.-accent-mode:after
+  background: linear-gradient(93.47deg, #DDECFA 0%, #BFDEFA 113.14%)
+
+.-accent-mode,
+.-light-mode
+  position: relative
+  &:after
+    content: ""
+    height: 100%
+    width: calc(100vw - 15px)
+    position: absolute
+    translate: -50% -50%
+    left: 50%
+    top: 50%
+    background-color: #fff
+    border-radius: var(--border-corner)
+    z-index: -1
+    @media(min-width: 769px)
+      width: calc(100vw - 17px * 2)
+

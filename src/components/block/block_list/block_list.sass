@@ -47,6 +47,8 @@
     --col: 3
 .content_steps
   .block--elements
-    gap: 150px
-  @media(min-width: 1024px)
-  --col: 3
+    gap: clamp(48px, calc(48px + (64 - 48) * ((100vw - 768px) / (1440 - 768))), 64px)
+  @media(min-width: 769px)
+    --col: 2
+  @media(min-width: 1240px)
+    --col: 3

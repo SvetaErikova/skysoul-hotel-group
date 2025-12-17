@@ -1,6 +1,4 @@
 export function initSteps() {
-  if (typeof window.LeaderLine === 'undefined') return;
-
   const LeaderLine = window.LeaderLine;
   const container = document.querySelector('.content_steps .block--elements');
   if (!container) return;
@@ -10,7 +8,6 @@ export function initSteps() {
 
   const lines = [];
 
-  // Конфигурация с разными gravity для каждой линии
   const anchorConfigs = [
     {
       from: 0, to: 1,
@@ -28,10 +25,10 @@ export function initSteps() {
     },
     {
       from: 2, to: 3,
-      fromX: '100%', fromY: '50%',
+      fromX: '60%', fromY: '100%',
       toX: '50%', toY: '0%',
-      startGravity: [250, 250],
-      endGravity: [250, -250]
+      startGravity: [-50, 80],
+      endGravity: [50, -80]
     },
     {
       from: 3, to: 4,
@@ -65,19 +62,20 @@ export function initSteps() {
       path: 'fluid',
       endPlug: 'arrow1',
       size: 2,
-      dash: { len: 4, gap: 4 },
+      dash: {len: 4, gap: 4},
       startSocketGravity: config.startGravity,
       endSocketGravity: config.endGravity,
     }));
   });
-  container.appendChild(line.svg);
 
   const resizeHandler = () => lines.forEach(line => line.position());
   window.addEventListener('resize', resizeHandler);
 
   window._stepsLines = lines;
   window._stepsResizeHandler = resizeHandler;
-
-  console.log(`✅ Линии созданы внутри контейнера:`, container);
 }
-initSteps()
+
+document.addEventListener("DOMContentLoaded", () => {
+  initSteps();
+
+})
