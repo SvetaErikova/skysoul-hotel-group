@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?54x6vg');
-  src:  url('fonts/icomoon.eot?54x6vg#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?54x6vg') format('truetype'),
-    url('fonts/icomoon.woff?54x6vg') format('woff'),
-    url('fonts/icomoon.svg?54x6vg#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?3ita3s');
+  src:  url('fonts/icomoon.eot?3ita3s#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?3ita3s') format('truetype'),
+    url('fonts/icomoon.woff?3ita3s') format('woff'),
+    url('fonts/icomoon.svg?3ita3s#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,150 +25,114 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-borger:before {
-  content: "\e92a";
-}
-.icon-close:before {
-  content: "\e92b";
-}
-.icon-phone:before {
-  content: "\e92c";
-}
-.icon-dropdown:before {
-  content: "\e92d";
-}
-.icon-stopwatch:before {
-  content: "\e92e";
-}
-.icon-sea:before {
-  content: "\e92f";
-}
-.icon-area:before {
-  content: "\e930";
-}
-.icon-arrow_l:before {
+.icon-rocket:before {
   content: "\e900";
 }
-.icon-arrow_r:before {
+.icon-square-share-line:before {
   content: "\e901";
 }
-.icon-bath:before {
+.icon-sun-fog:before {
   content: "\e902";
 }
-.icon-broken-clouds:before {
+.icon-sun-fog-solid:before {
   content: "\e903";
 }
-.icon-calendar:before {
+.icon-undo-right-round:before {
   content: "\e904";
 }
-.icon-cancel:before {
+.icon-undo-right-round-square:before {
   content: "\e905";
 }
-.icon-chevron_d:before {
+.icon-user:before {
   content: "\e906";
 }
-.icon-chevron_l:before {
+.icon-users:before {
   content: "\e907";
 }
-.icon-chevron_r:before {
+.icon-arrow-down:before {
   content: "\e908";
 }
-.icon-chevron_u:before {
+.icon-arrow-down-1:before {
   content: "\e909";
 }
-.icon-clear:before {
+.icon-arrow-right:before {
   content: "\e90a";
 }
-.icon-cloudy:before {
+.icon-arrow-up:before {
   content: "\e90b";
 }
-.icon-currrecny:before {
+.icon-banknote-2:before {
   content: "\e90c";
 }
-.icon-diamond:before {
+.icon-bill-chek:before {
   content: "\e90d";
 }
-.icon-dot:before {
+.icon-burger:before {
   content: "\e90e";
 }
-.icon-entertainment:before {
+.icon-card-transfer:before {
   content: "\e90f";
 }
-.icon-eye:before {
+.icon-chat-square-2:before {
   content: "\e910";
 }
-.icon-file:before {
+.icon-check--circle:before {
   content: "\e911";
 }
-.icon-food:before {
+.icon-clipboard-check:before {
   content: "\e912";
 }
-.icon-food-2:before {
+.icon-close:before {
   content: "\e913";
 }
-.icon-info:before {
+.icon-document:before {
   content: "\e914";
 }
-.icon-key:before {
+.icon-document-add:before {
   content: "\e915";
 }
-.icon-minus:before {
+.icon-download:before {
   content: "\e916";
 }
-.icon-mist:before {
+.icon-download-square:before {
   content: "\e917";
 }
-.icon-ok:before {
+.icon-expand-down-stop:before {
   content: "\e918";
 }
-.icon-parking:before {
+.icon-eye-closed:before {
   content: "\e919";
 }
-.icon-pet:before {
+.icon-eye-opened:before {
   content: "\e91a";
 }
-.icon-plus:before {
+.icon-eye-opened-line:before {
   content: "\e91b";
 }
-.icon-pool:before {
+.icon-eyes-closed-line:before {
   content: "\e91c";
 }
-.icon-rain:before {
+.icon-letter-unread:before {
   content: "\e91d";
 }
-.icon-robe:before {
+.icon-like:before {
   content: "\e91e";
 }
-.icon-rooms:before {
+.icon-location:before {
   content: "\e91f";
 }
-.icon-scatter-clouds:before {
+.icon-medal-ribbon-star:before {
   content: "\e920";
 }
-.icon-shower-rain:before {
+.icon-minus:before {
   content: "\e921";
 }
-.icon-snow:before {
+.icon-plus:before {
   content: "\e922";
 }
-.icon-spa:before {
+.icon-remove-circle:before {
   content: "\e923";
 }
-.icon-telegram:before {
+.icon-remove-circle-1:before {
   content: "\e924";
-}
-.icon-thunderstorm:before {
-  content: "\e925";
-}
-.icon-user:before {
-  content: "\e926";
-}
-.icon-vk:before {
-  content: "\e927";
-}
-.icon-wi-fi:before {
-  content: "\e928";
-}
-.icon-youtube:before {
-  content: "\e929";
 }

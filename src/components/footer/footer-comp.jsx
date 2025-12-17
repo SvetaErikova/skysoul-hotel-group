@@ -10,8 +10,8 @@ export const Footer = () => {
   return (
     <>
       <div class="main--actions">
-        <Button type={'filled'} color={'primary'}>Личный кабинет></Button>
-        <Button type={'filled'} color={'secondary'} dark={true}>Передать в управление></Button>
+        <Button type={'filled'} color={'primary'} icon={'icon-arrow-right'}>Личный кабинет</Button>
+        <Button type={'filled'} color={'secondary'} icon={'icon-arrow-right'} dark={true}>Передать в управление</Button>
       </div>
       <footer className="footer">
         <div className="footer--wrapper">
