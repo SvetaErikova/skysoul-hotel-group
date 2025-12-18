@@ -39,29 +39,16 @@
   align-items: center
   pointer-events: all
   transition: var(--transition)
-  width: var(--container)
-  height: var(--container)
   aspect-ratio: 1/1
-  min-width: 36px
-  min-height: 36px
-  --bck-btn-arrow: #FCFCFC
   font-size: 1.2em
+  background-color: #121A22
+  color: #FFFFFF
+  border-radius: var(--border-corner)
   @media(min-width: 1240px)
-    width: 56px
-    height: 56px
-    font-size: 36px
-  &:not(.button-dark)
-    span
-      background: linear-gradient(180deg, #3094D2 39.91%, #003662 100%)
-      -webkit-background-clip: text
-      background-clip: text
-      -webkit-text-fill-color: transparent
-      color: transparent
-    &:after
-      box-shadow: 0px 0px 6px 0px rgba(5, 10, 15, 0.17), 0px 1px 3px 0px rgba(0, 0, 0, 0.06), 0px 3px 2px 0px #FFFFFF inset
-
-    &:before
-      background-color: var(--bg-color)
+    width: 46px
+    font-size: 20px
+  &:hover
+    opacity: 0.7
   &.swiper-button-disabled
     pointer-events: none
     opacity: 0
@@ -74,59 +61,32 @@
   margin-right: auto
   gap: 8px
   &-bullet
-    width: 18px
-    height: 18px
+    width: 14px
+    height: 14px
     position: relative
-    --br-btn-arrow: 50px
-    --btn-rotate: -45deg
     aspect-ratio: 1/1
-
-    &:after,
-    &:before
-      content: ''
-      position: absolute
-      transition: 400ms ease-in
-    &:after
-      inset: 4px
-      rotate: 45deg
-      background-color: #FFFFFF
-      border-radius: 2px
-      opacity: 0
-    &:before
-      content: ''
-      position: absolute
-      inset: 0
-      rotate: var(--btn-rotate)
-      //z-index: -1
-      border-radius: var(--br-btn-arrow)
-      transition: 400ms ease-in
-      background-color: rgba(255, 255, 255, 0.2)
-
+    background-color: #FFFFFF
+    opacity: 0.6
+    border-radius: 50%
   .swiper-pagination-bullet-active
-    --br-btn-arrow: 4px
-    --bck-btn-arrow: rgba(255, 255, 255, 0.2)
-    &:before
-      rotate: 135deg
-      scale: 1.1
-    &:after
-      opacity: 1
+    opacity: 1
+    width: 32px
+    aspect-ratio: initial
+    border-radius: var(--border-corner)
+
 
 .block_list-slider,
-.content_gallery .js-gallerySwiper,
-.block_banner:not(.block_banner-hero)
+.content_gallery .js-gallerySwiper
   position: relative
   .block--elements
     display: flex
     flex-direction: column
     position: relative
   & .slider_controls
-    translate: -50% -50%
-    left: 50%
-    top: 50%
-    width: calc(100% + var(--container))
-    z-index: 2
-    @media(min-width: 1240px)
-      width: calc(100% + 56px)
+    position: static
+    margin-left: auto
+    order: 1
+
 
 .block_banner:not(.block_banner-hero),
 .block_list-slider,
@@ -141,9 +101,4 @@
     top: 50%
     width: calc(100% - var(--container))
 
-.block_image_text
-  .swiper--prev, .swiper--next
-    width: 44px
-    height: 44px
-    font-size: 24px
 

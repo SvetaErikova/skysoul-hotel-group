@@ -1,0 +1,60 @@
+.content_calculator
+  position: relative
+  color: var(--text-secondary)
+  &:after
+    content: ""
+    height: 100%
+    width: calc(100vw - 15px)
+    position: absolute
+    translate: -50% -50%
+    left: 50%
+    top: 50%
+    background-color: #121A22
+    border-radius: var(--border-corner)
+    z-index: -1
+    @media(min-width: 769px)
+      width: calc(100vw - 17px * 2)
+  .block--head_caption
+    color: var(--text-secondary)
+
+
+  .calculator
+    display: flex
+    flex-direction: column
+    gap: 24px
+    @media(min-width: 769px)
+      display: grid
+      grid-template-columns: 1fr 1fr
+    &_form
+      display: flex
+      flex-direction: column
+      gap: 24px
+      &_container
+        display: flex
+        background: rgba(255, 255, 255, 0.1)
+        backdrop-filter: blur(10px)
+        border: 1px solid
+        border-image-source: linear-gradient(90.36deg, rgba(240, 240, 240, 0.21) -7.9%, rgba(255, 255, 255, 0) 88.51%)
+        border-radius: var(--border-corner)
+        .form--input
+          margin-bottom: 0
+          width: 100%
+          & > span
+            display: none
+        .form--input_error
+          display: none
+
+    &_result
+      display: flex
+      flex-direction: column
+      gap: 24px
+      p
+        background: rgba(255, 255, 255, 0.1)
+        backdrop-filter: blur(10px)
+        border: 1px solid
+        border-image-source: linear-gradient(90.36deg, rgba(240, 240, 240, 0.21) -7.9%, rgba(255, 255, 255, 0) 88.51%)
+        border-radius: var(--border-corner)
+        width: 100%
+        max-width: 220px
+
+

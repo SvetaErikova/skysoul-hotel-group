@@ -13,38 +13,6 @@ export default function Home() {
       title={
       <Block_Head title={'Заголовок энного уровня'} headingLevel={'1'} headingSize={'f-h1'}></Block_Head>
     }></Block>
-    <Block_banner_cascade
-      banners={[
-        {
-          imageSrc: "/assets/img/1.jpg",
-          labels: [
-            {text: "Новости", className: "-accent"},
-            {text: "Инфраструктура",className: "-dark"},
-          ],
-          title: (
-            <Block_Head
-              title="Заголовок энного уровня"
-              caption={'Tortor at donec in ornare et tellus. Nec blandit ultrices vitae iaculis vitae in dictum nec. Laoreet dignissim odio eu in. Vel.'}
-              headingLevel={2}
-            />
-          ),
-          text: (
-            <div className="is_cascade">
-              <div class="blog-info">
-                <div>
-                  <span className="icon-calendar"></span>
-                  <span>22 апреля 2024</span>
-                </div>
-                <div>
-                  <span className="icon-calendar"></span>
-                  <span>22 апреля 2024</span>
-                </div>
-              </div>
-            </div>
-          )
-        },
-      ]}
-    ></Block_banner_cascade>
-    <Blog></Blog>
+    {/*<Blog></Blog>*/}
   </MainLayout>;
 }

@@ -47,16 +47,16 @@ export const Is_cascade_full = () => {
       <blockquote class='blockquote' id={'blockquote'}>
         <div className="blockquote--decor"></div>
         <div className="blockquote--text">
-          <p>Просто потрясающе!</p>
-          <span>Я не просто расслабилась — я впервые за годы почувствовала, что моё тело и разум говорят на одном языке</span>
+          <p><span class={'-accent'}>Наша команда</span> — это люди с опытом более 10 лет в HoReCa, девелопменте и сервисе, объединённые одной задачей: </p>
+          <span>создать понятную, надёжную и эффективную систему управления, где интересы собственника и комфорт гостя идут рядом.</span>
         </div>
         <div className="blockquote--author">
           <div className="blockquote--author_img">
             <img src="/assets/img/1.jpg" alt=""/>
           </div>
           <div className="blockquote--author_text">
-            <p>Иван Иванов</p>
-            <span>Гость</span>
+            <p>Сергей Петрович Киселев</p>
+            <span>СЕО Skysoul hotel group</span>
           </div>
         </div>
       </blockquote>
@@ -90,7 +90,7 @@ export const Is_cascade_full = () => {
           </tbody>
         </table>
       </div>
-      <img src="/assets/img/2.png" alt=""/>
+      <img src="/assets/img/1.jpg" alt=""/>
       <Accordion_full/>
       <Gallery
         isSlider={true}

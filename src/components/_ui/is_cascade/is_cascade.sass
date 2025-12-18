@@ -30,8 +30,8 @@
   h6
     font-size: var(--heading-6)
   p, li
-    font-size: var(--body-l)
-    line-height: 1.4
+    font-size: 16px
+    line-height: 1.6
   table
     font-size: var(--caption-m)
     line-height: 1.2
@@ -42,8 +42,14 @@
     &:hover,
     &:focus
       color: var(--accent-2)
-
+  & > img,
+  video,
+  figure,
+  .gallery
+    margin: clamp(32px, calc(32px + (48 - 32) * ((100vw - 375px) / (1440 - 375))), 48px) 0
+    border-radius: var(--border-corner)
   img
+
     height: auto
 
   strong
@@ -63,8 +69,11 @@
 
   figure
     figcaption
-      margin-top: 12px
+      margin: 12px auto 0
       color: #64788F
+      width: max-content
+    img
+      border-radius: var(--border-corner)
 
   hr
     border-color: currentColor
@@ -72,13 +81,7 @@
 
   .is_cascade--accordion
     margin: var(--m-text-top) 0 var(--m-bottom)
-    .accordion
-      padding: clamp(16px, calc(16px + (20 - 16) * ((100vw - 768px) / (1440 - 768))), 20px)
-    .accordion--button_text
-      font-size: var(--heading-6)
-  .is_cascade--accordion.-bck
-    padding: 0
-    background: none
+
   .button_wrapper, .block--actions
     display: flex
     align-items: center
@@ -113,7 +116,8 @@
     tbody
       td:first-child:not(.table-subhead)
         text-align: left
-
+  .-accent
+    color: var(--accent)
 .accommodation--info
   margin: var(--m-text-top) 0 var(--m-bottom)
   display: flex
@@ -132,7 +136,7 @@
   span[class^="icon-"]
     color: rgba(15, 80, 132, 0.5)
 .is_cascade:has(.gallery)
-  overflow: hidden
+  //overflow: hidden
   .gallery
     margin: var(--m-head-top) 0 var(--m-bottom)
     aspect-ratio: 800/533
@@ -142,13 +146,6 @@
       bottom: 16px
       right: 16px
       gap: 8px
-      .swiper--next,
-      .swiper--prev
-        width: 44px
-        height: 44px
-        font-size: 1.4em
-        &:before
-          content: none
 
 // Video
 .is_cascade
@@ -169,45 +166,55 @@
 
 .blockquote
   margin: 16px 0
-  border-left:  6px solid  rgba(74, 181, 234, 1)
-  padding-left: var(--g-m)
   display: flex
   flex-direction: column
-  gap: 16px
+  gap: 32px  20px
+  @media(min-width: 769px)
+    display: grid
+    grid-template-columns: auto 1fr
   &--decor
     &:after
       content: ""
       display: flex
-      width: 40px
-      aspect-ratio: 40/24
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='24' viewBox='0 0 40 24' fill='none'%3E%3Cpath d='M40 14.9304C40.0002 19.4652 36.6402 24 30.9515 24C25.2628 24 21.7952 19.0409 21.7952 13.8166C21.7952 8.59227 24.9921 4.98563 27.2947 3.1558C29.5974 1.32597 31.1584 0.856059 34.2024 0C31.7646 2.2011 30.3288 3.89834 29.6516 6.65635C35.3947 5.78122 39.9998 10.3956 40 14.9304Z' fill='%23A3DCF7'/%3E%3Cpath d='M18.2048 14.9304C18.2049 19.4652 14.845 24 9.15627 24C3.46753 24 0 19.0409 0 13.8166C0 8.59227 3.19684 4.98563 5.4995 3.1558C7.80216 1.32597 9.36316 0.856059 12.4071 0C9.96937 2.2011 8.5336 3.89834 7.85634 6.65635C13.5994 5.78122 18.2046 10.3956 18.2048 14.9304Z' fill='%23A3DCF7'/%3E%3C/svg%3E")
+      width: 56px
+      aspect-ratio: 56/37
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='37' viewBox='0 0 56 37' fill='none'%3E%3Cg clip-path='url(%23clip0_82_1353)'%3E%3Cpath d='M44.5081 35.52C51.2948 35.52 56.8281 30.0493 56.8281 23.31C56.8281 17.0729 52.0015 11.8533 45.8682 11.1793C45.7081 8.52325 46.6548 5.99936 48.7214 3.6604C49.2015 3.11858 49.1481 2.28614 48.5881 1.79715C48.3348 1.58576 48.0282 1.48002 47.7081 1.48002C47.3748 1.48002 47.0414 1.59898 46.7881 1.85006C46.6681 1.91611 46.3881 2.00863 46.2281 2.07468C45.9748 2.16719 45.7348 2.24646 45.5748 2.33897C40.2015 5.03466 36.0815 9.0254 33.9614 13.5711C32.7348 16.214 32.0548 19.3061 32.0548 22.2132C32.0548 22.6096 32.0681 23.0061 32.0948 23.4025C32.5348 30.089 38.1082 35.52 44.5081 35.52Z' fill='%23C4E1FF'/%3E%3Cpath d='M15.9535 35.52C22.7401 35.52 28.2734 30.0493 28.2734 23.31C28.2734 17.0729 23.4468 11.8533 17.3 11.1793C17.1534 8.52325 18.1001 5.99936 20.1534 3.6604C20.6467 3.11858 20.5801 2.28614 20.0334 1.79715C19.7801 1.58576 19.46 1.48002 19.1534 1.48002C18.8201 1.48002 18.4867 1.59898 18.2201 1.85006C18.1134 1.91611 17.8334 2.00863 17.6734 2.07468C17.4067 2.16719 17.1801 2.24646 17.0068 2.33897C11.6467 5.03466 7.52677 9.0254 5.40674 13.5711C4.1801 16.214 3.50009 19.3061 3.50009 22.2132C3.50009 22.6096 3.51344 23.0061 3.54013 23.4025C3.98008 30.089 9.54012 35.52 15.9535 35.52Z' fill='%23C4E1FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_82_1353'%3E%3Crect width='56' height='37' fill='white' transform='matrix(-1 0 0 -1 56 37)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E")
   &--author
-    display: grid
-    grid-template-columns: 48px auto
-    gap: 8px
-
+    display: flex
+    flex-direction: column
+    gap: 16px
+    align-items: center
+    text-align: center
+    @media(min-width: 769px)
+      grid-column: 2
+      display: grid
+      grid-template-columns: 60px auto
+      text-align: left
     &_img
       aspect-ratio: 1/1
+      width: 100px
       border-radius: 100px
       overflow: hidden
+      @media(min-width: 769px)
+        width: 60px
+
       img
         object-fit: cover
         width: 100%
         height: 100%
     p
-      font-size: var(--subtitle-s)
+      font-size: 18px
       font-weight: 500
     span
-      font-size: var(--caption-xs)
-      color: #64788F
+      font-size: clamp(14px, calc(16px + (14 - 16) * ((100vw - 768px) / (1440 - 768))), 16px)
+      color: var(--text-primary-subhead)
   &--text
     display: flex
     flex-direction: column
-    gap: 8px
     p
-      font-family: 'LTRemark'
-      text-transform: uppercase
-      font-size: var(--heading-6)
+      font-size: 24px
+      display: inline-block
     span
-      font-size: var(--body-m)
+      font-size: 24px
+      color: #A0A8B1
 

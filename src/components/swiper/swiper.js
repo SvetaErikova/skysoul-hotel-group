@@ -80,9 +80,9 @@ const activateBlocklistSlider = (swiper_item) => {
 
   switch (true) {
     case swiper_item.classList.contains("content_card"):
-      slides_per_view_desktop = 4;
-      slides_per_view_desktop_small = 3;
-      slides_per_view_pad = 2.2;
+      slides_per_view_desktop = 5;
+      slides_per_view_desktop_small = 4;
+      slides_per_view_pad = 3;
       slides_per_view_mob = 1.4;
       break;
     case swiper_item.classList.contains("content_personnel"):
@@ -96,58 +96,59 @@ const activateBlocklistSlider = (swiper_item) => {
       slides_per_view_mob = 1.2;
       break;
     case swiper_item.classList.contains("content_partners"):
-      slides_per_view_desktop = 2;
-      slides_per_view_desktop_small = 2;
-      slides_per_view_mob = 1.1;
+      slides_per_view_desktop = 5;
+      slides_per_view_desktop_small = 4;
+      slides_per_view_desktop_small = 3;
+      slides_per_view_mob = 1.2;
       break;
     case swiper_item.classList.contains("content_article"):
       slides_per_view_desktop = 4;
       slides_per_view_desktop_small = 3;
-      slides_per_view_mob = 1.1;
+      slides_per_view_mob = 1.2;
       break;
     case swiper_item.classList.contains("content_advantages"):
-      slides_per_view_desktop = 2;
-      slides_per_view_desktop_small = 2;
-      slides_per_view_pad = 1;
-      slides_per_view_mob = 1.1;
+      slides_per_view_desktop = 4;
+      slides_per_view_desktop_small = 5;
+      slides_per_view_pad = 2;
+      slides_per_view_mob = 1.2;
       break;
     case swiper_item.classList.contains("content_steps"):
       slides_per_view_desktop = 2;
       slides_per_view_desktop_small = 2;
-      slides_per_view_mob = 1.1;
+      slides_per_view_mob = 1.2;
       break;
     case swiper_item.classList.contains("content_services"):
       slides_per_view_desktop = 3;
       slides_per_view_desktop_small = 2;
-      slides_per_view_mob = 1.1;
+      slides_per_view_mob = 1.2;
       break;
     case swiper_item.classList.contains("content_directions"):
-      slides_per_view_desktop = 2;
-      slides_per_view_desktop_small = 2;
-      slides_per_view_pad = 1;
-      slides_per_view_mob = 1.1;
+      slides_per_view_desktop = 5;
+      slides_per_view_desktop_small = 4;
+      slides_per_view_pad = 2.2;
+      slides_per_view_mob = 1.2;
       break;
     case swiper_item.classList.contains("content_vacancies"):
       slides_per_view_desktop = 2;
       slides_per_view_desktop_small = 2;
-      slides_per_view_pad = 1;
-      slides_per_view_mob = 1.1;
+      slides_per_view_pad = 1.2;
+      slides_per_view_mob = 1.2;
       break;
     case swiper_item.classList.contains("content_media"):
       slides_per_view_desktop = 4;
       slides_per_view_desktop_small = 3;
-      slides_per_view_mob = 1.1;
+      slides_per_view_mob = 1.2;
       break;
     case swiper_item.classList.contains("content_blog"):
       slides_per_view_desktop = 4;
       slides_per_view_desktop_small = 3;
-      slides_per_view_mob = 1.1;
+      slides_per_view_mob = 1.2;
       break;
     default:
       slides_per_view_desktop = 4;
       slides_per_view_desktop_small = 3;
       slides_per_view_pad = 2.2;
-      slides_per_view_mob = 1.13;
+      slides_per_view_mob = 1.2;
   }
 
   const {controls, prev, next} = buildControls({pagination: false});

@@ -94,7 +94,9 @@ export const Header = ({transparent = false}) => {
 
           <div class="header--actions">
             <Button type={'filled'} color="secondary" popup={'popup_for_menu'} icon={'icon-burger'}>
-              Меню
+            </Button>
+            <Button type={'filled'} color="secondary" dark={true} >
+              8 800 888 88 88
             </Button>
           </div>
         </div>

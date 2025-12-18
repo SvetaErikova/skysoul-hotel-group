@@ -20,15 +20,18 @@ input[type="date"]
 
 .-dark-mode .form
   --text-subhead: #64788F
-  --border-input: rgba(15, 80, 132, 0.1)
-  --border-input_hover: #A3DCF7
-  --bck-input: #ECF7FD
+  --border-input: rgba(255, 255, 255, 0.1)
+  --border-input_hover: #D9ECFF
+  --bck-input: linear-gradient(90.36deg, rgba(240, 240, 240, 0.21) -7.9%, rgba(255, 255, 255, 0) 88.51%)
+
+
 
 .form
-  --text-subhead: #64788F
-  --border-input: rgba(15, 80, 132, 0.1)
-  --border-input_hover: #A3DCF7
-  --bck-input: #ECF7FD
+  --text-subhead: #A0A8B1
+  --border-input: #F4F6FA
+  --border-input_hover: #D9ECFF
+  --bck-input: #F4F6FA
+  --border-r-input: var(--border-corner)
 
   fieldset
     padding: 0
@@ -37,22 +40,18 @@ input[type="date"]
     flex-direction: column
     gap: 0
   &--input
+    font-size: clamp(14px, calc(16px + (14 - 16) * ((100vw - 768px) / (1440 - 768))), 16px)
     & > span
       order: -1
-      font-size: var(--heading-8)
-      font-weight: 700
+      font-weight: 500
       transition: var(--transition)
       color: var(--text-primary)
       margin-bottom: 8px
-      font-family: 'LTRemark'
     label + label
       margin-top: 16px
 
-
-
 .form--title
   font-size: var(--heading-4)
-  font-family: 'LTRemark'
   font-weight: 300
   line-height: 1.2
   text-transform: uppercase
@@ -63,7 +62,7 @@ input[type="date"]
 
 .form--policy
   font-size: var(--body-m)
-  color: var(--text-primary)
+  color: var(--text-primary-subhead)
   margin: clamp(24px, calc(24px + (32 - 24) * ((100vw - 1024px) / (1920 - 1024))), 32px) 0
   a:not(.button)
     color: var(--accent)
@@ -76,10 +75,9 @@ input[type="date"]
   gap: 6px
   align-items: center
   padding: 6px
-  border-radius: 100px
+  border-radius: var(--border-radius)
   border: 1px solid #FFFFFF1A
   backdrop-filter: blur(24px)
-  box-shadow: 0 4px 20px 0 #00000066,  0 1px 1px 0 #FFFFFF26 inset
   @media(min-width: 769px)
     width: max-content
   .form--input
@@ -87,7 +85,7 @@ input[type="date"]
     &> span
       display: none
     input
-      border-radius: 100px
+      border-radius: var(--border-radius)
       &::placeholder
         color: #203750
 

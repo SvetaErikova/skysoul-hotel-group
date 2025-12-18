@@ -7,7 +7,6 @@ export const Article =() =>{
   return(
     <Block className={'content_article'}
     title={<Block_Head title={'Заголовок энного уровня'} subtitle={'Программа лояльности'} caption={'Tortor at donec in ornare et tellus. Nec blandit ultrices vitae iaculis vitae in dictum nec. Laoreet dignissim odio eu in. Vel.'}></Block_Head>}>
-      <Block_Sidebar></Block_Sidebar>
       <Is_cascade_full></Is_cascade_full>
     </Block>
   )

@@ -2,41 +2,37 @@
   display: flex
   flex-direction: column
   gap: 16px
-  background: var(--bg-content)
-  border-radius: var(--border-corner)
-  padding: 8px
-  @media(min-width: 769px)
-    padding: 16px
 .accordion
   position: relative
-  box-shadow: 0px 3px 12px 0px var(--shadow-dark)
-  padding: var(--g-s)
-  border-radius: var(--border-corner-s)
-  @media(max-width: 768px)
-    padding: 4px
+  padding: 22px 20px
+  border-radius: var(--border-corner)
+  background: rgba(255, 255, 255, 0.4)
+  transition: background var(--transition)
+
   &.is_open
+    background: var(--bg-content)
     .accordion--content
       pointer-events: auto
       grid-template-rows: 1fr
       opacity: 1
       padding-top: 16px
     span[class^="icon-"]
-      rotate: 180deg
+      color: var(--accent)
+      &:before
+        content: "\e921"
 
   &--button
     transition: var(--transition)
     cursor: pointer
     display: flex
     justify-content: space-between
-    align-items: flex-start
+    align-items: center
     position: relative
     gap: 24px
     .accordion--button_text
-      transition: var(--transition)
-      font-size: var(--heading-5)
+      font-size: var(--title-s)
+      font-weight: 500
       margin-bottom: 0
-      font-family: 'LTRemark'
-      text-transform: uppercase
     span[class^="icon-"]
       position: relative
       display: flex
@@ -61,5 +57,6 @@
       width: 100%
       grid-row: 1 / span 2
       overflow: hidden
+      color: var(--text-primary-subhead)
       & > *:first-child
         margin-top: 0

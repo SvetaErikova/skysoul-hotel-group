@@ -16,22 +16,16 @@ export function buildControls(options = {}) {
   let next = null;
   if (navigation) {
     let arrow_left = document.createElement("span");
-    arrow_left.classList.add("icon-arrow_l");
+    arrow_left.classList.add("icon-arrow-left");
 
     prev = document.createElement("div");
-    prev.classList.add("swiper--prev", "button", "button-arrow");
-    if (darkMode) {
-      prev.classList.add("button-dark");
-    }
+    prev.classList.add("swiper--prev", "button", );
     prev.appendChild(arrow_left);
 
     let arrow_right = document.createElement("span");
-    arrow_right.classList.add("icon-arrow_r");
+    arrow_right.classList.add("icon-arrow-right");
     next = document.createElement("div");
-    next.classList.add("swiper--next", "button", "button-arrow");
-    if (darkMode) {
-      next.classList.add("button-dark");
-    }
+    next.classList.add("swiper--next", "button", );
     next.appendChild(arrow_right);
   }
 

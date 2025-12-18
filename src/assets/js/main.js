@@ -32,7 +32,7 @@ import "../../components/form/form.js";
 // import "../../components/booking/booking.js";
 // content
 // import "../../components/content/services/services.js";
-// import "../../components/content/reviews/review.js";
+import "../../components/content/calculator/calculator.js";
 
 
 

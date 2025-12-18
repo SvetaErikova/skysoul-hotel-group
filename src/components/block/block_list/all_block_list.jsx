@@ -1,9 +1,10 @@
 import {Button} from "../../_ui/button/button.jsx";
 import {
+  All_card_advantages,
   All_card_article, All_card_blog,
-  All_card_default,
+  All_card_default, All_card_directions,
   All_card_job,
-  All_card_media,
+  All_card_media, All_card_partners,
   All_card_personnel,
   All_card_resort,
   All_card_services, All_card_steps,
@@ -45,12 +46,11 @@ export const All_block_list = () => {
         }
       >
         <All_card_default></All_card_default>
-        <Card title={'Карточка ссылка с лейблами'}
-              text={'In the heart of Altai, on the slope of Mount Malaya Sinyukha, there is a unique chalet complex'}
-              image={'../../assets/img/2.jpg'} link={'/'}
-              action={
-                <Button type={'outlined'} color={'primary'} icon={'icon-file'}/>
-              }/>
+        <Card
+          title="Карточка информационная "
+          image={'../../assets/img/1.jpg'}
+          text="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+        />
       </Block_List>
       <br></br>
 
@@ -75,14 +75,11 @@ export const All_block_list = () => {
         }
       >
         <All_card_default></All_card_default>
-
         <Card
-          title={"Карточка попап"}
-          images={[{src: "../../assets/img/1.jpg"}]}
-          popup={"popup_for_cascade"}
-          action={
-            <Button icon={'icon-file'} className={'button-arrow button-dark'} />
-          }
+          title="Карточка информационная "
+          image={'../../assets/img/1.jpg'}
+          text="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+
         />
       </Block_List>
 
@@ -109,10 +106,9 @@ export const All_block_list = () => {
       >
         <All_card_default></All_card_default>
         <Card
-          title={"Карточка попап"}
-          images={[{src: "../../assets/img/1.jpg"}]}
-          popup={"popup_for_cascade"}
-          action={<Button type="filled" color="primary" icon={"icon-eye"}></Button>}
+          title="Карточка информационная "
+          image={'../../assets/img/1.jpg'}
+          text="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
         />
       </Block_List>
 
@@ -343,9 +339,103 @@ export const All_block_list = () => {
         }
       >
         <All_card_blog></All_card_blog>
-
       </Block_List>
       <br></br>
+      {/*Картчки преимуществ  грид*/}
+      <Block_List
+        className="content_advantages"
+        colorMode={'-accent-mode'}
+        title={
+          <Block_Head
+            title={"грид "}
+            caption={"Карточки преимуществ"}
+            headingLevel={2}
+          ></Block_Head>
+        }
+      >
+        <All_card_advantages></All_card_advantages>
+      </Block_List>
+      <br></br>
+      {/*Картчки преимуществ c баннером*/}
+      <Block_List
+        className="content_advantages advantages_with_banner"
+        colorMode={'-accent-mode'}
+        title={
+          <Block_Head
+            title={"Карточки преимуществ с баннером "}
+            caption={"Карточки преимуществ"}
+            headingLevel={2}
+          ></Block_Head>
+        }
+      >
+        <All_card_advantages></All_card_advantages>
+        <Card title={'Оставьте заявку на бесплатную&nbsp;консультацию'} image={'../../assets/img/1.jpg'} action={<Button type={'filled'} color={'primary'} icon={'icon-arrow-right'}>Оставить заявку</Button>}></Card>
+      </Block_List>
+      <br></br>
+      {/*Картчки направлений  грид*/}
+      <Block_List
+        className="content_directions"
+        colorMode={'-accent-mode'}
+        title={
+          <Block_Head
+            title={"грид "}
+            caption={"Карточки Направлений"}
+            headingLevel={2}
+          ></Block_Head>
+        }
+      >
+        <All_card_directions></All_card_directions>
+      </Block_List>
+      <br></br>
+      {/*Картчки направлений  Слайдер */}
+      <Block_List
+        className="content_directions"
+        colorMode={'-accent-mode'}
+        slider={true}
+        title={
+          <Block_Head
+            title={"Слайдер "}
+            caption={"Карточки Направлений"}
+            headingLevel={2}
+          ></Block_Head>
+        }
+      >
+        <All_card_directions></All_card_directions>
+      </Block_List>
+
+      <br></br>
+      {/*Картчки партнеров  грид*/}
+      <Block_List
+        className="content_partners"
+        title={
+          <Block_Head
+            title={"грид "}
+            caption={"Карточки партнеров"}
+            headingLevel={2}
+          ></Block_Head>
+        }
+      >
+        <All_card_partners></All_card_partners>
+      </Block_List>
+      <br></br>
+      {/*Картчки партнеров  Слайдер */}
+      <Block_List
+        className="content_partners"
+        slider={true}
+        title={
+          <Block_Head
+            title={"Слайдер "}
+            caption={"Карточки партнеров"}
+            headingLevel={2}
+          ></Block_Head>
+        }
+      >
+        <All_card_partners></All_card_partners>
+        <Card image={'../../assets/img/logo.svg'}></Card>
+      </Block_List>
+      <br></br>
+
+
       {/*Картчки пошаговые грид*/}
       <Steps></Steps>
       <br></br>

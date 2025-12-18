@@ -3,7 +3,7 @@ export const Accordion = ({ title, text }) => {
 		<div class={"accordion"}>
 			<div class="accordion--button">
 				<p class="accordion--button_text">{title}</p>
-				<span class={"icon-chevron_d"}></span>
+				<span class={"icon-plus"}></span>
 			</div>
 			<div class="accordion--content">
 				<div class="is_cascade">

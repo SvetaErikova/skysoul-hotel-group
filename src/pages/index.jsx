@@ -27,8 +27,8 @@ export default function Home() {
             <Button link={"/career-detail"} >
               Вакансии детальная
             </Button>
-            <Button link={"/blog"} >
-              Блог
+            <Button link={"/article"} >
+              Статья
             </Button>
             <Button link={"/career"} >
               Карьера

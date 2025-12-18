@@ -1,4 +1,20 @@
-.content_article
+.content_article:not(.block_list)
+  .block--wrapper
+    max-width: calc(926px + var(--container) * 2)
+    margin: auto
+    gap: var(--g-m)
+    display: flex
+    flex-direction: column
+  .block--head
+    @media(min-width: 769px)
+      justify-content: center
+      text-align: center
 
+  .is_cascade
+    & > figure,
+    & > video,
+    .gallery
+      @media(min-width: 999px)
+        margin: clamp(32px, calc(32px + (48 - 32) * ((100vw - 375px) / (1440 - 375))), 48px) calc(var(--container) * -1)
 
 
