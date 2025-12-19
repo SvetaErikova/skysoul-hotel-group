@@ -15,8 +15,7 @@ export const Nav = ({ className, ...props }) => {
               key={link.href || index}
               className={clsx('nav--item', 'dropdown')}
             >
-              <a href={link.href}>{link.label}</a>
-
+              <Button type={'link'} color={'secondary'} link={link.href} icon={'icon-burger'}>{link.label} </Button>
               {link.children.map((child, childIndex) => (
                 <div key={child.href || childIndex} className="dropdown--item">
                   <a href={child.href}> {child.label}</a>
@@ -31,7 +30,7 @@ export const Nav = ({ className, ...props }) => {
             key={link.href || index}
             className={clsx('nav--item')}
           >
-            <a href={link.href}>{link.label}</a>
+            <Button type={'link'} color={'secondary'} link={link.href}>{link.label} </Button>
           </div>
         );
       })}
@@ -40,7 +39,7 @@ export const Nav = ({ className, ...props }) => {
 
         <Dropdown
           className={clsx('nav--item', 'nav--item-more','dropdown')} hidden>
-          <button >Ещё</button>
+          <Button type={'link'} color={'secondary'} icon={'icon-burger'}>Ещё</Button>
         </Dropdown>
 
     </nav>

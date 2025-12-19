@@ -18,9 +18,9 @@ export const Block_Head = ({
       <div className="block--head_title">
         {accentTitleBefore || accentTitleAfter ? (
           <HeadingTag className={headingSize}>
-            {accentTitleBefore && <span className="-accent">{accentTitleBefore}</span>}
+            {accentTitleBefore && <span className="-accent"  dangerouslySetInnerHTML={{ __html: accentTitleBefore }}></span>}
             <span>{title}</span>
-            {accentTitleAfter && <span className="-accent">{accentTitleAfter}</span>}
+            {accentTitleAfter && <span className="-accent" dangerouslySetInnerHTML={{ __html: accentTitleAfter }}></span>}
           </HeadingTag>
         ) : (
           <HeadingTag

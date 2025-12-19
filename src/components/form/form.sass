@@ -19,10 +19,10 @@ input[type="date"]
   appearance: none
 
 .-dark-mode .form
-  --text-subhead: #64788F
+  --text-subhead: rgba(255, 255, 255, 0.35)
   --border-input: rgba(255, 255, 255, 0.1)
   --border-input_hover: #D9ECFF
-  --bck-input: linear-gradient(90.36deg, rgba(240, 240, 240, 0.21) -7.9%, rgba(255, 255, 255, 0) 88.51%)
+  --bck-input: linear-gradient(90.84deg, rgba(240, 240, 240, 0.0875) -14.49%, rgba(255, 255, 255, 0.0375) 125.82%)
 
 
 
@@ -69,25 +69,34 @@ input[type="date"]
     text-decoration: underline
   .form--input
     margin-bottom: 0
-
+.-dark-mode
+  --text-primary-subhead: rgba(255, 255, 255, 0.5)
 .form--subscription
   display: flex
   gap: 6px
   align-items: center
-  padding: 6px
-  border-radius: var(--border-radius)
+  //padding: 12px 16px
+  border-radius: var(--border-corner)
   border: 1px solid #FFFFFF1A
   backdrop-filter: blur(24px)
+  background: linear-gradient(90.84deg, rgba(240, 240, 240, 0.0875) -14.49%, rgba(255, 255, 255, 0.0375) 125.82%)
   @media(min-width: 769px)
-    width: max-content
   .form--input
     margin-bottom: 0
+    width: 100%
     &> span
       display: none
     input
-      border-radius: var(--border-radius)
+      background-color: transparent
+      color: #FFF1E8
+      border: none
+      //padding: 0
       &::placeholder
-        color: #203750
+        color: var(--text-subhead)
+  .button-link
+    padding: 0
+
+
 
 .is_sending
   button[type="submit"]

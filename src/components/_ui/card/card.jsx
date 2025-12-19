@@ -76,9 +76,9 @@ export const Card_resort =({image, title, subtitle, text, action, labels, link='
   )
 }
 
-export const Card_personnel = ({title, text}) => {
+export const Card_personnel = ({title, text, image}) => {
   return (
-    <Card title={title} text={text} image={'/assets/img/2.jpg'} popup={'popup_for_cascade'} actionsout={true} action={<Button type={'outlined'} color={'primary'} icon={'icon-eyes-closed-line'} />}></Card>
+    <Card title={title} text={text}  image={image ? image : '/assets/img/2.jpg'}  popup={'popup_for_cascade'} actionsout={true} action={<Button type={'outlined'} color={'primary'} icon={'icon-eyes-closed-line'} />}></Card>
   )
 }
 export const Card_job = ({title, text}) => {

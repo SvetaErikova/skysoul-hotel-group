@@ -6,6 +6,22 @@ import {Nav} from '../nav/nav.jsx';
 export const Header = ({transparent = false}) => {
   return (
       <header class={clsx('header', {'header-transparent': transparent})}>
+        <div class="header--top">
+          <div class="header--top_nav">
+            <a href="">Забронировать отдых</a>
+            <a href="">Проведение мероприятий</a>
+            <a href="">Карьера</a>
+            <a href="">Блог</a>
+            <a href="">Вопросы/ответы</a>
+            <a href="">Шоу-рум</a>
+            <a href="">Контакты</a>
+          </div>
+          <div class="header--top_actions">
+            <a href="">
+              <img src="/assets/img/soc/tg.svg" alt="" />
+            </a>
+          </div>
+        </div>
         <div class="header--main">
           <a href="/" className="header--logo">
             {/* biome-ignore format:start */}
@@ -101,7 +117,6 @@ export const Header = ({transparent = false}) => {
           </div>
         </div>
       </header>
-
   );
 };
 

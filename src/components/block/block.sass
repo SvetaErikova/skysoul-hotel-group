@@ -12,11 +12,12 @@
 
 .-accent-mode,
 .-light-mode
+  margin: var(--g-container-vertical) 0
   position: relative
   &:after
     content: ""
     height: 100%
-    width: calc(100vw - 15px)
+    width: calc(100% - 30px)
     position: absolute
     translate: -50% -50%
     left: 50%
@@ -25,4 +26,4 @@
     border-radius: var(--border-corner)
     z-index: -1
     @media(min-width: 769px)
-      width: calc(100vw - 17px * 2)
+      width: calc(100% - 32px)

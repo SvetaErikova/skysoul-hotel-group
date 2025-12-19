@@ -10,9 +10,10 @@ export const Calculator = () =>{
       title={<Block_Head title={'Калькулятор<br> доходности'} caption={'Рассчитайте, как ваши инвестиции превращаются в стабильный доход. Прозрачная математика, за которой стоит реальная ценность.'}/>}>
       <div className="calculator">
         <div className="calculator_form ">
-          <div class="calculator_form_container_tile">Площадь аппартаментов в управлении, м2</div>
+          <div class="calculator_form_container_title">Площадь аппартаментов в управлении, м2</div>
           <div class="calculator_form_container">
-            <Input type={"number"} name={"number"} placeholder={"0"} required={true} text={"Площадь аппартаментов в управлении, м2"} inputMode="numeric" min="1" max="123"></Input>
+            <Input type={"number"} name={"number"} placeholder={"Введите цифры, без пробелов и запятых. В качестве разделителя используйте точку"} required={true} inputMode="numeric" min="1" max="123"></Input>
+            <span>Введите цифры, без пробелов и запятых. В качестве разделителя используйте точку</span>
             <Button type={'filled'} color={'primary'} className={'js-btn-calc'} icon={'icon-arrow-right'}>Расчитать</Button>
           </div>
         </div>

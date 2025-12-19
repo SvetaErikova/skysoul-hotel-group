@@ -38,6 +38,9 @@
     justify-content: center
     &:only-child
       font-size: 1.5em
+  &:has(span[class^="icon-"]:only-child)
+    aspect-ratio: 1/1
+    padding: 10px
   &[disabled],
   &.is_disabled
     cursor: initial
