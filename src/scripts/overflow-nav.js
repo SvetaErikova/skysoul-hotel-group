@@ -12,7 +12,7 @@ export class OverflowNav {
   constructor(options = {}) {
     // дефолтные настройки
     const defaults = {
-      comfortCount: 1,
+      comfortCount: 0,
       debounce: 0,
       selectors: {
         root: ".header .nav",
@@ -74,9 +74,18 @@ export class OverflowNav {
       window.removeEventListener("resize", this._boundSchedule);
     if (this._onLoad) window.removeEventListener("load", this._onLoad);
 
-    Array.from(this.dropdown.children).forEach((el) => {
-      this._change(el, false);
-      this.root.insertBefore(el, this.more);
+    // Возвращаем элементы из dropdown обратно в навигацию
+    Array.from(this.dropdown.children).forEach((dropdownItem) => {
+      const link = dropdownItem.querySelector('a');
+      if (link) {
+        // Создаем новый nav--item
+        const navItem = document.createElement('div');
+        navItem.className = 'nav--item';
+        navItem.appendChild(link.cloneNode(true));
+        this._change(navItem, false);
+        this.root.insertBefore(navItem, this.more);
+      }
+      dropdownItem.remove();
     });
 
     this.more.hidden = this.dropdown.children.length === 0;
@@ -93,10 +102,41 @@ export class OverflowNav {
     };
   }
   _children() {
-    return Array.from(this.root.children).filter((el) => el !== this.more);
+    return Array.from(this.root.children).filter(
+      (el) => el !== this.more && el.classList.contains('nav--item')
+    );
   }
   _outerWidth(el) {
+    // Для элементов с дропдауном учитываем только видимую часть (ссылку)
+    // игнорируя скрытый dropdown--wrapper
+    if (el.classList.contains('dropdown')) {
+      const link = el.querySelector('a');
+      if (link) {
+        return link.getBoundingClientRect().width;
+      }
+    }
+    // Для обычных nav--item тоже берем ширину ссылки
+    const link = el.querySelector('a');
+    if (link) {
+      return link.getBoundingClientRect().width;
+    }
     return el.getBoundingClientRect().width;
+  }
+  _extractLink(el) {
+    // Извлекаем ссылку из nav--item (Button с type="link" рендерится как <a>)
+    const link = el.querySelector('a');
+    if (!link) return null;
+    
+    // Клонируем ссылку со всеми атрибутами и содержимым
+    const clonedLink = link.cloneNode(true);
+    return clonedLink;
+  }
+  _createDropdownItem(link) {
+    // Создаем новый dropdown--item с ссылкой
+    const item = document.createElement('div');
+    item.className = 'dropdown--item';
+    item.appendChild(link);
+    return item;
   }
   _menuGap() {
     const cs = getComputedStyle(this.root);
@@ -112,10 +152,19 @@ export class OverflowNav {
 
   // перераспределение элементов
   redistribute() {
-    // вернуть всё из дропдауна
-    Array.from(this.dropdown.children).forEach((el) => {
-      this._change(el, false);
-      this.root.insertBefore(el, this.more);
+    // вернуть всё из дропдауна обратно в навигацию
+    Array.from(this.dropdown.children).forEach((dropdownItem) => {
+      const link = dropdownItem.querySelector('a');
+      if (link) {
+        // Создаем новый nav--item из ссылки
+        const navItem = document.createElement('div');
+        navItem.className = 'nav--item';
+        // Клонируем ссылку (Button с type="link" уже является <a>)
+        navItem.appendChild(link.cloneNode(true));
+        this._change(navItem, false);
+        this.root.insertBefore(navItem, this.more);
+      }
+      dropdownItem.remove();
     });
 
     const available = Math.floor(this.root.getBoundingClientRect().width);
@@ -146,10 +195,16 @@ export class OverflowNav {
       } else break;
     }
 
+    // Переносим элементы, которые не влезают, в dropdown
     for (let j = last + 1; j < items.length; j++) {
-      const el = items[j];
-      this._change(el, true);
-      this.dropdown.appendChild(el);
+      const navItem = items[j];
+      const link = this._extractLink(navItem);
+      if (link) {
+        const dropdownItem = this._createDropdownItem(link);
+        this._change(dropdownItem, true);
+        this.dropdown.appendChild(dropdownItem);
+        navItem.remove(); // Удаляем оригинальный nav--item
+      }
     }
 
     // запас
@@ -158,8 +213,13 @@ export class OverflowNav {
       const still = this._children();
       const lastEl = still[still.length - 1];
       if (lastEl && lastEl !== this.more) {
-        this._change(lastEl, true);
-        this.dropdown.prepend(lastEl);
+        const link = this._extractLink(lastEl);
+        if (link) {
+          const dropdownItem = this._createDropdownItem(link);
+          this._change(dropdownItem, true);
+          this.dropdown.prepend(dropdownItem);
+          lastEl.remove(); // Удаляем оригинальный nav--item
+        }
       }
     }
 

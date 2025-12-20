@@ -17,9 +17,9 @@ export default function Home() {
       <GalleryFull
         title={
           <Block_Head
-            title="Слайдер с одной картинкой"
+            title="Галерея"
             subtitle="Галерея"
-            caption="isSlider=true, col=1"
+            caption=""
             headingLevel={2}
           />
         }
@@ -29,65 +29,6 @@ export default function Home() {
         showSelection={false}
       />
 
-      <GalleryFull
-        title={
-          <Block_Head
-            title="Слайдер с двумя картинками"
-            subtitle="Галерея"
-            caption="isSlider=true, col=1"
-            headingLevel={2}
-          />
-        }
-        images={defaultImages}
-        isSlider={true}
-        col={2}
-        showSelection={false}
-      />
-      <GalleryFull
-        title={
-          <Block_Head
-            title="Слайдер с тремя картинками"
-            subtitle="Галерея"
-            caption="isSlider=true, col=1"
-            headingLevel={2}
-          />
-        }
-        images={defaultImages}
-        isSlider={true}
-        col={3}
-        showSelection={false}
-      />
-      <GalleryFull
-        title={
-          <Block_Head
-            title="Грид на одну картинку"
-            subtitle="Галерея"
-            caption="isSlider=false, col=1"
-            headingLevel={2}
-          />
-        }
-        images={defaultImages}
-        isSlider={false}
-        col={2}
-        group="gallery-grid-single"
-        showSelection={false}
-      />
-
-      <GalleryFull
-        title={
-          <Block_Head
-            title="Грид на три картинки"
-            subtitle="Галерея"
-            caption="isSlider=false, col=3"
-            headingLevel={2}
-          />
-        }
-        images={defaultImages}
-        isSlider={false}
-        col={3}
-        group="gallery-grid-triple"
-        showSelection={false}
-      />
     </MainLayout>
   );
 }

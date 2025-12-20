@@ -18,7 +18,8 @@ export const Nav = ({ className, ...props }) => {
               <Button type={'link'} color={'secondary'} link={link.href} icon={'icon-burger'}>{link.label} </Button>
               {link.children.map((child, childIndex) => (
                 <div key={child.href || childIndex} className="dropdown--item">
-                  <a href={child.href}> {child.label}</a>
+                  <></>
+                  <Button type={'link'} color={'primary'} link={child.href}>{child.label} </Button>
                 </div>
               ))}
             </Dropdown>

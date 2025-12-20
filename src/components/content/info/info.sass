@@ -1,0 +1,47 @@
+.content_info
+  overflow: hidden
+  .block--wrapper
+    display: flex
+    flex-direction: column
+    gap: var(--g-xl)
+    @media(min-width: 769px)
+      display: grid
+      grid-template-columns: 1fr 50vw
+  .block--cards
+    position: relative
+    overflow: hidden
+    margin-right: calc(var(--container) * -1)
+    height: max-content
+    &_container
+      max-width: 60vw
+      @media(min-width: 769px)
+        max-width: 32.153vw
+      @media(min-width: 1441px)
+        max-width: 30vw
+  .block--content
+    padding: clamp(0px, 0px + 48 * (100vw - 992px) / 448, 48px) 0
+  .card
+    transition: transform 0.5s ease-in-out, opacity 0.8s ease-in-out
+    aspect-ratio: 463/600
+    &--image
+      border-radius: var(--border-corner)
+      aspect-ratio: initial
+      height: 100%
+      transition: height 0.5s ease-in-out
+    &.swiper-slide-active ~ .card
+      .card--image
+        height: 80%
+        z-index: 2
+  .slider_controls
+    @media(min-width: 769px)
+      left: auto
+      right: var(--container)
+      bottom: 0
+  .swiper-pagination
+    @media(max-width: 768px)
+      margin-top: var(--g-l)
+      justify-content: center
+      &-bullet
+        background-color: #A0A8B1
+
+

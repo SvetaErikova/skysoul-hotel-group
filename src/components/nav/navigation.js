@@ -10,16 +10,13 @@ export const links = [
   },
   {
     label: "Передача в управление",
-    href: "/offers",
+    href: "/mice",
   },
   {
     label: "Курорты",
-    href: "/products",
+    href: "/resort",
   },
-  {
-    label: "Курорты",
-    href: "/products",
-  },
+
   {
     label: "Для бизнеса",
     href: "/products",
@@ -40,5 +37,9 @@ export const links = [
       { label: "Новости", href: "/news" },
       { label: "Контакты", href: "/contacts" },
     ],
+  },
+  {
+    label: "Купить недвижимость",
+    href: "/products",
   },
 ];

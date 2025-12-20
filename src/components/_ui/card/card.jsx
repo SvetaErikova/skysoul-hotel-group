@@ -34,16 +34,17 @@ export const Card = ({link, popup, images = [], title,subtitle, text, action, im
           <img src={image} alt="" loading="lazy"/>
         </div>
       )}
+      {title && (
+        <div class="card--content">
+            <Labels items={labels}/>
+          {renderField(title, 'card--title')}
+          {renderField(subtitle, 'card--subtitle')}
+          {renderField(text, 'card--text')}
+          {action && !actionsout && <div class="card--action">{action}</div>}
+          {children}
+        </div>
+      )}
 
-
-      <div class="card--content">
-        <Labels items={labels}/>
-        {renderField(title, 'card--title')}
-        {renderField(subtitle, 'card--subtitle')}
-        {renderField(text, 'card--text')}
-        {action && !actionsout && <div class="card--action">{action}</div>}
-        {children}
-      </div>
     </>
   );
 

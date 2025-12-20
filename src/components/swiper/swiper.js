@@ -172,233 +172,23 @@ block_list_sliders.forEach((slider) => {
   activateBlocklistSlider(slider);
 });
 
-const initRoomsSliders = () => {
-  const sliders = document.querySelectorAll(".content_room .block--elements");
-
-  const createThumbsSwiper = (block, slider) => {
-    const existing = block.querySelector(".content_room__thumbs");
-    if (existing?.swiper) return existing.swiper;
-
-    const images = Array.from(slider.querySelectorAll(".card--image img"))
-      .map((img) => img?.getAttribute("src"))
-      .filter(Boolean);
-
-    if (!images.length) return null;
-
-    const thumbsContainer = document.createElement("div");
-    thumbsContainer.className = "content_room__thumbs swiper";
-
-    const wrapper = document.createElement("div");
-    wrapper.className = "swiper-wrapper";
-
-    images.forEach((src) => {
-      const slide = document.createElement("div");
-      slide.className = "swiper-slide";
-      slide.style.backgroundImage = `url(${src})`;
-      wrapper.append(slide);
-    });
-
-    thumbsContainer.append(wrapper);
-    block.prepend(thumbsContainer);
-
-    return new Swiper(thumbsContainer, {
-      slidesPerView: 1,
-      allowTouchMove: false,
-      effect: "fade",
-      fadeEffect: {
-        crossFade: true,
-      },
-      // speed: 600,
-    });
-  };
-
-  sliders.forEach((slider) => {
-    if (!slider || !slider.querySelector(".card")) return;
-
-    const block = slider.closest(".content_room");
-    if (!block) return;
-
-    const thumbsSwiper = createThumbsSwiper(block, slider);
-
-    const {controls, prev, next} = buildControls({pagination: false, navigation: true, darkMode: true});
-    slider.append(controls);
-
-    const pagination = document.createElement("div");
-    pagination.className = "swiper-pagination";
-    slider.append(pagination);
-
-    new Swiper(
-      slider,
-      withNavigationAndPagination(
-        {
-          slideClass: "card",
-          spaceBetween: 16,
-          freeMode: false,
-          loop: false,
-          centeredSlides: true,
-          slidesPerView: 1.3,
-          effect: "slide",
-          pagination: true,
-          thumbs: thumbsSwiper
-            ? {
-              swiper: thumbsSwiper,
-            }
-            : undefined,
-          breakpoints: {
-            220: {
-              slidesPerView: 1,
-              centeredSlides: false,
-            },
-            1024: {
-              slidesPerView: 1.3,
-              centeredSlides: true,
-              spaceBetween: 0,
-            },
-          },
-        },
-        {pagination, prev, next}
-      )
-    );
-  });
-};
-
-initRoomsSliders();
-
-// accomodation
-function initAccomodationCardSlider() {
-  let card_room_slider = document.querySelectorAll(".content_accomodation .card .card--image");
-  card_room_slider.forEach((slider) => {
-    let images = slider.querySelectorAll("img");
-
-    if (images.length > 1) {
-      const slider_controls = document.createElement("div");
-      slider_controls.classList.add("slider_controls");
-
-      const swiper_nav_prev = document.createElement("div");
-      swiper_nav_prev.classList.add("swiper--prev");
-      slider_controls.append(swiper_nav_prev);
-
-      const swiper_nav_next = document.createElement("div");
-      swiper_nav_next.classList.add("swiper--next");
-      slider_controls.append(swiper_nav_next);
-
-      const swiper_pagination = document.createElement("div");
-      swiper_pagination.classList.add("swiper-pagination");
-
-      slider.append(swiper_pagination);
-      slider.append(slider_controls);
-
-
-      const card_room_slider = new Swiper(slider, {
-        createElements: true,
-        slidesPerView: 1,
-        grabCursor: true,
-        // simulateTouch: true,
-        freeMode: false,
-        allowTouchMove: true,
-        loop: false,
-        effect: "fade",
-        fadeEffect: {
-          crossFade: true,
-        },
-        navigation: {
-          nextEl: swiper_nav_next,
-          prevEl: swiper_nav_prev,
-        },
-        pagination: {
-          el: swiper_pagination,
-          type: 'custom',
-          renderCustom: function (swiper, current, total) {
-            return `
-							<span>${current}</span>
-							<span>/</span>
-							<span>${total}</span>
-						`;
-          }
-        },
-        mousewheel: {
-          forceToAxis: true,
-        },
-        slideClass: "card__image_slide",
-
-      });
-    }
-  });
-}
-
-// initAccomodationCardSlider();
-
 
 let activateGallerySliders = (gallery) => {
-
-  const colClass = Array.from(gallery.classList).find((cls) => cls.startsWith("col-"));
-  const col = colClass ? parseInt(colClass.replace("col-", ""), 10) || 1 : 1;
-
-  if (gallery.querySelectorAll('.gallery--item').length <= col) {
-    return
-  }
-  const content_gallery = gallery.closest('.content_gallery');
-
-  let slides_per_view_desktop = 1,
-    slides_per_view_desktop_small = 1,
-    slides_per_view_pad = 1,
-    slides_per_view_mob = 1;
-
-  if (content_gallery) {
-    switch (true) {
-      case col === 3:
-        slides_per_view_desktop = 3;
-        slides_per_view_desktop_small = 2;
-        slides_per_view_pad = 2;
-        slides_per_view_mob = 1.2;
-        break;
-      case col === 2:
-        slides_per_view_desktop = 2;
-        slides_per_view_desktop_small = 2;
-        slides_per_view_pad = 1.5;
-        slides_per_view_mob = 1.2;
-        break;
-      default:
-        slides_per_view_desktop = 1.3;
-        slides_per_view_desktop_small = 1.2;
-        slides_per_view_pad = 1;
-        slides_per_view_mob = 1;
-    }
-  }
-  let controlsSet;
-  if (content_gallery) {
-    controlsSet = buildControls({pagination: false, navigation: true, darkMode: true});
-  } else {
-    controlsSet = buildControls({pagination: true, navigation: true, darkMode: true});
-  }
-  gallery.append(controlsSet.controls);
-
-  // if (controlsSet.controls && controlsSet.controls.children.length) {
-  //   gallery.append(controlsSet.controls);
-  // }
-
-  const isCenteredDesktop = col === 1;
-
+  const {controls, pagination, prev, next} = buildControls({pagination: true, navigation: true, darkMode: true});
+  gallery.append(controls);
 
   const swiperOptions = withNavigationAndPagination(
     {
       slideClass: "gallery--item",
-      slidesPerView: slides_per_view_mob,
+      slidesPerView: 1,
       spaceBetween: 8,
       freeMode: false,
       loop: true,
-      centeredSlides: isCenteredDesktop,
       grabCursor: true,
       navigation: true,
       pagination: true,
-      breakpoints: {
-        220: {slidesPerView: slides_per_view_mob, centeredSlides: true},
-        640: {slidesPerView: slides_per_view_pad, spaceBetween: 16},
-        768: {slidesPerView: slides_per_view_desktop_small},
-        1240: {slidesPerView: slides_per_view_desktop},
-      },
     },
-    controlsSet
+    {pagination, prev, next}
   );
   new Swiper(gallery, swiperOptions);
 };
@@ -409,72 +199,64 @@ galleries.forEach((gallery) => {
 })
 
 
-function Services_init_slider(block) {
+const activateInfoSlider = (block) => {
 
-  let service = block.querySelector('.block--elements')
+  let card_image_slider = block.querySelectorAll(".block--cards_container")
 
-  const bgImages = Array.from(block.querySelectorAll('.block--image img'));
+  card_image_slider.forEach(slider => {
 
-  if (!bgImages.length) return;
-  const updateActiveImage = (swiper) => {
-    bgImages.forEach(img => img.classList.remove('is_visible'));
-    const realIndex = swiper.realIndex;
-    const imageIndex = realIndex % bgImages.length;
-    if (bgImages[imageIndex]) {
-      bgImages[imageIndex].classList.add('is_visible');
+    let cards = slider.querySelectorAll('.card')
+
+    if (cards.length > 1) {
+      const {controls, pagination, prev, next} = buildControls({pagination: true, navigation: true});
+
+      const swiperOptions = withNavigationAndPagination(
+        {
+          slideClass: 'card',
+          slidesPerView: 1,
+          spaceBetween: 20,
+          grabCursor: true,
+          simulateTouch: true,
+          freeMode: false,
+          allowTouchMove: true,
+          // loop: true,
+          speed: 500,
+          mousewheel: {
+            forceToAxis: true,
+          },
+          effect: window.innerWidth >= 768 ? "creative" : "slide",
+          creativeEffect: window.innerWidth >= 768
+            ? {
+              prev: {
+                translate: ["-110%", 0, 0],
+                opacity: 0
+              },
+              next: {
+                translate: ["105%", 0, 0],
+                // scale: 0.7
+              },
+            } : false,
+          pagination: window.innerWidth < 768 ? true : false,
+        },
+        {pagination, prev, next}
+      );
+
+      const card_slider = new Swiper(slider, swiperOptions);
+
+      if(window.matchMedia('(min-width:769px)').matches) {
+        block.querySelector('.block--cards').appendChild(controls);
+      }
+      else {
+        block.querySelector('.block--cards').appendChild(pagination);
+      }
     }
-  };
+  });
+};
 
-  const updateSlidesOpacity = (swiper) => {
-    const activeIndex = swiper.activeIndex;
-    swiper.slides.forEach((slide, index) => {
-      const distance = Math.abs(index - activeIndex);
-      if (distance === 0) {
-        slide.style.opacity = '1';
-      } else if (distance === 1) {
-        slide.style.opacity = '0.6';
-      } else {
-        slide.style.opacity = '0.2';
-      }
-    });
-  };
+const info_block = document.querySelectorAll(".content_info");
 
-  const {controls, prev, next} = buildControls({pagination: false, navigation: true, darkMode: true});
-  service.append(controls);
+info_block.forEach((block) => {
 
-  const swiperOptions = withNavigationAndPagination(
-    {
-      slideClass: "card",
-      freeMode: false,
-      slidesPerView: "auto",
-      centeredSlides: true,
-      allowTouchMove: false,
-      watchSlidesProgress: true,
-      loop: false,
-      spaceBetween: 64,
-      navigation: true,
-      pagination: false,
+  activateInfoSlider(block);
 
-      on: {
-        init: function (swiper) {
-          updateActiveImage(swiper);
-          updateSlidesOpacity(swiper);
-        },
-        slideChange: function (swiper) {
-          updateActiveImage(swiper);
-          updateSlidesOpacity(swiper);
-        },
-        setTransition: function (swiper, duration) {
-          updateSlidesOpacity(swiper);
-        }
-      }
-    },
-    {controls, pagination: null, prev, next}
-  );
-  new Swiper(service, swiperOptions);
-}
-
-const services = document.querySelectorAll(".content_services-slider");
-services.forEach((block) => {
-  Services_init_slider(block);
-})
+});
