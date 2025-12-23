@@ -10,10 +10,7 @@ const PopupsLayout = ({ data, className, classNameContent, children, btnClose = 
 		<div className={`popup ${className || ''}`} data-popup={data}>
 			<div className={`popup--content ${classNameContent || ''}`}>
         {btnClose && (
-          <div className="popup--close button button-arrow button-dark" data-closepopup="">
-            <span className={'icon-close'}></span>
-          </div>
-
+          <Button className={'popup--close'}  icon={'icon-close'} data-closepopup></Button>
         )}
 				{children}
 			</div>
@@ -83,22 +80,7 @@ export const PopupFilter = () => {
   );
 };
 
-export const PopupRoomAdvantages = () => {
-  return (
-    <PopupsLayout data={"popup_for_room_advantages"}>
-      <div class="popup__content">
 
-      </div>
-    </PopupsLayout>
-  );
-};
-export const PopupReview = () => {
-  return <PopupsLayout data={'popup_for_review'} className={'popup-review'} btnClose={true}>
-    <div class="popup_content-wrapper">
-
-    </div>
-  </PopupsLayout>;
-};
 export const PopupCookies = () => {
   return <PopupsLayout data={'popup_for_cookies'} btnClose={false}>
     <strong>Сайт использует Cookies</strong>
@@ -119,10 +101,7 @@ export const Popups = () => {
       <PopupForm></PopupForm>
       <PopupCascade></PopupCascade>
       <PopupCookies></PopupCookies>
-      <PopupReview></PopupReview>
-      <PopupContacts></PopupContacts>
       <PopupFilter></PopupFilter>
-      <PopupRoomAdvantages></PopupRoomAdvantages>
     </>
   );
 };

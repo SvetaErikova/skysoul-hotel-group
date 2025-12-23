@@ -66,18 +66,16 @@
     &:hover
       .icon-eyes-closed-line:before
         content: '\e91b'
-
+  //&:not([data-openpopup]),
+  //&:not([href]),
+  //&:not([data-popup_cascade])
+  //
+  //  .card--image
+  //    mask-image: none
 [href],
 [data-popup_cascade],
 [data-openpopup]
   cursor: pointer
-
-//[data-popup_cascade],
-//[data-openpopup]
-//  .card--action
-//    opacity: 1
-//    .icon:after
-//      content: "\e949"
 
 .content_card,
 .content_personnel,
@@ -85,26 +83,32 @@
 .content_blog,
 .content_services,
 .content_directions
-  .card--image
-    mask-image: var(--_nb-mask-image)
-    mask-size: var(--_nb-mask-size)
-    mask-position: var(--_nb-mask-position)
-    mask-repeat: no-repeat
-    --_nb-curve-pos: var(--_nb-curve-pos-tr)
-    --_nb-mask-position: var(--_nb-mask-position-tr)
-    border-radius: var(--nb-r)
+  [href],
+  [data-popup_cascade],
+  [data-openpopup]
+    .card--image
+      mask-image: var(--_nb-mask-image)
+      mask-size: var(--_nb-mask-size)
+      mask-position: var(--_nb-mask-position)
+      mask-repeat: no-repeat
+      --_nb-curve-pos: var(--_nb-curve-pos-tr)
+      --_nb-mask-position: var(--_nb-mask-position-tr)
+      border-radius: var(--nb-r)
 
 .content_vacancies,
 .content_article,
 .content_steps
-  .card--content
-    mask-image: var(--_nb-mask-image)
-    mask-size: var(--_nb-mask-size)
-    mask-position: var(--_nb-mask-position)
-    mask-repeat: no-repeat
-    --_nb-curve-pos: var(--_nb-curve-pos-tr)
-    --_nb-mask-position: var(--_nb-mask-position-tr)
-    border-radius: var(--nb-r)
+  [href],
+  [data-popup_cascade],
+  [data-openpopup]
+    .card--content
+      mask-image: var(--_nb-mask-image)
+      mask-size: var(--_nb-mask-size)
+      mask-position: var(--_nb-mask-position)
+      mask-repeat: no-repeat
+      --_nb-curve-pos: var(--_nb-curve-pos-tr)
+      --_nb-mask-position: var(--_nb-mask-position-tr)
+      border-radius: var(--nb-r)
 
 .content_card,
 .content_personnel,
@@ -165,7 +169,6 @@
       font-weight: 600
     &--text
       font-size: var(--text-m)
-
 
 .content_resorts
   .card
@@ -371,7 +374,6 @@
       color: #FFFFFF
       max-width: 50px
 
-
   &.advantages_with_banner
     .card:last-child
       background-color: #FFFFFF
@@ -433,6 +435,7 @@
 
 .content_steps
   .card
+
     position: relative
     @for $i from 1 through 6
       &:nth-child(#{$i})
@@ -445,6 +448,7 @@
           font-size: var(--subtitle-xxs)
           color: var(--accent)
     &--content
+      height: 100%
       background-color: var(--bg-content)
       padding: 90px 20px 20px
     &--title

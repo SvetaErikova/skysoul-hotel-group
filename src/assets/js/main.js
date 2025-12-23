@@ -33,6 +33,7 @@ import "../../components/form/form.js";
 // content
 // import "../../components/content/services/services.js";
 import "../../components/content/calculator/calculator.js";
+import "../../components/content/advantages/advantages.js";
 
 
 

@@ -15,52 +15,6 @@ PopupManager.register(
     },
   },
 );
-PopupManager.register('popup_for_review',
-  {
-    is_block_scroll: true,
-    close_controls: true,
-  },
-  {
-    on_open: (popup_element, params) => {
-      let block_to_clone = params.block;
-      let block_content = block_to_clone.cloneNode(true);
-      let gallery = block_to_clone.querySelectorAll('[data-fancybox]')
-      gallery.forEach(it => {
-        it.dataset.fancybox = "gallery_popup"
-      })
-      popup_element.querySelector('.popup_content-wrapper').append(block_content);
-
-    },
-    on_close: (popup_element, params) => {
-      setTimeout(() => {
-        popup_element.querySelector('.popup_content-wrapper').innerHTML = '';
-      }, 100)
-    }
-
-  }
-);
-
-PopupManager.register('popup_for_room_advantages',
-  {
-    is_block_scroll: true,
-    close_controls: true,
-  },
-  {
-    on_open: (popup_element, params) => {
-
-      let block_to_clone = params.block;
-      let block_content = block_to_clone.cloneNode(true);
-      popup_element.querySelector('.popup__content').append(block_content);
-
-    },
-    on_close: (popup_element, params) => {
-      setTimeout(() => {
-        popup_element.querySelector('.accommodation--info').remove()
-      }, 100)
-    }
-
-  }
-);
 
 PopupManager.register(
   "popup_for_cookies",
@@ -74,19 +28,6 @@ PopupManager.register(
     },
   },
 );
-
-PopupManager.register(
-  "popup_for_contacts",
-  {
-    additional_close_controls: false,
-    is_block_scroll: false,
-  },
-  {
-    on_close: (popup_element, params) => {
-    },
-  },
-);
-
 PopupManager.register("popup_for_menu",   {
     additional_close_controls: false,
     is_block_scroll: false,
@@ -175,16 +116,6 @@ function activatePopupButtons(block) {
         let block_to_clone = b.parentElement.querySelector(".filter");
         if (block_to_clone) {
           PopupManager.open(b.dataset.openpopup, {block: block_to_clone});
-        }
-      } else if (b.dataset.openpopup === "popup_for_room_advantages") {
-        let block_to_clone = b.previousElementSibling;
-        if (block_to_clone) {
-          PopupManager.open(b.dataset.openpopup, {block: block_to_clone})
-        }
-      } else if (b.dataset.openpopup === "popup_for_review") {
-        let block_to_clone = b.closest('.review');
-        if (block_to_clone) {
-          PopupManager.open(b.dataset.openpopup, {block: block_to_clone})
         }
       } else {
         PopupManager.open(b.dataset.openpopup);

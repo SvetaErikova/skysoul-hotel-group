@@ -4,9 +4,9 @@
   gap: var(--g-heading)
   align-content: center
   &_subtitle
-    //grid-area: subtitle
-    font-size: var(--subheading)
-    color: var(--accent-light)
+    font-size: 20px
+    font-weight: 500
+    line-height: 1.6
 
   &_title
     //grid-area: title
@@ -17,7 +17,7 @@
       color: var(--accent)
   &_caption
     //grid-area: caption
-    font-size: 20px
+    font-size: 18px
     font-weight: 500
     line-height: 1.6
 
@@ -33,16 +33,25 @@
   //    display: none
 
 .block_list,
-.content_calculator
+.content_calculator,
+.content_table,
+.content_advantages.advantages
   .block--head
     @media(min-width: 1024px)
       display: grid
       grid-template-columns: 1.3fr 1fr
       grid-template-rows: auto 1fr auto
       gap: 8px 10vw
-      &_subtitle,
+
       &_title
         grid-column: 1
+      &_subtitle
+        grid-row: span 2
+        display: flex
+        align-items: flex-end
+        &:has(+ *)
+          grid-row: initial
+      &_subtitle,
       &_caption,
       .block--actions
         grid-column: 2
@@ -51,6 +60,4 @@
         align-content: flex-end
         margin-top: auto
       &_title
-        grid-row:  2 / span 2
-      &_subtitle
-        grid-column: span 2
+        grid-row: 1 / span 3

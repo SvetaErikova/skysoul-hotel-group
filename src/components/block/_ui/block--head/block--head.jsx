@@ -12,9 +12,7 @@ export const Block_Head = ({
 
   return (
     <div class="block--head">
-        <div className={'block--head_subtitle '}>
-          <p>{subtitle}</p>
-        </div>
+
       <div className="block--head_title">
         {accentTitleBefore || accentTitleAfter ? (
           <HeadingTag className={headingSize}>
@@ -29,7 +27,9 @@ export const Block_Head = ({
           />
         )}
       </div>
-
+      <div className={'block--head_subtitle '}>
+        <p>{subtitle}</p>
+      </div>
       {caption && (
         <div class="block--head_caption">
           {typeof caption === 'string' ? <p>{caption}</p> : caption}

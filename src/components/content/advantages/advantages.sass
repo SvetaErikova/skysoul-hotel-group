@@ -1,2 +1,46 @@
-.content_advantages
+.content_advantages.advantages
+  --card-shift: 0%
+  .block--elements
+    position: relative
+    gap: 50vh
+    display: flex
+    flex-direction: column
 
+  .item
+    position: sticky
+    width: 100%
+    transform: translateY(var(--card-shift, 0))
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    background-color: var(--bg-content)
+    border-radius: var(--border-corner)
+    overflow: hidden
+    top: 30vh
+    //top: 50vh
+    //transform: translateY(-50%)
+    @media(min-width: 1024px)
+      height: 272px
+    @for $i from 1 through 9
+      &:nth-child(#{$i})
+        &::after
+          content: "#{if($i < 10, '0', '')}#{$i}"
+          position: absolute
+          top: 20px
+          left: 20px
+          z-index: 2
+          font-size: var(--subtitle-xxs)
+          color: var(--accent)
+    &--content
+      display: flex
+      flex-direction: column
+      gap: 16px
+      height: inherit
+      padding: clamp(20px, calc(20px + (30 - 20) * ((100vw - 768px) / (1440 - 768))), 30px)
+
+    &--title
+      font-weight: 500
+      font-size: clamp(20px, calc(20px + (24 - 20) * ((100vw - 768px) / (1440 - 768))), 24px)
+    &--text
+      margin-top: auto
+      color: rgba(18, 26, 34, 0.85)
+      font-size: clamp(16px, calc(18px + (16 - 18) * ((100vw - 768px) / (1440 - 768))), 18px)

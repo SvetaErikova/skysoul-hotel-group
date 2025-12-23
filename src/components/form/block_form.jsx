@@ -1,9 +1,9 @@
 import { Block } from '../block/block.jsx';
 import { Block_Head } from '../block/_ui/block--head/block--head.jsx';
-import { Form } from '../form/form-comp.jsx';
-import { Form_short } from '../form/form_short.jsx';
-import { Input } from '../form/inputs/input/input_comp.jsx';
-import { Form_policy } from '../form/form_policy.jsx';
+import { Form } from './form-comp.jsx';
+import { Form_short } from './form_short.jsx';
+import { Input } from './inputs/input/input_comp.jsx';
+import { Form_policy } from './form_policy.jsx';
 import { Button } from '../_ui/button/button.jsx';
 
 export const Block_form = () =>{

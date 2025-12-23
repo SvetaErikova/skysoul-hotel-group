@@ -79,6 +79,8 @@
 .block_banner-hero
   max-height: 100svh
   margin-top: calc(var(--headerHeight)  * -1 - 4px)
+  .block--head
+    margin-top: 90px
 
 .block_banner:not(.block_banner-no_media)
   color: #FFFFFF
@@ -100,76 +102,3 @@
     .slider_controls
       @media(max-width: 768px)
         display: none
-
-.block_banner.block_banner-no_media
-  color: var(--text-primary)
-  .banner
-    background-color: var(--bg-default)
-    &:after
-      content: ''
-      position: absolute
-      inset: 0
-      mask-image: url('../img/pattern.svg'),linear-gradient(270deg, transparent 0%,rgba(0, 0, 0, 0.93) 38.16%, #000000 45.3%, #000000 54.61%,rgba(0, 0, 0, 0.93) 61.87%, transparent 100%)
-      background: rgba(255, 255, 255, 0.5)
-      @media(min-width: 769px)
-        mask-image: url('../img/pattern.svg'),linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 0) 90%)
-
-    //z-index: -1
-    &:before
-      content: ''
-      position: absolute
-      inset: 0
-      border-radius: var(--border-corner)
-      box-shadow: 0px 2px 16px 3px rgba(15, 80, 132, 0.15) inset, 0px 2px 3px 0px rgba(15, 80, 132, 0.15) inset
-  .block--content:after
-    content: none
-  .block--head
-    text-align: center
-    align-items: center
-    margin: 0
-    width: 100%
-    position: relative
-
-  &.-light-mode
-    .banner
-      background: #FFFFFF
-      &:after
-        background: #F5FBFF
-      &:before
-        content: none
-  &.-dark-mode
-    //--text-primary: #FFFFFF
-    //--text-primary-subhead: #FFFFFF
-    .banner
-      background: var(--bg-color)
-      &:before
-        content: none
-      &:after
-        background: rgba(255, 255, 255, 0.05)
-
-.block_banner-cascade
-  height: initial
-  min-height: initial
-  .banner
-    height: initial
-    padding: var(--g-xl) var(--g-16)
-    gap: 16px
-    align-items: initial
-    &:after
-      position: absolute
-      inset: 0
-      background: linear-gradient(0deg, var(--alpha-grey-050, rgba(72, 72, 72, 0.5)), var(--alpha-grey-050, rgba(72, 72, 72, 0.5))), linear-gradient(270deg, rgba(0, 0, 0, 0) 40.28%, rgba(0, 0, 0, 0.342105) 50.41%, rgba(0, 0, 0, 0.5) 59.74%)
-      background-blend-mode: multiply
-
-    @media(min-width: 769px)
-      padding: var(--g-xl)
-    & > *:not(.block--content)
-      max-width: 720px
-  .block--head
-    text-align: initial
-    align-items: flex-start
-    margin: initial
-  .labels
-    margin-bottom: 16px
-  .is_cascade
-    z-index: 2

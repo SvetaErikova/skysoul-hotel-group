@@ -12,6 +12,8 @@
     overflow: hidden
     margin-right: calc(var(--container) * -1)
     height: max-content
+    display: flex
+    flex-direction: column
     &_container
       max-width: 60vw
       @media(min-width: 769px)
@@ -44,4 +46,20 @@
       &-bullet
         background-color: #A0A8B1
 
-
+  &.-reversed
+    .block--wrapper
+      @media(min-width: 769px)
+        grid-template-columns: 50vw 1fr
+    .block--cards
+      @media(min-width: 769px)
+        margin-right: 0
+        margin-left: calc(var(--container) * -1)
+        order: -1
+        align-items: flex-end
+    .block--content
+      @media(min-width: 769px)
+        order: 1
+    .slider_controls
+      @media(min-width: 769px)
+        left: var(--container)
+        right: auto

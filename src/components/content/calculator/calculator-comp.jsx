@@ -6,7 +6,7 @@ import { Button } from '../../_ui/button/button.jsx';
 export const Calculator = () =>{
   return (
     <Block
-      className={'content_calculator'}
+      className={'block block_html-code content_calculator -dark-mode'}
       title={<Block_Head title={'Калькулятор<br> доходности'} caption={'Рассчитайте, как ваши инвестиции превращаются в стабильный доход. Прозрачная математика, за которой стоит реальная ценность.'}/>}>
       <div className="calculator">
         <div className="calculator_form ">

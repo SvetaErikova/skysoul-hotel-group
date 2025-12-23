@@ -21,10 +21,11 @@
     justify-content: center
     grid-column: 2
     gap: 8px
-    max-width: 296px
+    max-width: 148px
     color: var(--accent)
+    aspect-ratio: 136/40
     @media(min-width: 769px)
-      aspect-ratio: 136/40
+
       max-width: 136px
     @media(min-width: 1920px)
       max-width: 218px
@@ -61,7 +62,7 @@
   gap: 16px
   transition: var(--transition)
   pointer-events: auto
-  margin: 8px var(--container) 0
+  margin: 8px calc(var(--container ) + 4px) 0
   @media(min-width: 769px)
     //display: grid
     //grid-template-columns: auto 1fr auto

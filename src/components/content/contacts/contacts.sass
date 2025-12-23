@@ -2,51 +2,101 @@
 
   .block--wrapper
     position: relative
-    height: 800px
+
     padding: 0
     margin: var(--g-container-vertical) var(--container)
     display: flex
-    align-items: flex-start
+    flex-direction: column
+    border-radius: var(--border-corner)
+    overflow: hidden
+    gap: 20px
+    @media(min-width: 992px)
+      height: auto
+  .block--map
+    height: 900px
     border-radius: var(--border-corner)
     overflow: hidden
     @media(min-width: 992px)
-      height: 100vh
-      max-height: calc(100vh - var(--headerHeight) - 70px)
-      align-items: flex-end
-
-.block--contacts
-  background-color: var(--bg-color)
-  padding: var(--g-m)
-  display: flex
-  flex-direction: column
-  gap: var(--g-xxs)
-  width: 100%
-  position: relative
-  z-index: 2
-  margin: var(--g-xxs)
-  border-radius: var(--border-corner)
-  @media(min-width: 992px)
-    border-radius: var(--border-corner) var(--border-corner) 0 0
-    margin: 0 0 0 var(--g-m)
-    max-width: 550px
-  &_title
-    font-family: 'LTRemark'
-    font-size: var(--heading-3)
-  &_info
+      aspect-ratio: 1300/600
+      height: auto
+  .block--contacts
+    position: absolute
+    background-color: var(--bg-content)
+    padding: var(--g-m)
     display: flex
     flex-direction: column
     gap: var(--g-xxs)
-    div
-      span
-        color: #4C647E
-        font-size: var(--subtitle-s)
-        line-height: 1.5
-      p
-        font-size: var(--caption-xl)
+    z-index: 2
+    left: 0
+    top: 0
+    right: 0
+    margin: 13px
+    border-radius: var(--border-corner)
+    @media(min-width: 992px)
+      left: clamp(16px, calc(16px + (44 - 16) * ((100vw - 768px) / (1440 - 768))), 44px)
+      max-width: 460px
+      translate:  0 -50%
+      top: 50%
+      right: auto
+      margin: 0
+
+    &_title
+      font-size: 20px
+      font-weight: 600
+    &_info
+      display: flex
+      flex-direction: column
+      gap: var(--g-xxs)
       div
         display: flex
-        gap: 6px
-        .button span[class*=icon-]
-          font-size: 2em
-    .block--actions
-      margin-top: 0
+        flex-direction: column
+        gap: 8px
+        span
+          opacity: 0.4
+          text-transform: uppercase
+          font-size: var( --subtitle-xxs)
+          line-height: 1.5
+        p
+          font-size: var(--caption-xl)
+        div
+          display: flex
+          gap: 6px
+          .button span[class*=icon-]
+            font-size: 2em
+        a:has(img)
+          aspect-ratio: 1/1
+          width: 24px
+          filter: grayscale(100%)
+          &:hover
+            filter: grayscale(0)
+  .block--contacts_note
+    display: flex
+    flex-direction: column
+    padding: 32px var(--container)
+    border-radius: var(--border-corner)
+    background-color: var(--bg-content)
+    width: 100%
+    &_title
+      font-size: 20px
+      font-weight: 500
+    &_list
+      display: flex
+      flex-direction: column
+      gap: 32px
+      flex-wrap: wrap
+      justify-content: space-between
+      margin-top: 32px
+      @media(min-width: 769px)
+        flex-direction: row
+      p
+        color: rgba(18, 26, 34, 0.4)
+        text-transform: uppercase
+        font-weight: 600
+        font-size: var(--fs-labels-card)
+      .item
+        display: flex
+        flex-direction: column
+        gap: 8px
+      .button
+        padding: 0
+        font-size: 18px

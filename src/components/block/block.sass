@@ -4,26 +4,22 @@
 .-no-padding .block--wrapper
   padding: 0 var(--container)
 
-.-light-mode:after
-  border-radius: var(--border-corner)
-
-.-accent-mode:after
-  background: linear-gradient(93.47deg, #DDECFA 0%, #BFDEFA 113.14%)
-
-.-accent-mode,
 .-light-mode
-  margin: var(--g-container-vertical) 0
+  background: #FFFFFF
+
+.-accent-mode
+  background: linear-gradient(93.47deg, #DDECFA 0%, #BFDEFA 113.14%)
+.-dark-mode
+  color: #FFFFFF
+  background: #121A22
+.-accent-mode,
+.-light-mode,
+.-dark-mode
+  margin: var(--g-container-vertical) 16px
   position: relative
-  &:after
-    content: ""
-    height: 100%
-    width: calc(100% - 30px)
-    position: absolute
-    translate: -50% -50%
-    left: 50%
-    top: 50%
-    background-color: #fff
-    border-radius: var(--border-corner)
-    z-index: -1
+  border-radius: var(--border-corner)
+  .block--wrapper
+    padding: var(--g-container-vertical) var(--container)
     @media(min-width: 769px)
-      width: calc(100% - 32px)
+      padding: var(--g-container-vertical) calc(var(--container) - 16px)
+

@@ -174,6 +174,7 @@ block_list_sliders.forEach((slider) => {
 
 
 let activateGallerySliders = (gallery) => {
+  if(gallery.querySelectorAll('img').length <=1) return
   const {controls, pagination, prev, next} = buildControls({pagination: true, navigation: true, darkMode: true});
   gallery.append(controls);
 
@@ -200,16 +201,12 @@ galleries.forEach((gallery) => {
 
 
 const activateInfoSlider = (block) => {
-
   let card_image_slider = block.querySelectorAll(".block--cards_container")
-
+  const isReversed = block.classList.contains('-reversed');
   card_image_slider.forEach(slider => {
-
     let cards = slider.querySelectorAll('.card')
-
     if (cards.length > 1) {
       const {controls, pagination, prev, next} = buildControls({pagination: true, navigation: true});
-
       const swiperOptions = withNavigationAndPagination(
         {
           slideClass: 'card',
@@ -227,22 +224,24 @@ const activateInfoSlider = (block) => {
           effect: window.innerWidth >= 768 ? "creative" : "slide",
           creativeEffect: window.innerWidth >= 768
             ? {
-              prev: {
+              prev: isReversed ? {
+                translate: ["105%", 0, 0],
+                opacity: 0
+              } : {
                 translate: ["-110%", 0, 0],
                 opacity: 0
               },
-              next: {
+              next: isReversed ? {
+                translate: ["-110%", 0, 0],
+              } : {
                 translate: ["105%", 0, 0],
-                // scale: 0.7
               },
             } : false,
           pagination: window.innerWidth < 768 ? true : false,
         },
         {pagination, prev, next}
       );
-
       const card_slider = new Swiper(slider, swiperOptions);
-
       if(window.matchMedia('(min-width:769px)').matches) {
         block.querySelector('.block--cards').appendChild(controls);
       }
