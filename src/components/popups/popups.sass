@@ -120,3 +120,48 @@
     display: flex
     flex-direction: column
     gap: 12px
+
+.popup_personnel
+  --p-content-x: clamp(20px, calc(20px + (30 - 20) * ((100vw - 768px) / (1440 - 768))), 30px)
+  --p-content-y: clamp(20px, calc(20px + (30 - 20) * ((100vw - 768px) / (1440 - 768))), 30px)
+  .popup--content
+    max-width: 800px
+  .personnel
+    display: flex
+    flex-direction: column
+    gap: var(--g-m)
+    @media(min-width: 1140px)
+      display: grid
+      grid-template-columns: 1.3fr 2fr
+    &--main
+      display: flex
+      flex-direction: column
+      gap: 6px
+    &--name
+      font-weight: 500
+      font-size: 16px
+    &--position
+      color: rgba(18, 26, 34, 0.6)
+    &--image
+      display: flex
+      justify-content: center
+      margin-bottom: 8px
+      img
+        border-radius: var(--border-corner)
+        aspect-ratio: 260/360
+        @media(max-width: 768px)
+          max-width:  300px
+    &--info
+      display: flex
+      flex-direction: column
+      gap: var(--g-s)
+
+      &_contacts
+        background: #F2F2F2
+        border-radius: var(--border-corner)
+        display: flex
+        justify-content: space-between
+        padding: 16px 24px
+      &_content
+        --m-text-top: 16px
+        --m-bottom: 8px

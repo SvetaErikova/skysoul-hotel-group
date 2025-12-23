@@ -359,7 +359,7 @@ export const All_block_list = () => {
       {/*Картчки преимуществ c баннером*/}
       <Block_List
         className="content_advantages advantages_with_banner"
-        colorMode={'-accent-mode'}
+        colorMode={'-light-mode'}
         title={
           <Block_Head
             title={"Карточки преимуществ с баннером "}

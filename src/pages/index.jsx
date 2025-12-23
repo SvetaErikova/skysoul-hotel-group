@@ -87,6 +87,12 @@ export default function Home() {
             <Button popup={"popup_for_cascade"} >
               Попап каскад
             </Button>
+            <Button data-popup-personnel='1'>
+              Попап персонал 1
+            </Button>
+            <Button data-popup-personnel='2'>
+              Попап персонал 2
+            </Button>
 					</div>
 				</div>
 			</section>

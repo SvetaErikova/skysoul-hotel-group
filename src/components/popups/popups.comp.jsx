@@ -25,34 +25,6 @@ export const PopupMenu = () => {
 		</PopupsLayout>
 	);
 };
-export const PopupContacts = () => {
-  return (
-    <PopupsLayout data={"popup_for_contacts"} className={'popup-contacts'} >
-      <div className="dropdown--item">
-        <span>Телефон</span>
-        <Button type="link" color="secondary" size={'md'}>+7 999 999 99 99</Button>
-      </div>
-      <div className="dropdown--item">
-        <span>E-mail</span>
-        <Button type="link" color="secondary" size={'md'}>info@skysoulresort.com</Button>
-      </div>
-      <div className="dropdown--item">
-        <span>Адрес</span>
-        <p>Республика Крым, г. Феодосия,<br/>пгт. Коктебель, ул. Арматлукская, 2</p>
-        <Button type="link" color="secondary" size={'md'}>Проложить маршрут →</Button>
-      </div>
-      <div className="dropdown--item">
-        <span>Социальные сети</span>
-        <div>
-          <Button link='/' type="link" color="secondary" size={'md'} icon={'icon-telegram'}></Button>
-          <Button link='/' type="link" color="secondary" size={'md'} icon={'icon-youtube'}></Button>
-          <Button link='/' type="link" color="secondary" size={'md'} icon={'icon-vk'}></Button>
-          <Button link='/' type="link" color="secondary" size={'md'} icon={'icon-ok'}></Button>
-        </div>
-      </div>
-    </PopupsLayout>
-  );
-};
 
 export const PopupCascade = () => {
   return (
@@ -80,6 +52,28 @@ export const PopupFilter = () => {
   );
 };
 
+export const PopupPersonnel = () =>{
+  return (
+    <PopupsLayout className={'popup_personnel'} data={"popup_for_personnel"}>
+      <div className="personnel">
+        <div className="personnel--main">
+          <div className="personnel--image">
+            <img src={'/'} alt={'/'} />
+          </div>
+          <p className="personnel--name"></p>
+          <p className="personnel--position"></p>
+        </div>
+        <div className="personnel--info">
+          <div className="personnel--info_contacts">
+            <Button className={'personnel--email'} type={'link'} color={'primary'} href={''}> </Button>
+            <Button className={'personnel--telegram'} type={'link'} color={'primary'} href={''} icon={''}></Button>
+          </div>
+          <div className="personnel--info_content is_cascade"></div>
+        </div>
+      </div>
+    </PopupsLayout>
+  )
+}
 
 export const PopupCookies = () => {
   return <PopupsLayout data={'popup_for_cookies'} btnClose={false}>
@@ -102,6 +96,7 @@ export const Popups = () => {
       <PopupCascade></PopupCascade>
       <PopupCookies></PopupCookies>
       <PopupFilter></PopupFilter>
+      <PopupPersonnel></PopupPersonnel>
     </>
   );
 };

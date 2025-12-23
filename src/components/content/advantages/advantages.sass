@@ -10,33 +10,41 @@
     position: sticky
     width: 100%
     transform: translateY(var(--card-shift, 0))
-    display: grid
-    grid-template-columns: repeat(2, 1fr)
+    display: flex
+    flex-direction: column
     background-color: var(--bg-content)
     border-radius: var(--border-corner)
     overflow: hidden
     top: 30vh
-    //top: 50vh
-    //transform: translateY(-50%)
-    @media(min-width: 1024px)
+    height: 480px
+    @media(min-width: 769px)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
       height: 272px
+      @media(min-width: 1441px)
+        height: 320px
     @for $i from 1 through 9
       &:nth-child(#{$i})
-        &::after
+        .item--content::after
           content: "#{if($i < 10, '0', '')}#{$i}"
-          position: absolute
-          top: 20px
-          left: 20px
           z-index: 2
-          font-size: var(--subtitle-xxs)
+          font-size: 14px
           color: var(--accent)
+          position: absolute
+          left: 20px
+          top:  20px
+          line-height: 1.5
+          @media(min-width: 769px)
+            left: 30px
+            top:  30px
     &--content
       display: flex
       flex-direction: column
       gap: 16px
       height: inherit
-      padding: clamp(20px, calc(20px + (30 - 20) * ((100vw - 768px) / (1440 - 768))), 30px)
-
+      padding: 20px 20px 20px 46px
+      @media(min-width: 769px)
+        padding: 30px 30px 30px 56px
     &--title
       font-weight: 500
       font-size: clamp(20px, calc(20px + (24 - 20) * ((100vw - 768px) / (1440 - 768))), 24px)

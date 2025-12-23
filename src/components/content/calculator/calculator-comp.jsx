@@ -8,7 +8,7 @@ export const Calculator = () =>{
     <Block
       className={'block block_html-code content_calculator -dark-mode'}
       title={<Block_Head title={'Калькулятор<br> доходности'} caption={'Рассчитайте, как ваши инвестиции превращаются в стабильный доход. Прозрачная математика, за которой стоит реальная ценность.'}/>}>
-      <div className="calculator">
+      <div className="calculator" data-price={'126975'}>
         <div className="calculator_form ">
           <div class="calculator_form_container_title">Площадь аппартаментов в управлении, м2</div>
           <div class="calculator_form_container">

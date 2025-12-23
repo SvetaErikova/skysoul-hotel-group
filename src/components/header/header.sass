@@ -62,7 +62,7 @@
   gap: 16px
   transition: var(--transition)
   pointer-events: auto
-  margin: 8px calc(var(--container ) + 4px) 0
+  margin: 4px var(--container )  0
   @media(min-width: 769px)
     //display: grid
     //grid-template-columns: auto 1fr auto
@@ -97,3 +97,6 @@
   @media(max-width: 768px)
     .button:not([data-openpopup])
       display: none
+body
+  @media(max-width: 768px)
+    padding-top: 20px

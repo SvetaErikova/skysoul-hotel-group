@@ -109,7 +109,7 @@ export const Header = ({transparent = false}) => {
 
 
           <div class="header--actions">
-            <Button type={'filled'} color="secondary" popup={'popup_for_menu'} icon={'icon-burger'}>
+            <Button type={'filled'} color="secondary" dark={true} popup={'popup_for_menu'} icon={'icon-burger'}>
             </Button>
             <Button type={'filled'} color="secondary" dark={true} >
               8 800 888 88 88

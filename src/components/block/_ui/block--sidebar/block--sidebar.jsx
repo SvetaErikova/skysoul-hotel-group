@@ -4,10 +4,11 @@ export const Block_Sidebar = () => {
   return (
     <div class={'block--sidebar'}>
       <div class={'is_cascade'}>
-        <h6>Заработная плата</h6>
-        <p>65 000 ₽ на руки</p>
-        <h6>Занятость</h6>
-        <p>Полная</p>
+        <b>Заработная плата</b>
+        <p class={'-accent'}>65 000 ₽ на руки</p>
+        <b>Занятость</b>
+        <p class={'-accent'}>Полная</p>
+        <b>Условия</b>
         <ul>
           <li>График 5/2</li>
           <li>Питание</li>
