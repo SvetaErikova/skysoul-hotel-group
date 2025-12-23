@@ -16,7 +16,7 @@ import { Info } from '../components/content/info/info.jsx';
 import { All_card_partners } from '../components/_ui/card/all_card.jsx';
 
 
-const tabs = [
+ const tabs = [
   { label: 'Все' },
   { label: 'Номера' },
   { label: 'Рестораны и бары' },

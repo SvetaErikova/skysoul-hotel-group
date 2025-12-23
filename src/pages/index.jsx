@@ -3,7 +3,7 @@ import MainLayout from "../layouts/MainLoyout.jsx";
 import { metaPages } from "../shared/meta-pages";
 
 export default function Home() {
-	return (
+  return (
 		<MainLayout meta={metaPages.home}>
 			<section className="block dev-nav" style={{ margin: "2em 0" }}>
 				<div className="block--wrapper">
