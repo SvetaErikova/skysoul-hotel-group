@@ -10,7 +10,7 @@ export const Block_form = () =>{
   return(
     <Block className={'block_html-code content_form'} colorMode={'-light-mode'}
            title={<Block_Head accentTitleBefore={'Оставьте заявку <br>'} title={'на бесплатную консультацию'} caption={'Наш менеджер свяжется с вами в ближайшее время.'}></Block_Head>}>
-      <div className="form">
+      <form className="form">
         <Input type={"text"} name={"name"} placeholder={"Иванов Иван Иванович"} required={true} text={"Ваше имя"} autocomplete={"autocomplete"}></Input>
         <Input type={"tel"} name={"tel"} placeholder={"+7 999 999-99-99"} required={true} text={"Телефон"} autocomplete={"tel"} inputMode="numeric"></Input>
         <Input type={"email"} name={"email"} placeholder={"example@imperial.ru"} required={true} text={"Email"} autocomplete={"email"}></Input>
@@ -18,7 +18,7 @@ export const Block_form = () =>{
         <div className="form--button">
           <Button type={'filled'} color={'primary'} htmlType="submit" disabled="disabled">Отправить</Button>
         </div>
-      </div>
+      </form>
     </Block>
   )
 }
