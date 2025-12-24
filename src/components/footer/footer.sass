@@ -10,14 +10,18 @@
     background-repeat: no-repeat
 
   &--top,
-  &--main,
-  &--note_bottom
+  &--main
     display: flex
     flex-direction: column
     gap: 64px
     @media(min-width: 999px)
       display: grid
       grid-template-columns: 5.5fr 3.25fr 3.25fr
+  &--note_bottom
+    display: flex
+    flex-wrap: wrap
+    gap: 10px
+    line-height: 1.3
 
 
   &--wrapper
@@ -133,7 +137,6 @@
     &_bottom
       color: var(--text-subhead)
       padding-top: 12px
-      border-top: 1px solid rgba(255, 255, 255, .2)
 .main--actions
   position: sticky
   bottom: 16px
