@@ -15,6 +15,7 @@ import { Block_form } from '../components/form/block_form.jsx';
 import { Info } from '../components/content/info/info.jsx';
 import { All_card_partners } from '../components/_ui/card/all_card.jsx';
 import {Accordion} from "../components/_ui/accordion/accordion.comp.jsx";
+import { Advantages } from '../components/content/advantages/advantages-comp.jsx';
 
 
 const tabs = [
@@ -77,6 +78,10 @@ export default function Home() {
         <Card_personnel title={'Лаевский Александр Сергеевич'} text={'Директор департамента питания'} image={'/assets/img/ruslans-content/team/resized/as-layevsky.jpg'} />
         <Card_personnel title={'Абросимов Сергей Юрьевич'} text={'Финансовый директор'} image={'/assets/img/ruslans-content/team/resized/sy-absrosimov.jpg'} />
       </Block_List>
+
+      <Advantages></Advantages>
+
+
       <Block_List
         className="content_resorts"
         colorMode={'-light-mode'}

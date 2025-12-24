@@ -40,4 +40,4 @@ function initScrollingAdvantages() {
   });
 }
 
-initScrollingAdvantages();
+// initScrollingAdvantages();
