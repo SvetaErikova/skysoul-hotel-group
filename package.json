@@ -11,7 +11,8 @@
 		"format": "npx @biomejs/biome format ./src",
 		"format:fix": "npx @biomejs/biome format --write ./src",
 		"check": "npx @biomejs/biome check ./src",
-		"check:fix": "npx @biomejs/biome check --write ./src"
+		"check:fix": "npx @biomejs/biome check --write ./src",
+    "fix-assets": "node fix-assets-path.js ./dist"
 	},
 	"keywords": [],
 	"author": "",
