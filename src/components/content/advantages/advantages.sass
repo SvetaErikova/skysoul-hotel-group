@@ -7,6 +7,7 @@
     flex-direction: column
 
   .item
+    box-shadow:    0 -20px 40px -20px rgba(0, 24, 49, 0.08), 0 20px 40px -20px rgba(0, 24, 49, 0.08)
     position: sticky
     width: 100%
     display: flex
@@ -14,14 +15,18 @@
     background-color: var(--bg-content)
     border-radius: var(--border-corner)
     overflow: hidden
-    top: 30vh
+    top: 15vh
     height: 480px
+    @media(max-width: 540px)
+      height: 70svh
+      justify-content: flex-start
     @media(min-width: 769px)
+      top: 30vh
       display: grid
       grid-template-columns: repeat(2, 1fr)
       height: 272px
-      @media(min-width: 1441px)
-        height: 320px
+    @media(min-width: 1441px)
+      height: 320px
     @for $i from 1 through 9
       &:nth-child(#{$i})
         .item--content::after
@@ -32,7 +37,7 @@
           position: absolute
           left: 20px
           top:  20px
-          line-height: 1.8
+          line-height: 2
           @media(min-width: 769px)
             left: 30px
             top:  30px
@@ -43,13 +48,44 @@
       flex-direction: column
       gap: 16px
       height: inherit
-      padding: 20px 20px 20px 46px
+      padding: 20px 20px 20px 50px
       @media(min-width: 769px)
-        padding: 30px 30px 30px 56px
+        padding: 30px 30px 30px 70px
     &--title
       font-weight: 500
       font-size: clamp(20px, calc(20px + (24 - 20) * ((100vw - 768px) / (1440 - 768))), 24px)
+      line-height: 1.5
     &--text
-      margin-top: auto
+
       color: rgba(18, 26, 34, 0.85)
       font-size: clamp(16px, calc(18px + (16 - 18) * ((100vw - 768px) / (1440 - 768))), 18px)
+      @media(min-width: 769px)
+        margin-top: auto
+      @media(min-width: 1141px)
+        font-size: 20px
+    &--image
+      display: flex
+      min-height: 240px
+      img
+        min-height: 240px
+  .advantages_btn_scrolling
+    position: sticky
+    bottom: 16px
+    left: auto
+    right: var(--container)
+    width: 46px
+    height: 46px
+    border-radius: 50%
+    background: linear-gradient(93.47deg, #DDECFA 0%, #BFDEFA 113.14%)
+    color: var(--accent)
+    translate:  0 20px
+    opacity: 0
+    margin-left: auto
+    &.is_show
+      translate: 0 0
+      opacity: 1
+    @media(max-width: 640px)
+      bottom: 130px
+
+  //& ~ .block
+  //  scroll-padding-top: 10vh

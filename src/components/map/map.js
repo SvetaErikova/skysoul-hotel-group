@@ -8,17 +8,35 @@ if (map_contacts) {
     ymaps.ready(() => {
       const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-      const iconSize = isMobile ? 42 : 68;
+      const mapCenter = isMobile ? [44.974710, 34.076783] : [44.971134, 34.076997];
 
-      const mapCenter = isMobile ? [44.997951, 35.257043] : [44.971134, 34.076997];
 
       const map = new ymaps.Map("map", {
         center: mapCenter,
-        zoom: 18,
+        zoom: 16,
         controls: [],
       });
 
-      map.behaviors.disable("scrollZoom");
+      map.behaviors.disable(['drag', 'scrollZoom', 'dblClickZoom',]);
+
+      var myGeoObject = new ymaps.GeoObject({
+        geometry: {
+          type: "Point",
+          coordinates: [44.971134, 34.076997]
+        },
+        // Добавляем свойства для тултипа
+        properties: {
+          hintContent: 'Центральный офис',
+          balloonContent: 'Центральный офис'
+        }
+      }, {
+        iconLayout: 'default#image',
+        iconImageHref: '/assets/img/favicon.svg',
+        iconImageSize: [60, 60],
+        iconImageOffset: [-30, -30]
+      });
+
+      map.geoObjects.add(myGeoObject);
     });
   }
 }

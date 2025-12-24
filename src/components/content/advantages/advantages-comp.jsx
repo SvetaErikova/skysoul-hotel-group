@@ -22,6 +22,7 @@ export const Advantages = () => {
           <Advantages_item title={'Прозрачная финансовая отчётность'} text={'Ежемесячные данные о загрузке, доходности и работе вашего объекта доступны в личном кабинете.'} image={'/assets/img/4.jpg'}></Advantages_item>
           <Advantages_item title={'Юридическая и бухгалтерская поддержка'} text={'Оформление документов, расчёты с гостями и партнёрами, полное соответствие законодательству.'} image={'/assets/img/4.jpg'}></Advantages_item>
         </div>
+      <Button className={'advantages_btn_scrolling'} icon={'icon-arrow-down-1'}></Button>
     </Block>
   );
 };

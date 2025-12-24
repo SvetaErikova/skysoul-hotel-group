@@ -68,9 +68,8 @@
       color: rgba(255, 255, 255, .4)
   &--nav
     display: grid
-    grid-template-columns: 50% 50%
+    grid-template-columns: 1fr 1fr
     gap: var(--g-m)
-    font-size: var(--body-xs)
     order: 1
     @media(min-width: 1025px)
       grid-column: 2 / span 2
@@ -82,6 +81,9 @@
       flex-direction: column
       list-style: none
       width: max-content
+      @media(max-width: 540px)
+        width: 100%
+
       &_title
         text-transform: uppercase
         color: var(--text-subhead)
@@ -91,6 +93,9 @@
       &_item
         a
           font-size: var(--subtitle-xs)
+          @media(max-width: 540px)
+            white-space: wrap
+
           &:hover
             color: var(--accent)
   &--contacts
@@ -149,6 +154,7 @@
   @media(max-width: 575px)
     flex-direction: column
     margin: 0 24px 16px
+    gap: 8px
   .button
     pointer-events: auto
     @media(max-width: 575px)

@@ -19,12 +19,15 @@
     //grid-area: caption
     font-size: 18px
     font-weight: 500
-    line-height: 1.6
+    line-height: 1.4
 
   .block--actions
     //grid-area: actions
     margin-top: 0
-
+.block--head
+  .block--actions .button
+    @media(max-width: 540px)
+      width: 100%
   //&_subtitle,
   //&_title,
   //&_caption,

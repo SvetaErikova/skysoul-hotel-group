@@ -34,6 +34,7 @@ import "../../components/form/form.js";
 // import "../../components/content/services/services.js";
 import "../../components/content/calculator/calculator.js";
 import "../../components/content/advantages/advantages.js";
+import "../../components/content/history/history.js";
 
 
 

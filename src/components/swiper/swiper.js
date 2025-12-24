@@ -216,7 +216,6 @@ const activateInfoSlider = (block) => {
           simulateTouch: true,
           freeMode: false,
           allowTouchMove: true,
-          // loop: true,
           speed: 500,
           mousewheel: {
             forceToAxis: true,
@@ -253,9 +252,67 @@ const activateInfoSlider = (block) => {
 };
 
 const info_block = document.querySelectorAll(".content_info");
-
 info_block.forEach((block) => {
-
   activateInfoSlider(block);
-
 });
+
+function activateHistorySlider (block)  {
+  let block_elements = block.querySelector('.block--elements'),
+    block_content = block.querySelector('.block--content'),
+    items = block_elements.querySelectorAll('.item');
+
+  const swiperOptionsForThumbs = {
+    ...defaultSwiperOptions,
+    slideClass: 'item',
+    slidesPerView: 1,
+    effect: 'fade',
+    centeredSlides: true,
+    speed: 500,
+    allowTouchMove: false,
+    simulateTouch: false,
+    navigation: false,
+    pagination: false,
+  };
+  const content_slider = new Swiper(block_content, swiperOptionsForThumbs);
+  if (items.length > 1) {
+    const { controls, pagination, prev, next } = buildControls({ pagination: true, navigation: true });
+    const swiperOptions = withNavigationAndPagination(
+      {
+        slideClass: 'item',
+        spaceBetween: 20,
+        grabCursor: true,
+        simulateTouch: true,
+        freeMode: false,
+        allowTouchMove: true,
+        centeredSlides: true,
+        speed: 500,
+        mousewheel: {
+          forceToAxis: true,
+        },
+        thumbs: {
+          swiper: content_slider,
+        },
+        breakpoints: {
+          220: { slidesPerView: 3 },
+          640: { slidesPerView: 3 },
+          1024: { slidesPerView: 5 },
+          1440: { slidesPerView: 7 },
+        },
+        pagination: window.innerWidth < 768 ? { el: pagination, clickable: true } : false,
+      },
+      { pagination, prev, next },
+    );
+    const elements_slider = new Swiper(block_elements, swiperOptions);
+    if(window.matchMedia('(min-width:769px)').matches) {
+      block.querySelector('.block--wrapper').appendChild(controls);
+    }
+    else {
+      block.querySelector('.block--wrapper').appendChild(pagination);
+    }
+  }
+};
+let history_block = document.querySelectorAll('.content_history');
+history_block.forEach(block => {
+  activateHistorySlider(block);
+});
+

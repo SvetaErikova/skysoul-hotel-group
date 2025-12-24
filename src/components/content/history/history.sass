@@ -1,0 +1,76 @@
+.content_history
+  overflow: hidden
+  .block--wrapper
+    position: relative
+
+
+  .block--elements
+    height: 100px
+    border-bottom: 1px solid
+    border-image-source: linear-gradient(90deg, rgba(168, 177, 185, 0.15) 0%, rgba(76, 79, 83, 0.5) 48.08%, rgba(158, 166, 173, 0.15) 98.56%)
+    border-image-slice: 1
+    padding-bottom: 8px
+    .item
+      flex-shrink: 0
+      flex-grow: 0
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      position: relative
+      &:after
+        content: ""
+        position: absolute
+        width: 8px
+        aspect-ratio: 1/1
+        background: #A0A8B1
+        border-radius: 50px
+        top: calc(100% + 4px)
+        transition: var(--transition)
+      &--title
+        font-size: 24px
+        font-family: 'Forum' , serif
+        transition: font-size var(--transition)
+        line-height: 1em
+        @media(min-width: 1440px)
+          font-size: 32px
+      &.swiper-slide-active
+        &:after
+          background: var(--accent)
+          scale: 1.2
+        .item--title
+          font-size: 84px
+          color: var(--accent)
+  .block--content
+    margin-top: 32px
+    .item
+      flex-shrink: 0
+      flex-grow: 0
+      display: flex
+      justify-content: center
+
+
+      &--content
+        padding: 24px
+        background-color: var(--bg-content)
+        border-radius: var(--border-corner)
+        width: 100%
+        max-width: 520px
+        ul, p
+          color: var(--text-primary-subhead)
+      &--title
+        font-weight: 500
+        font-size: 20px
+  .slider_controls
+    position: absolute
+    right: var(--container)
+    left: auto
+    top: var(--g-container-vertical)
+    height: max-content
+    width: max-content
+  .swiper-pagination
+    @media(max-width: 768px)
+      margin-top: var(--g-l)
+      justify-content: center
+      &-bullet
+        background-color: #A0A8B1

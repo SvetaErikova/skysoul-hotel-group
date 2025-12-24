@@ -9,9 +9,9 @@ export const Menu = () => {
       <div className="menu">
         <div class="menu--wrapper">
           <div class="menu--top">
-            <div class="menu--logo">
+            <a href={'/'} class="menu--logo">
               <img src="/assets/img/logo-white.svg" />
-            </div>
+            </a>
             <Button type={'filled'} color="secondary"  data-closepopup icon={'icon-close'}>
             </Button>
           </div>
