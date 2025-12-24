@@ -13,10 +13,10 @@ export const Contacts = () => {
           <div class="block--contacts_info">
             <div>
               <span>Адрес</span>
-              <p>295014, Республика Крым, г. Симферополь, ул.Евпаторийское шоссе, 8</p>
+              <p>Республика Крым, г. Симферополь, ул.Евпаторийское шоссе, 8</p>
             </div>
             <div>
-              <span>Телефон</span>
+              <span>Телефоны</span>
               <p><a href="tel:+79790241160">+7 979 024 11 60</a></p>
               <p><a href="tel:+79790241159">+7 979 024 11 59</a></p>
             </div>
@@ -39,7 +39,7 @@ export const Contacts = () => {
         </div>
         <Map_contacts></Map_contacts>
         </div>
-        <div class="block--contacts_note" style="display:none;">
+        <div class="block--contacts_note">
           <div class="block--contacts_note_title">По вопросам сотрудничества</div>
           <div className="block--contacts_note_list">
             <div className="item">
