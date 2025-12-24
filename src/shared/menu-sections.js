@@ -6,27 +6,26 @@ export const menuSections = [
 			{
 				title: "Курорты",
 				links: [
-					{ text: "О нас", href: "/" },
-					{ text: "История", href: "/" },
-					{ text: "Галерея", href: "/" },
-					{ text: "Новости", href: "/" },
-					{ text: "Контакты", href: "/" }
+					{ text: "Sky Soul", href: "https://skysoulhotel.ru/" },
+					{ text: "Птица", href: "https://птица-курорт.рф/" },
+					{ text: "Сантерра", href: "https://sunterra.com.ru/" },
 				]
 			},
 			{
-				title: "Размещение",
+				title: "Для собственников",
 				links: [
-					{ text: "Отели", href: "/" },
-					{ text: "Апартаменты", href: "/" },
-					{ text: "Шале", href: "/" },
-					{ text: "Спецпредложения", href: "/" },
-					{ text: "Бронирование", href: "/" }
+					{ text: "Котловой метод", href: "/" },
+          { text: "Котловой метод", href: "/to-owners/boiler-method.html/" },
+          { text: "Памятка инвестору", href: "/to-owners/memo-to-investor.html/" },
+          { text: "Калькулятор доходности", href: "/to-owners/profitability-calculator.html/" },
+          { text: "Личный кабинет", href: "/to-owners/lk.html/" },
+          { text: "Услуги", href: "/to-owners/services.html/" },
 				]
 			},
 			{
-				title: "Рестораны и кафе",
+				title: "Для бизнеса",
 				links: [
-					{ text: "Рестораны", href: "/" },
+					{ text: "Туроператорам", href: "/to-tour-operators.html/" },
 					{ text: "Кафе", href: "/" },
 					{ text: "Бары", href: "/" },
 					{ text: "Доставка", href: "/" }
