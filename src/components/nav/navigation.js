@@ -2,13 +2,13 @@ export const links = [
   {
     label: "Собственникам",
     href: "/to-owners",
-    children: [
-      { label: "Котловой метод", href: "/to-owners/boiler-method" },
-      { label: "Памятка инвестору", href: "/to-owners/memo-to-investor" },
-      { label: "Калькулятор доходности", href: "/to-owners/profitability-calculator" },
-      { label: "Личный кабинет", href: "/to-owners/lk" },
-      { label: "Услуги", href: "/to-owners/services" },
-    ],
+    // children: [
+    //   { label: "Котловой метод", href: "/to-owners/boiler-method" },
+    //   { label: "Памятка инвестору", href: "/to-owners/memo-to-investor" },
+    //   { label: "Калькулятор доходности", href: "/to-owners/profitability-calculator" },
+    //   { label: "Личный кабинет", href: "/to-owners/lk" },
+    //   { label: "Услуги", href: "/to-owners/services" },
+    // ],
   },
   {
     label: "Передача в управление",
@@ -21,12 +21,12 @@ export const links = [
   {
     label: "Для бизнеса",
     href: "/for-business",
-    children: [
-      { label: "Туроператорам", href: "/to-tour-operators" },
-      { label: "Поставщикам", href: "/to-suppliers" },
-      { label: "Сотрудничество", href: "/cooperation" },
-      { label: "Реклама на курортах", href: "/advertising-at-resorts" }
-    ]
+    // children: [
+    //   { label: "Туроператорам", href: "/to-tour-operators" },
+    //   { label: "Поставщикам", href: "/to-suppliers" },
+    //   { label: "Сотрудничество", href: "/cooperation" },
+    //   { label: "Реклама на курортах", href: "/advertising-at-resorts" }
+    // ]
   },
   {
     label: "О компании",
