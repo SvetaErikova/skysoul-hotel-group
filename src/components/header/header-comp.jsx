@@ -17,7 +17,7 @@ export const Header = ({transparent = false}) => {
             <a href="/contacts.html/">Контакты</a>
           </div>
           <div class="header--top_actions">
-            <a href="#">
+            <a href="https://t.me/skysoul_hotel" target="_blank">
               <img src="/assets/img/soc/tg.svg"/>
             </a>
           </div>
