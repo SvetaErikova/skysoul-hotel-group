@@ -157,7 +157,7 @@ const activateBlocklistSlider = (swiper_item) => {
         breakpoints: {
           220: {slidesPerView: slides_per_view_mob},
           640: {slidesPerView: slides_per_view_pad},
-          999: {slidesPerView: slides_per_view_desktop_small},
+          1024: {slidesPerView: slides_per_view_desktop_small},
           1440: {slidesPerView: slides_per_view_desktop},
         },
       },

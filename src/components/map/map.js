@@ -10,7 +10,7 @@ if (map_contacts) {
 
       const iconSize = isMobile ? 42 : 68;
 
-      const mapCenter = isMobile ? [44.997951, 35.257043] : [44.674488, 34.414378];
+      const mapCenter = isMobile ? [44.997951, 35.257043] : [44.971134, 34.076997];
 
       const map = new ymaps.Map("map", {
         center: mapCenter,

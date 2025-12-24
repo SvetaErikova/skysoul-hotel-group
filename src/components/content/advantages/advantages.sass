@@ -9,7 +9,6 @@
   .item
     position: sticky
     width: 100%
-    transform: translateY(var(--card-shift, 0))
     display: flex
     flex-direction: column
     background-color: var(--bg-content)
@@ -33,10 +32,12 @@
           position: absolute
           left: 20px
           top:  20px
-          line-height: 1.5
+          line-height: 1.8
           @media(min-width: 769px)
             left: 30px
             top:  30px
+          @media(min-width: 1441px)
+            font-size: 16px
     &--content
       display: flex
       flex-direction: column

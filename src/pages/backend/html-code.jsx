@@ -8,6 +8,7 @@ import { Steps } from '../../components/content/steps/steps-comp.jsx';
 import { Block_form } from '../../components/form/block_form.jsx';
 import { Block } from '../../components/block/block.jsx';
 import { Advantages } from '../../components/content/advantages/advantages-comp.jsx';
+import { History } from '../../components/content/history/history.jsx';
 
 export default function Home() {
   const tabs = [
@@ -18,6 +19,7 @@ export default function Home() {
   ];
 	return (
 		<MainLayout meta={metaPages.home} >
+      <History></History>
       <Advantages></Advantages>
       <Steps></Steps>
       <Block_form></Block_form>

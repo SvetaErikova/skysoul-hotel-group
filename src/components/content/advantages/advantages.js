@@ -13,14 +13,14 @@ function initScrollingAdvantages() {
 
         gsap.to(card, {
           y: `${shiftAmount}%`,
-          duration: 0.6,
-          ease: 'easeInOut',
+          duration: 0.5,
+          ease: 'power1.out',
         });
       } else {
         gsap.to(card, {
           y: '0%',
-          duration: 0.6,
-          ease: 'easeInOut',
+          duration: 0.5,
+          ease: 'power1.out',
         });
       }
     });
@@ -28,16 +28,28 @@ function initScrollingAdvantages() {
     activeCardIndex = newActiveIndex;
   }
   cards.forEach((card, index) => {
-    ScrollTrigger.create({
-      trigger: card,
-      start: 'top center',
-      end: 'bottom center',
-      scrub: false,
-      markers: false,
-      onEnter: () => updateCardPosition(index),
-      onEnterBack: () => updateCardPosition(index)
-    });
+    // Создаем fromTo анимацию с триггером внутри
+    gsap.fromTo(card,
+      {
+        top: '50vh'
+      },
+      {
+        top: '30vh',
+        duration: 1,
+        ease: 'power1.out',
+        scrollTrigger: {
+          trigger: card,
+          start: 'top center',
+          end: 'bottom center',
+          scrub: 0.5, // Или scrub: 0.5 для плавности
+          markers: false,
+          onEnter: () => updateCardPosition(index),
+          onEnterBack: () => updateCardPosition(index)
+          // Это тот же самый триггер, что у тебя был!
+        }
+      }
+    );
   });
 }
 
-// initScrollingAdvantages();
+initScrollingAdvantages();
