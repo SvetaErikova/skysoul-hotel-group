@@ -5,13 +5,37 @@ import MainLayout from '../layouts/MainLoyout.jsx';
 
 export default function Home() {
   return (
-    <MainLayout meta={metaPages.home}>
-      <div class="block block_html_code content_error">
-        <div class="block--wrapper">
+    <MainLayout meta={metaPages.not_found_page}>
+
+      <div class="breadcrumbs"
+           itemscope=""
+           itemtype="https://schema.org/BreadcrumbList">
+        <a itemprop="itemListElement"
+           itemscope=""
+           itemtype="https://schema.org/ListItem"
+           href="/">
+          <span itemprop="name">Главная</span>
+        </a>
+        <a itemprop="itemListElement"
+           itemscope=""
+           itemtype="https://schema.org/ListItem"
+           href="/404">
+          <span itemProp="name">404</span>
+        </a>
+      </div>
+
+      <div className="block block_html_code content_error">
+        <div className="block--wrapper">
           <Block_Head
-            subtitle={"Page not found"} title={" 404"} caption={'Oops! It seems you\'ve wandered off the beaten path. Our cozy chalet retreat in the stunning Altai region, right at the foot of Mount Malaya Sinyukha, is waiting for you. Let\'s get you back on track!'}
+            title={" 404"}
+            subtitle={"Страница не найдена"}
+            caption={'Кажется такой страницы не существует. Возможно такой страницы не существует или она в разработке. Попробуйте обновить позже или вернитесь на главную страницу.'}
             action={
-              <Button type={'filled'} color={'primary'} link={"/"}>на главную</Button>}>
+              <Button type={'filled'}
+                      color={'primary'}
+                      link={"/"}>На главную</Button>
+            }
+          >
           </Block_Head>
         </div>
       </div>

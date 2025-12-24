@@ -9,7 +9,7 @@ export default function MainLayout({ children, meta, className, colorMode = '' }
 		<BaseHtml meta={meta} colorMode={colorMode}  className={className}>
 			<Header pagePath={meta.path} />
 			<main>
-				<Breadcrumbs></Breadcrumbs>
+				{/*<Breadcrumbs></Breadcrumbs>*/}
 				{children}
 			</main>
 			<Footer></Footer>

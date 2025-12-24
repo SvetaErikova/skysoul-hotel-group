@@ -18,5 +18,10 @@ export const metaPages = {
     title: "Contacts",
     description: "Contacts page",
     path: "/contacts"
+  },
+	"not_found_page": {
+    title: "Skysoul Hotel Group — 404",
+    description: "",
+    path: "/404"
   }
 }
