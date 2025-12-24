@@ -13,11 +13,12 @@ export const Contacts = () => {
           <div class="block--contacts_info">
             <div>
               <span>Адрес</span>
-              <p>Крым, улица, номер дома</p>
+              <p>295014, Республика Крым, г. Симферополь, ул.Евпаторийское шоссе, 8</p>
             </div>
             <div>
               <span>Телефон</span>
-              <p><a href="tel:+7 499 999 99 99">+7 499 999 99 99</a></p>
+              <p><a href="tel:+79790241160">+7 979 024 11 60</a></p>
+              <p><a href="tel:+79790241159">+7 979 024 11 59</a></p>
             </div>
             <div>
               <span>Email</span>
@@ -26,8 +27,8 @@ export const Contacts = () => {
             <div>
               <span>Социальные сети</span>
               <div>
-                <a href="/">
-                  <img src="/assets/img/soc/tg.svg" alt="" />
+                <a href="https://t.me/skysoul_hotel" target="_blank">
+                  <img src="/assets/img/soc/tg.svg"/>
                 </a>
               </div>
             </div>
@@ -38,7 +39,7 @@ export const Contacts = () => {
         </div>
         <Map_contacts></Map_contacts>
         </div>
-        <div class="block--contacts_note">
+        <div class="block--contacts_note" style="display:none;">
           <div class="block--contacts_note_title">По вопросам сотрудничества</div>
           <div className="block--contacts_note_list">
             <div className="item">
