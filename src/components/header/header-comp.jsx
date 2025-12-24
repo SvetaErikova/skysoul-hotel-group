@@ -8,17 +8,17 @@ export const Header = ({transparent = false}) => {
       <header class={clsx('header', {'header-transparent': transparent})}>
         <div class="header--top">
           <div class="header--top_nav">
-            <a href="">Забронировать отдых</a>
-            <a href="">Проведение мероприятий</a>
-            <a href="">Карьера</a>
-            <a href="">Блог</a>
-            <a href="">Вопросы/ответы</a>
-            <a href="">Шоу-рум</a>
-            <a href="">Контакты</a>
+            <a href="/booking.html/">Забронировать отдых</a>
+            <a href="/events.html/">Проведение мероприятий</a>
+            {/*<a href="/career.html/">Карьера</a>*/}
+            {/*<a href="/blog.html/">Блог</a>*/}
+            {/*<a href="/faq.html/">Вопросы/ответы</a>*/}
+            <a href="/showroom.html/">Шоу-рум</a>
+            <a href="/contacts.html/">Контакты</a>
           </div>
           <div class="header--top_actions">
-            <a href="">
-              <img src="/assets/img/soc/tg.svg" alt="" />
+            <a href="#">
+              <img src="/assets/img/soc/tg.svg"/>
             </a>
           </div>
         </div>
@@ -100,7 +100,6 @@ export const Header = ({transparent = false}) => {
                 </clipPath>
               </defs>
             </svg>
-
             {/* biome-ignore format:end */}
           </a>
           <div class="header--nav">
@@ -111,8 +110,8 @@ export const Header = ({transparent = false}) => {
           <div class="header--actions">
             <Button type={'filled'} color="secondary" popup={'popup_for_menu'} icon={'icon-burger'}>
             </Button>
-            <Button type={'filled'} color="secondary" dark={true} >
-              8 800 888 88 88
+            <Button type={'filled'} link={'mailto:info@skygrouphotel.ru'} color="secondary" dark={true} >
+              info@skygrouphotel.ru
             </Button>
           </div>
         </div>

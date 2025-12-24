@@ -1,45 +1,33 @@
 export const links = [
   {
     label: "Собственникам",
-    href: "/",
+    href: "/to-owners.html/",
     children: [
-      { label: "О нас", href: "/about" },
-      { label: "Услуги", href: "/services" },
-      { label: "Контакты", href: "/contacts" },
+      { label: "Котловой метод", href: "/to-owners/boiler-method.html/" },
+      { label: "Памятка инвестору", href: "/to-owners/memo-to-investor.html/" },
+      { label: "Калькулятор доходности", href: "/to-owners/profitability-calculator.html/" },
+      { label: "Личный кабинет", href: "/to-owners/lk.html/" },
+      { label: "Услуги", href: "/to-owners/services.html/" },
     ],
   },
   {
     label: "Передача в управление",
-    href: "/mice",
+    href: "/transfer-to-management.html/",
   },
   {
     label: "Курорты",
-    href: "/resort",
+    href: "/resorts.html/",
   },
-
   {
     label: "Для бизнеса",
-    href: "/products",
-    children: [
-      { label: "MICE", href: "/mice" },
-      { label: "Корпоративные программы", href: "/corporate" },
-      { label: "Партнерство", href: "/partnership" },
-      { label: "Инвестиции", href: "/investments" },
-    ],
+    href: "/for-business.html/",
   },
   {
     label: "О компании",
-    href: "/products",
-    children: [
-      { label: "О нас", href: "/about" },
-      { label: "История", href: "/history" },
-      { label: "Галерея", href: "/gallery" },
-      { label: "Новости", href: "/news" },
-      { label: "Контакты", href: "/contacts" },
-    ],
+    href: "/about.html",
   },
   {
     label: "Купить недвижимость",
-    href: "/products",
+    href: "/buy-real-estate.html/",
   },
 ];
