@@ -8,16 +8,17 @@ export const Header = ({transparent = false}) => {
       <header class={clsx('header', {'header-transparent': transparent})}>
         <div class="header--top">
           <div class="header--top_nav">
-            <a href="/booking.html/">Забронировать отдых</a>
-            <a href="/events.html/">Проведение мероприятий</a>
-            {/*<a href="/career.html/">Карьера</a>*/}
-            {/*<a href="/blog.html/">Блог</a>*/}
-            {/*<a href="/faq.html/">Вопросы/ответы</a>*/}
-            <a href="/showroom.html/">Шоу-рум</a>
-            <a href="/contacts.html/">Контакты</a>
+            {/*<a href="/booking">Забронировать отдых</a>*/}
+            <a href="/events">Проведение мероприятий</a>
+            {/*<a href="/career">Карьера</a>*/}
+            {/*<a href="/blog">Блог</a>*/}
+            {/*<a href="/faq">Вопросы/ответы</a>*/}
+            <a href="/showroom">Шоу-рум</a>
+            <a href="/contacts">Контакты</a>
           </div>
           <div class="header--top_actions">
-            <a href="https://t.me/skysoul_hotel" target="_blank">
+            <a href="https://t.me/skysoul_hotel"
+               target="_blank">
               <img src="/assets/img/soc/tg.svg"/>
             </a>
           </div>
