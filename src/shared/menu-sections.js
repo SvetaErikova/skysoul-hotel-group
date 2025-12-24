@@ -14,31 +14,31 @@ export const menuSections = [
 			{
 				title: "Для собственников",
 				links: [
-          { text: "Передача в управление", href: "/transfer-to-management.html/" },
-          { text: "Котловой метод", href: "/to-owners/boiler-method.html/" },
-          { text: "Памятка инвестору", href: "/to-owners/memo-to-investor.html/" },
-          { text: "Калькулятор доходности", href: "/to-owners/profitability-calculator.html/" },
-          { text: "Личный кабинет", href: "/to-owners/lk.html/" },
-          { text: "Услуги", href: "/to-owners/services.html/" },
-          { text: "Вопросы и ответы", href: "/faq.html/" },
-          { text: "Документы", href: "/documents.html/" },
+          { text: "Передача в управление", href: "/transfer-to-management" },
+          { text: "Котловой метод", href: "/to-owners/boiler-method" },
+          { text: "Памятка инвестору", href: "/to-owners/memo-to-investor" },
+          { text: "Калькулятор доходности", href: "/to-owners/profitability-calculator" },
+          { text: "Личный кабинет", href: "/to-owners/lk" },
+          { text: "Услуги", href: "/to-owners/services" },
+          { text: "Вопросы и ответы", href: "/faq" },
+          { text: "Документы", href: "/documents" },
 				]
 			},
 			{
 				title: "Для бизнеса",
 				links: [
-					{ text: "Туроператорам", href: "/to-tour-operators.html/" },
-					{ text: "Поставщикам", href: "/to-suppliers.html/" },
-					{ text: "Сотрудничество", href: "/cooperation.html/" },
-					{ text: "Реклама на курортах", href: "/advertising-at-resorts.html/" }
+					{ text: "Туроператорам", href: "/to-tour-operators" },
+					{ text: "Поставщикам", href: "/to-suppliers" },
+					{ text: "Сотрудничество", href: "/cooperation" },
+					{ text: "Реклама на курортах", href: "/advertising-at-resorts" }
 				]
 			},
 			{
 				title: "Мероприятия",
 				links: [
-					{ text: "MICE", href: "/events/mice.html/" },
-					{ text: "Свадьбы", href: "/events/weddings.html/" },
-					{ text: "Дни рождения", href: "/events/berthdays.html/" },
+					{ text: "MICE", href: "/events/mice" },
+					{ text: "Свадьбы", href: "/events/weddings" },
+					{ text: "Дни рождения", href: "/events/berthdays" },
 				]
 			},
 		]
