@@ -62,7 +62,7 @@ export const Card = ({link, popup, images = [], title,subtitle, text, action, im
 };
 export const Card_resort =({image, title, subtitle, text, action, labels, link='/'}) => {
   return (
-    <a className="card" href={link}>
+    <a className="card" href={link} target="_blank">
         <div class="card--image">
           <img src={image} alt="" loading="lazy"/>
         </div>
@@ -79,7 +79,7 @@ export const Card_resort =({image, title, subtitle, text, action, labels, link='
 
 export const Card_personnel = ({title, text, image}) => {
   return (
-    <Card title={title} text={text}  image={image ? image : '/assets/img/2.jpg'}  popup={'popup_for_cascade'} actionsout={true} action={<Button type={'outlined'} color={'primary'} icon={'icon-eyes-closed-line'} />}></Card>
+    <Card title={title} text={text}  image={image ? image : '/assets/img/2.jpg'}></Card>
   )
 }
 export const Card_job = ({title, text}) => {

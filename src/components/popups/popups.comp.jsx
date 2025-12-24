@@ -77,8 +77,8 @@ export const PopupPersonnel = () =>{
 
 export const PopupCookies = () => {
   return <PopupsLayout data={'popup_for_cookies'} btnClose={false}>
-    <strong>Сайт использует Cookies</strong>
-    <p>Без них всё работало бы хуже</p>
+    <strong>Этот сайт использует cookies</strong>
+    <p>Чтобы улучшить работу сайта, мы собираем данные о ваших посещениях. Оставаясь на сайте, вы соглашаетесь с нашей политикой использования cookies.</p>
     <button class="button button-filled button-primary" data-closepopup="" data-accept="">
       <span>Хорошо!</span>
     </button>

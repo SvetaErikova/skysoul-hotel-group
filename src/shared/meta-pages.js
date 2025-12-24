@@ -1,7 +1,7 @@
 export const metaPages = {
   "home": {
-    title: "Home",
-    description: "Home page",
+    title: "Skysoul Hotel Group — Управляющая компания отелями и апартаментами",
+    description: "",
     path: "/"
   },
   "about": {

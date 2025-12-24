@@ -10,6 +10,7 @@ export default function BaseHtml({ children, meta, colorMode = '', className, li
       <link rel="stylesheet" href="/assets/css/libs.min.css"/>
       <link rel="stylesheet" href="/assets/css/main.css"/>
       <meta name="viewport" content="width=device-width,initial-scale=1"/>
+      <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon"/>
     </head>
     <body class={clsx(lightmode ? "-light" : "", colorMode, className)}>
     {children}
