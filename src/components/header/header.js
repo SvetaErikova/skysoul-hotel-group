@@ -6,16 +6,8 @@ const isDesktop = () => window.matchMedia('(min-width:769px)').matches;
 
 function updateHeaderHeight() {
   const header = document.querySelector('.header--main');
-  const headerHeight = header ? header.getBoundingClientRect().height : 104;
+  const headerHeight = header ? header.getBoundingClientRect().height : 65;
   document.documentElement.style.setProperty('--headerHeight', `${headerHeight}px`);
-}
-
-function getHeaderHeight(fallbackElement = null) {
-  const rawValue = getComputedStyle(document.documentElement).getPropertyValue('--headerHeight');
-  const parsed = parseFloat(rawValue);
-  if (!Number.isNaN(parsed)) return parsed;
-  if (fallbackElement) return fallbackElement.getBoundingClientRect().height;
-  return 104;
 }
 
 function updateViewportHeight() {
@@ -24,9 +16,9 @@ function updateViewportHeight() {
 }
 
 initBaseVariables();
-if ( window.matchMedia('(min-width:1140px)').matches) {
+// if ( window.matchMedia('(min-width:1140px)').matches) {
   initHeaderScroll();
-}
+// }
 
 
 /* Base Variables */
@@ -71,6 +63,6 @@ function initHeaderNav() {
     });
   });
 }
-if (window.matchMedia("(min-width:769px)").matches) {
+if (window.matchMedia("(min-width:999px)").matches) {
   initHeaderNav();
 }

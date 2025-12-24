@@ -10,10 +10,11 @@
   will-change: tranform
   @media(max-width: 1024px)
     transition: var(--transition)
-  @media(max-width: 768px)
+  @media(max-width: 998px)
     display: flex
     flex-direction: column
     gap: 16px
+    padding: 16px 0
   &--logo
     display: flex
     flex-direction: column
@@ -24,12 +25,14 @@
     max-width: 148px
     color: var(--accent)
     aspect-ratio: 136/40
+    width: 100%
     @media(min-width: 769px)
 
       max-width: 136px
-    @media(min-width: 1920px)
-      max-width: 218px
+    @media(min-width: 1440px)
+      max-width: 190px
   &.is_scrolled
+    translate: 0 -12px
     @media(min-width: 1140px)
       translate: 0 -45px
   &--top
@@ -62,10 +65,8 @@
   gap: 16px
   transition: var(--transition)
   pointer-events: auto
-  margin: 4px var(--container )  0
-  @media(min-width: 769px)
-    //display: grid
-    //grid-template-columns: auto 1fr auto
+  margin: 0 var(--container )  0
+  @media(min-width: 999px)
     margin: 4px 20px 0
     padding: 8px
 
@@ -74,7 +75,7 @@
   max-width: 60vw
   .nav
     display: none
-    @media(min-width: 769px)
+    @media(min-width: 999px)
       display: flex
       align-items: center
       justify-content: center
@@ -91,12 +92,10 @@
 .header--actions
   display: flex
   justify-content: flex-end
-  @media(min-width: 769px)
+  @media(min-width: 999px)
     [data-openpopup]
       display: none
-  @media(max-width: 768px)
+  @media(max-width: 998px)
     .button:not([data-openpopup])
       display: none
-body
-  @media(max-width: 768px)
-    padding-top: 20px
+
