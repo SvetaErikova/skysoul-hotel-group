@@ -14,89 +14,33 @@ export const menuSections = [
 			{
 				title: "Для собственников",
 				links: [
-					{ text: "Котловой метод", href: "/" },
+          { text: "Передача в управление", href: "/transfer-to-management.html/" },
           { text: "Котловой метод", href: "/to-owners/boiler-method.html/" },
           { text: "Памятка инвестору", href: "/to-owners/memo-to-investor.html/" },
           { text: "Калькулятор доходности", href: "/to-owners/profitability-calculator.html/" },
           { text: "Личный кабинет", href: "/to-owners/lk.html/" },
           { text: "Услуги", href: "/to-owners/services.html/" },
+          { text: "Вопросы и ответы", href: "/faq.html/" },
+          { text: "Документы", href: "/documents.html/" },
 				]
 			},
 			{
 				title: "Для бизнеса",
 				links: [
 					{ text: "Туроператорам", href: "/to-tour-operators.html/" },
-					{ text: "Кафе", href: "/" },
-					{ text: "Бары", href: "/" },
-					{ text: "Доставка", href: "/" }
+					{ text: "Поставщикам", href: "/to-suppliers.html/" },
+					{ text: "Сотрудничество", href: "/cooperation.html/" },
+					{ text: "Реклама на курортах", href: "/advertising-at-resorts.html/" }
 				]
 			},
 			{
-				title: "Для гостей",
+				title: "Мероприятия",
 				links: [
-					{ text: "Услуги", href: "/" },
-					{ text: "Трансфер", href: "/" },
-					{ text: "Парковка", href: "/" },
-					{ text: "Wi-Fi", href: "/" },
-					{ text: "Консьерж-сервис", href: "/" }
+					{ text: "MICE", href: "/events/mice.html/" },
+					{ text: "Свадьбы", href: "/events/weddings.html/" },
+					{ text: "Дни рождения", href: "/events/berthdays.html/" },
 				]
 			},
-		]
-	},
-	{
-		id: "activities",
-		title: "Чем заняться",
-		groups: [
-			{
-				title: "На суше",
-				links: [
-					{ text: "Пешие прогулки", href: "/" },
-					{ text: "Велосипеды", href: "/" },
-					{ text: "Конные прогулки", href: "/" },
-					{ text: "Экскурсии", href: "/" },
-					{ text: "Альпинизм", href: "/" }
-				]
-			},
-			{
-				title: "На воде",
-				links: [
-					{ text: "Катамараны", href: "/" },
-					{ text: "Лодки", href: "/" },
-					{ text: "Рыбалка", href: "/" },
-					{ text: "Водные виды спорта", href: "/" }
-				]
-			},
-			{
-				title: "Для детей",
-				links: [
-					{ text: "Детские площадки", href: "/" },
-					{ text: "Анимация", href: "/" },
-					{ text: "Детские программы", href: "/" },
-					{ text: "Игровые комнаты", href: "/" },
-					{ text: "Детский клуб", href: "/" }
-				]
-			},
-			{
-				title: "SPA и оздоровление",
-				links: [
-					{ text: "SPA-центр", href: "/" },
-					{ text: "Массаж", href: "/" },
-					{ text: "Бани и сауны", href: "/" },
-					{ text: "Йога", href: "/" },
-					{ text: "Медитация", href: "/" },
-					{ text: "Оздоровительные программы", href: "/" }
-				]
-			},
-			{
-				title: "Спорт",
-				links: [
-					{ text: "Теннис", href: "/" },
-					{ text: "Волейбол", href: "/" },
-					{ text: "Футбол", href: "/" },
-					{ text: "Баскетбол", href: "/" },
-					{ text: "Тренажерный зал", href: "/" }
-				]
-			}
 		]
 	}
 ];
