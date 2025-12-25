@@ -17,8 +17,8 @@
   &--wrapper
     display: flex
     flex-direction: column
-    padding: 0 calc(var(--container) + 4px)  64px
-    gap: clamp(96px, calc(96px + (64 - 96) * ((100vw - 768px) / (1440 - 768))), 64px)
+    padding: 0 var(--container)  64px
+    gap: clamp(32px, calc(32px + (64 - 32) * ((100vw - 768px) / (1440 - 768))), 64px)
 
   &--top
     height: var(--headerHeight)
@@ -31,6 +31,7 @@
   &--logo
     aspect-ratio: 136/40
     max-width: 148px
+    width: 100%
 
   &--main
     .button--wrapper

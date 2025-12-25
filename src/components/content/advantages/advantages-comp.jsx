@@ -40,6 +40,7 @@ export const Advantages = () => {
                          text={'Оформление документов, расчёты с гостями и партнёрами, полное соответствие законодательству.'}
                          image={'/assets/img/ruslans-content/adv/9.jpg'}></Advantages_item>
       </div>
+      <Button className={'advantages_btn_scrolling'} icon={'icon-arrow-down-1'}></Button>
     </Block>
   );
 };

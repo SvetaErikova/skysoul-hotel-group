@@ -8,7 +8,7 @@ if (map_contacts) {
     ymaps.ready(() => {
       const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-      const mapCenter = isMobile ? [44.974710, 34.076783] : [44.971134, 34.076997];
+      const mapCenter = isMobile ? [44.974710, 34.076783] : [44.970917, 34.072790];
 
 
       const map = new ymaps.Map("map", {

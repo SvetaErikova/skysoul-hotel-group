@@ -12,15 +12,15 @@ export default function Home() {
 						<Button link={"/main"} >
 							Главная
 						</Button>
-            <Button link={"/accommodation-detail"} >
-              Проживание детальная
-            </Button>
-            <Button link={"/offer"} >
-              Спецпредложения
-            </Button>
-            <Button link={"/offer-detail"} >
-              Спецпредложения детальная
-            </Button>
+            {/*<Button link={"/accommodation-detail"} >*/}
+            {/*  Проживание детальная*/}
+            {/*</Button>*/}
+            {/*<Button link={"/offer"} >*/}
+            {/*  Спецпредложения*/}
+            {/*</Button>*/}
+            {/*<Button link={"/offer-detail"} >*/}
+            {/*  Спецпредложения детальная*/}
+            {/*</Button>*/}
             <Button link={"/career"} >
               Вакансии
             </Button>
@@ -63,15 +63,15 @@ export default function Home() {
 						<Button link={"/backend/banner"} >
 							Баннеры
 						</Button>
-            <Button link={"/backend/color-mode"} >
-              Цветовые темы
-            </Button>
+            {/*<Button link={"/backend/color-mode"} >*/}
+            {/*  Цветовые темы*/}
+            {/*</Button>*/}
 						<Button link={"/backend/image-text"} >
 							Картинка текст
 						</Button>
-						<Button link={"/backend/gallery"} >
-							Галерея
-						</Button>
+						{/*<Button link={"/backend/gallery"} >*/}
+						{/*	Галерея*/}
+						{/*</Button>*/}
 						<Button link={"/backend/list"} >
 							Списки
 						</Button>

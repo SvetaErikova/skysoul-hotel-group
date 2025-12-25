@@ -30,10 +30,8 @@ function initScrollingAdvantages() {
   }
 
   cards.forEach((card, index) => {
-    // Создаем fromTo анимацию с триггером внутри
     gsap.fromTo(card,
-      {
-      },
+      {},
       {
         duration: 1,
         ease: 'power1.out',
@@ -41,11 +39,10 @@ function initScrollingAdvantages() {
           trigger: card,
           start: 'top 70%',
           end: 'bottom center',
-          scrub: 0.5, // Или scrub: 0.5 для плавности
+          scrub: 0.5,
           markers: false,
           onEnter: () => updateCardPosition(index),
           onEnterBack: () => updateCardPosition(index),
-          // Это тот же самый триггер, что у тебя был!
         },
       },
     );
@@ -54,8 +51,9 @@ function initScrollingAdvantages() {
 
 
 function AdvantagesAction() {
-  let block = document.querySelector('.advantages'),
-    btnScrollingBottom = block.querySelector('.advantages_btn_scrolling');
+  let block = document.querySelector('.advantages');
+  if (!block) return;
+  let btnScrollingBottom = block.querySelector('.advantages_btn_scrolling');
   if (!btnScrollingBottom) return;
   btnScrollingBottom.addEventListener('click', (e) => {
     let nextBlock = document.querySelector('.advantages + *');
@@ -80,10 +78,11 @@ function AdvantagesAction() {
       markers: false,
       onToggle: (self) => {
         btnScrollingBottom.classList.toggle('is_show', self.isActive);
-      }
+      },
     });
   }
-  checkAdvantagesVisibility()
+
+  checkAdvantagesVisibility();
 }
 
 AdvantagesAction();
