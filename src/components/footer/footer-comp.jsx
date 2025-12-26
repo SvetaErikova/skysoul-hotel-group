@@ -10,20 +10,20 @@ export const Footer = () => {
   return (
     <>
       <div class="main--actions">
-        <Button type={'filled'} link={'/to-owners/lk.html/'} color={'primary'} icon={'icon-arrow-right'}>Личный кабинет</Button>
-        <Button type={'filled'} link={'/transfer-to-management.html/'} color={'secondary'} icon={'icon-arrow-right'} dark={true}>Передать в управление</Button>
+        {/*<Button type={'filled'} link={'/to-owners/lk.html/'} color={'primary'} icon={'icon-arrow-right'}>Личный кабинет</Button>*/}
+        <Button className={'widsterForm'} type={'filled'} color={'primary'} icon={'icon-arrow-right'}>Передать в управление</Button>
       </div>
       <footer className="footer">
         <div className="footer--wrapper">
             <div className="footer--top">
             <FooterLogo />
-            <div className="button--wrapper">
-              <Button type={'filled'} link={'/transfer-to-management.html/'} color={'primary'} color={'primary'} icon={'icon-arrow-right'}>Передать в управление</Button>
-              <Button type={'outlined'} link={'/to-owners/lk.html/'} color={'secondary'} icon={'icon-user'}>Личный кабинет</Button>
-            </div>
+            {/*<div className="button--wrapper">*/}
+              {/*<Button type={'filled'} className={'widsterForm'} color={'primary'} color={'primary'} icon={'icon-arrow-right'}>Передать в управление</Button>*/}
+              {/*<Button type={'outlined'} link={'/to-owners/lk.html/'} color={'secondary'} icon={'icon-user'}>Личный кабинет</Button>*/}
+            {/*</div>*/}
           </div>
           <div className="footer--main">
-            <FooterForm></FooterForm>
+            {/*<FooterForm></FooterForm>*/}
             <FooterNav />
             <FooterContacts />
           </div>
@@ -34,10 +34,16 @@ export const Footer = () => {
                   <a href="/about.html">О компании</a>
                 </div>
                 <div className="footer--note_nav-item">
-                  <a href="/buy-real-estate.html/">Купить недвижимость</a>
+                  <a href="https://skysoul.ru/" target='blank'>Купить недвижимость</a>
                 </div>
                 <div className="footer--note_nav-item">
                   <a href="/media.html/">Медиа для инвесторов</a>
+                </div>
+                <div className="footer--note_nav-item footer--note_nav-item_align_right">
+                  <a href="https://t.me/skysoul_hotel"
+                     target="_blank">
+                    <img src="/assets/img/soc/tg.svg"/>
+                  </a>
                 </div>
               </div>
 
@@ -48,10 +54,10 @@ export const Footer = () => {
             <div className="footer--note_bottom">
               {/*<div className="copyright">© 2025, Skysoul Resort</div>*/}
               <a href="https://skygrouphotel.ru/policy-doc.html" target="_blank">Согласие на обработку персональных данных</a>
-                <a href="https://skygrouphotel.ru/adv-doc.html" target="_blank">Согласие на получение рассылки</a>
-                <a href="https://disk.360.yandex.ru/i/uJjirAXfar3cpg" target="_blank">Политика обработки персональных данных</a>
-                <a href="https://disk.360.yandex.ru/i/d9hz9KqGwibVqA" target="_blank">Правила использования сайта</a>
-                <a href="Согласие на доступ в личный кабинет" target="_blank">Согласие на доступ в личный кабинет</a>
+              <a href="https://skygrouphotel.ru/adv-doc.html" target="_blank">Согласие на получение рассылки</a>
+              <a href="https://disk.360.yandex.ru/i/uJjirAXfar3cpg" target="_blank">Политика обработки персональных данных</a>
+              <a href="https://disk.360.yandex.ru/i/d9hz9KqGwibVqA" target="_blank">Правила использования сайта</a>
+              <a href="Согласие на доступ в личный кабинет" target="_blank">Согласие на доступ в личный кабинет</a>
             </div>
             <div class="footer--note_bottom" style="justify-content: flex-end;">
               <div className="footer--copyright_dev"
