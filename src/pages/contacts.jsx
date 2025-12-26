@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <MainLayout meta={metaPages.home}>
       <Contacts></Contacts>
-      <Block_form></Block_form>
+      {/*<Block_form></Block_form>*/}
     </MainLayout>
   );
 }

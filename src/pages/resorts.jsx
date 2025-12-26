@@ -62,7 +62,7 @@ export default function Home() {
         }]} action={<Button type={'outlined'} color={'primary'} icon={'icon-arrow-up-right'} />} />
       </Block_List>
 
-      <Block_form></Block_form>
+      {/*<Block_form></Block_form>*/}
 
     </MainLayout>
   );

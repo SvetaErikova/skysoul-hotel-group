@@ -4,11 +4,12 @@ export const FooterContacts =() =>{
 
       <div className="footer--contacts_item">
         <span>Адрес</span>
-        <p>Крым, ул. Ленина, дом 10, офис 320</p>
+        <p>Республика Крым, г. Симферополь, ул.Евпаторийское шоссе, 8</p>
       </div>
       <div className="footer--contacts_item">
         <span>Контакты</span>
-        {/*<a href="tel:+7 999 999 99 99">8 800 888 88 88</a>*/}
+        <a href="tel:+79790241160">+7 979 024 11 60</a>
+        <a href="tel:+79790241159">+7 979 024 11 59</a>
         <a href="mailto:info@skygrouphotel.ru">info@skygrouphotel.ru</a>
       </div>
       {/*<div className="footer--contacts_item">*/}

@@ -60,29 +60,30 @@ export default function Home() {
 
       <Advantages></Advantages>
 
-      <Info
-        title={
-          <Block_Head
-            accentTitleBefore={'Передача <br>'}
-            title={'в управление'}
-            subtitle={'Партнёрство, которым можно гордиться: увеличивайте доходность, сохраняйте контроль и доверяйте экспертам. Ваш актив — наша ответственность, ваше доверие — наша мотивация.'}
-            action={
-              <>
-                <Button type="filled"
-                        color="primary"
-                        icon={'icon-arrow-right'}
-                        className={'widsterForm'}>
-                  <span>Передать в управление</span>
-                </Button>
-              </>
-            }
-          >
-          </Block_Head>
-        }
-        images={['../../assets/img/ruslans-content/main-page-partners-3.jpg', '../../assets/img/ruslans-content/main-page-partners-2.jpg', '../../assets/img/ruslans-content/main-page-partners-1.jpg']}
-        reversed={true}
-      >
-      </Info>
+      {/*<Info*/}
+      {/*  title={*/}
+      {/*    <Block_Head*/}
+      {/*      accentTitleBefore={'Передача <br>'}*/}
+      {/*      title={'в управление'}*/}
+      {/*      subtitle={'Партнёрство, которым можно гордиться: увеличивайте доходность, сохраняйте контроль и доверяйте экспертам. Ваш актив — наша ответственность, ваше доверие — наша мотивация.'}*/}
+      {/*      action={*/}
+      {/*        <>*/}
+      {/*          <Button type="filled"*/}
+      {/*                  color="primary"*/}
+      {/*                  icon={'icon-arrow-right'}*/}
+      {/*                  className={'widsterForm'}>*/}
+      {/*            <span>Передать в управление</span>*/}
+      {/*          </Button>*/}
+      {/*        </>*/}
+      {/*      }*/}
+      {/*    >*/}
+      {/*    </Block_Head>*/}
+      {/*  }*/}
+      {/*  images={['../../assets/img/ruslans-content/main-page-partners-3.jpg', '../../assets/img/ruslans-content/main-page-partners-2.jpg', '../../assets/img/ruslans-content/main-page-partners-1.jpg']}*/}
+      {/*  reversed={true}*/}
+      {/*>*/}
+      {/*</Info>*/}
+
     </MainLayout>
   );
 }

@@ -96,7 +96,7 @@ export default function Home() {
         }
       />
 
-      <Block_form></Block_form>
+      {/*<Block_form></Block_form>*/}
 
     </MainLayout>
   );

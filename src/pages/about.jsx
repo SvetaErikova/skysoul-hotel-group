@@ -38,12 +38,13 @@ export default function Home() {
 
       <Block_image_text
         images={[
-          { src: '../../assets/img/ruslans-content/about/1.jpg' },
+          { src: '../../assets/img/ruslans-content/main-page-banner.jpg' },
         ]}
         title={
           <Block_Head
-            accentTitleBefore={'SkySoul Hotel Group '}
-            subtitle={'В SkyGroup цифры работают на вашу репутацию.Управляющая компания, объединяющая курорты 4–5 звёзд в Крыму. Мы берём апартаменты в управление и превращаем их в стабильный источник дохода'}
+            accentTitleBefore={'SkySoul<br>'}
+            title={'Hotel Group'}
+            subtitle={'В SkyGroup цифры работают на вашу репутацию.Управляющая компания, объединяющая курорты 4–5 звёзд в Крыму. Мы берём апартаменты в управление и превращаем их в стабильный источник дохода.'}
           >
           </Block_Head>
         }
@@ -52,7 +53,7 @@ export default function Home() {
       <Info title={
           <Block_Head
             title={'Кто мы?'}
-            subtitle={'Партнёрство, которым можно гордиться: увеличивайте доходность, сохраняйте контроль и доверяйте экспертам. Ваш актив — наша ответственность, ваше доверие — наша мотивация.'}
+            subtitle={'SKYSOUL HOTEL GROUP управляет курортами 4–5 звёзд в Крыму, объединяя опыт международного гостиничного бизнеса и глубокое понимание локального рынка.'}
           >
           </Block_Head>
         }
@@ -60,9 +61,7 @@ export default function Home() {
         images={['../../assets/img/ruslans-content/resorts/card-ptica.jpg', '../../assets/img/ruslans-content/resorts/card-santerra.jpg', '../../assets/img/ruslans-content/resorts/card-sky-soul-resort.jpg']}
         content={
           <>
-            <p>
-              SKYSOUL HOTEL GROUP управляет курортами 4–5 звёзд в Крыму, объединяя опыт международного гостиничного бизнеса и глубокое понимание локального рынка.
-            </p>
+            <br/>
             <p>
               В центре нашей работы — два направления: создание курортов мирового уровня для отдыхающих и надёжная система управления апартаментами для собственников. Такой баланс позволяет одновременно формировать безупречный сервис для гостей и стабильный доход для инвесторов.
             </p>
@@ -112,7 +111,7 @@ export default function Home() {
         </Card>
       </Block_List>
 
-      <Block_form></Block_form>
+      {/*<Block_form></Block_form>*/}
 
     </MainLayout>
   );

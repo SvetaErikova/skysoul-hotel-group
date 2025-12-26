@@ -53,7 +53,7 @@ export default function Home() {
             images={['../../assets/img/ruslans-content/to-owners/1.jpg', '../../assets/img/ruslans-content/to-owners/2.jpg', '../../assets/img/ruslans-content/to-owners/3.jpg']}>
       </Info>
 
-      <Block_form></Block_form>
+      {/*<Block_form></Block_form>*/}
 
     </MainLayout>
   );

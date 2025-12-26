@@ -18,22 +18,22 @@ export const links = [
     label: "Курорты",
     href: "/resorts",
   },
-  {
-    label: "Для бизнеса",
-    href: "/for-business",
-    // children: [
-    //   { label: "Туроператорам", href: "/to-tour-operators" },
-    //   { label: "Поставщикам", href: "/to-suppliers" },
-    //   { label: "Сотрудничество", href: "/cooperation" },
-    //   { label: "Реклама на курортах", href: "/advertising-at-resorts" }
-    // ]
-  },
+  // {
+  //   label: "Для бизнеса",
+  //   href: "/for-business",
+  //   // children: [
+  //   //   { label: "Туроператорам", href: "/to-tour-operators" },
+  //   //   { label: "Поставщикам", href: "/to-suppliers" },
+  //   //   { label: "Сотрудничество", href: "/cooperation" },
+  //   //   { label: "Реклама на курортах", href: "/advertising-at-resorts" }
+  //   // ]
+  // },
   {
     label: "О компании",
     href: "/about.html",
   },
   {
     label: "Купить недвижимость",
-    href: "/buy-real-estate",
+    href: "https://skysoul.ru/",
   },
 ];

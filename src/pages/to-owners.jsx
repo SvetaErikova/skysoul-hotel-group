@@ -59,6 +59,9 @@ export default function Home() {
             accentTitleBefore={'Программа лояльености'}
             title={'для собственников'}
             subtitle={'Участие в программе лояльности увеличивает вашу доходность от каждого объекта, предоставляя эксклюзивные финансовые условия и приоритетный доступ к самым выгодным инвестиционным предложениям в Крыму.'}
+            action={
+              <Button type="filled" color="primary" link={'./assets/img/loyalty.pdf'}>Программа лояльности</Button>
+            }
           >
           </Block_Head>
         }
@@ -73,18 +76,18 @@ export default function Home() {
           <Block_Head
             accentTitleBefore={'Что такое '}
             title={'котловой метод?'}
-            subtitle={'Котловой метод — это система распределения дохода, при которой все поступления от аренды объединяются в общий фонд. После вычета расходов 60 % распределяются между инвесторами пропорционально площади их апартаментов.'}
-            action={
-              <>
-                <Button type="outlined"
-                        link={'/to-owners/boiler-method'}
-                        color="secondary"
-                        icon={'icon-arrow-right'}>
-                  <span>Подробнее</span>
-                </Button>
-
-              </>
-            }
+            subtitle={'Котловой метод — это система распределения дохода, при которой все поступления от аренды объединяются в общий фонд. После вычета расходов 60% распределяются между инвесторами пропорционально площади их апартаментов.'}
+            // action={
+            //   <>
+            //     <Button type="outlined"
+            //             link={'/to-owners/boiler-method'}
+            //             color="secondary"
+            //             icon={'icon-arrow-right'}>
+            //       <span>Подробнее</span>
+            //     </Button>
+            //
+            //   </>
+            // }
           >
           </Block_Head>
         }
@@ -92,7 +95,7 @@ export default function Home() {
 
       <Steps></Steps>
 
-      <Calculator></Calculator>
+      {/*<Calculator></Calculator>*/}
 
       <Block_image_text
         contentBottom={true}
@@ -115,8 +118,7 @@ export default function Home() {
               <li>При котловом методе вы не зависите от конкретной загрузки вашего лота.</li>
               <li>Вы получаете часть общей выручки — как если бы владели долей в целом отеле.</li>
             </ol>
-            <a href="/to-owners/boiler-method"
-               className="button button-outlined button-secondary"><span><span>Подробнее</span></span><span className="icon-arrow-right"></span></a>
+            {/*<a href="/to-owners/boiler-method" className="button button-outlined button-secondary"><span><span>Подробнее</span></span><span className="icon-arrow-right"></span></a>*/}
           </>
         }
       />

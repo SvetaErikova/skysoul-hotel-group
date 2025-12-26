@@ -27,12 +27,16 @@ const tabs = [
 
 export default function Home() {
   return (
-    <HeroLayout meta={metaPages.home} className={'page-main'}>
+    <HeroLayout meta={metaPages.home}
+                className={'page-main'}>
       <Block_banner
         banners={[
           {
             title:
-              <Block_Head title="Skysoul <br> hotel group" headingSize={'f-h1'} subtitle="Создаём курорты категории 4 и 5 звёзд, куда хочется возвращаться. Всесезонный отдых, высокий сервис и команда с большим опытом, продумывающая каждую деталь ради идеального Курорта." headingLevel={1} />,
+              <Block_Head title="Skysoul <br> hotel group"
+                          headingSize={'f-h1'}
+                          subtitle="Создаём курорты, куда хочется возвращаться. Всесезонный отдых, высокий сервис и команда с большим опытом, продумывающая каждую деталь ради идеального Курорта."
+                          headingLevel={1}/>,
             imageSrc: '/assets/img/ruslans-content/main-page-banner.jpg',
           },
         ]}
@@ -40,11 +44,13 @@ export default function Home() {
       ></Block_banner>
       <Block
         className={'block_html-code'}>
-        <div class="is_cascade" style={'max-width: 700px; margin: 0 auto'}>
-          <blockquote class="blockquote">
+        <div className="is_cascade"
+             style={'max-width: 700px; margin: 0 auto'}>
+          <blockquote className="blockquote">
             <div className="blockquote--decor"></div>
             <div className="blockquote--text">
-              <p><span class={'-accent'}>Наша команда</span> — это люди с опытом более 10 лет в HoReCa, девелопменте и
+              <p><span className={'-accent'}>Наша команда</span> — это люди с опытом более 10 лет в HoReCa, девелопменте
+                и
                 сервисе, объединённые одной задачей: </p>
               <span>создать понятную, надёжную и эффективную систему управления, где интересы собственника и комфорт гостя идут рядом.</span>
             </div>
@@ -66,17 +72,29 @@ export default function Home() {
         title={
           <Block_Head
             title={'Команда '}
-            subtitle={'Команда сайта Skygroup Hotel — это профессионалы, которые превращают бронирование отеля в приятное и лёгкое путешествие по цифровому пространству.'}
+            subtitle={'Команда сайта Skysoul Hotel Group — это профессионалы, которые превращают бронирование отеля в приятное и лёгкое путешествие по цифровому пространству.'}
             headingLevel={2}
           ></Block_Head>
         }
       >
-        <Card_personnel title={'Сергей Петрович Киселев'} text={'CEO Отельный оператор «SKYGROUP Development»'} image={'/assets/img/ruslans-content/team/resized/sp-kiselev.jpg'} />
-        <Card_personnel title={'Сухорукова Елена Валерьевна'} text={'HR директор'} image={'/assets/img/ruslans-content/team/resized/ev-suhorukova.jpg'} />
-        <Card_personnel title={'Демидова Алена Алексеевна'} text={'Директор рекреации'} image={'/assets/img/ruslans-content/team/resized/aa-demidova.jpg'} />
-        <Card_personnel title={'Кинжали Анастасия Игоревна'} text={'Директор по маркетингу и рекламе'} image={'/assets/img/ruslans-content/team/resized/ai-kinzali.jpg'} />
-        <Card_personnel title={'Лаевский Александр Сергеевич'} text={'Директор департамента питания'} image={'/assets/img/ruslans-content/team/resized/as-layevsky.jpg'} />
-        <Card_personnel title={'Абросимов Сергей Юрьевич'} text={'Финансовый директор'} image={'/assets/img/ruslans-content/team/resized/sy-absrosimov.jpg'} />
+        <Card_personnel title={'Сергей Петрович Киселев'}
+                        text={'CEO Отельный оператор «SKYGROUP Development»'}
+                        image={'/assets/img/ruslans-content/team/resized/sp-kiselev.jpg'}/>
+        <Card_personnel title={'Сухорукова Елена Валерьевна'}
+                        text={'HR директор'}
+                        image={'/assets/img/ruslans-content/team/resized/ev-suhorukova.jpg'}/>
+        <Card_personnel title={'Демидова Алена Алексеевна'}
+                        text={'Директор рекреации'}
+                        image={'/assets/img/ruslans-content/team/resized/aa-demidova.jpg'}/>
+        <Card_personnel title={'Кинжали Анастасия Игоревна'}
+                        text={'Директор по маркетингу и рекламе'}
+                        image={'/assets/img/ruslans-content/team/resized/ai-kinzali.jpg'}/>
+        <Card_personnel title={'Лаевский Александр Сергеевич'}
+                        text={'Директор департамента питания'}
+                        image={'/assets/img/ruslans-content/team/resized/as-layevsky.jpg'}/>
+        <Card_personnel title={'Абросимов Сергей Юрьевич'}
+                        text={'Финансовый директор'}
+                        image={'/assets/img/ruslans-content/team/resized/sy-absrosimov.jpg'}/>
       </Block_List>
 
       <Advantages></Advantages>
@@ -93,33 +111,81 @@ export default function Home() {
           ></Block_Head>
         }
       >
-        <Card_resort link={'https://xn----7sbxkublblhh6a.xn--p1ai/'} image={'/assets/img/ruslans-content/resorts/card-ptica.jpg'} title={'«Птица»'} subtitle={'Санаторный курорт будущего'} text={'Уже возведено 60% комплекса. Уникальное сочетание курорта и апарт-отеля. Санаторная база, экология, архитектура нового уровня'} labels={[{
-          text: 'Курорт 5+' }, {
-          text: 'г.Саки',
-          icon: 'icon-location',
-        }]} action={<Button type={'outlined'} color={'primary'} icon={'icon-arrow-up-right'} />} />
-        <Card_resort link={'https://skysoulhotel.ru/'} image={'/assets/img/ruslans-content/resorts/card-sky-soul-resort.jpg'} title={'«SkySoul Resort»'} subtitle={'Флагман, с которого всё началось'} text={'Первая очередь сдана, 4 этапа строительства. Инвестиционный рост: от 170 000 до 725 000 руб/м². Победитель Urban Awards, лидер Юга'} labels={[{
-          text: 'Курорт 5+' }, {
-          text: 'г. Феодосия',
-          icon: 'icon-location',
-        }]} action={<Button type={'outlined'} color={'primary'} icon={'icon-arrow-up-right'} />} />
-        <Card_resort link={'https://sunterra.com.ru/'} image={'/assets/img/ruslans-content/resorts/card-santerra.jpg'} title={'«Сантерра»'} subtitle={'Элитная бухта, новый стандарт Юга'} text={'Апартаменты, виллы, таунхаусы. Получен РНС, старт строительства. Архитектура международного уровня. Бренд как инвестиция — от 1 млн руб/м²'} labels={[{
-          text: 'Курорт 5+' }, {
-          text: 'г.Судак',
-          icon: 'icon-location',
-        }]} action={<Button type={'outlined'} color={'primary'} icon={'icon-arrow-up-right'} />} />
+        <Card_resort link={'https://xn----7sbxkublblhh6a.xn--p1ai/'}
+                     image={'/assets/img/ruslans-content/resorts/card-ptica.jpg'}
+                     title={'«Птица»'}
+                     subtitle={'Санаторный курорт будущего'}
+                     text={'Уже возведено 60% комплекса. Уникальное сочетание курорта и апарт-отеля. Санаторная база, экология, архитектура нового уровня'}
+                     labels={[{
+                       text: 'Курорт 5+'
+                     }, {
+                       text: 'г.Саки',
+                       icon: 'icon-location',
+                     }]}
+                     action={<Button type={'outlined'}
+                                     color={'primary'}
+                                     icon={'icon-arrow-up-right'}/>}/>
+        <Card_resort link={'https://skysoulhotel.ru/'}
+                     image={'/assets/img/ruslans-content/resorts/card-sky-soul-resort.jpg'}
+                     title={'«SkySoul Resort»'}
+                     subtitle={'Флагман, с которого всё началось'}
+                     text={'Первая очередь сдана, 4 этапа строительства. Инвестиционный рост: от 170 000 до 725 000 руб/м². Победитель Urban Awards, лидер Юга'}
+                     labels={[{
+                       text: 'Курорт 5+'
+                     }, {
+                       text: 'г. Феодосия',
+                       icon: 'icon-location',
+                     }]}
+                     action={<Button type={'outlined'}
+                                     color={'primary'}
+                                     icon={'icon-arrow-up-right'}/>}/>
+        <Card_resort link={'https://sunterra.com.ru/'}
+                     image={'/assets/img/ruslans-content/resorts/card-santerra.jpg'}
+                     title={'«Сантерра»'}
+                     subtitle={'Элитная бухта, новый стандарт Юга'}
+                     text={'Апартаменты, виллы, таунхаусы. Получен РНС, старт строительства. Архитектура международного уровня. Бренд как инвестиция — от 1 млн руб/м²'}
+                     labels={[{
+                       text: 'Курорт 5+'
+                     }, {
+                       text: 'г.Судак',
+                       icon: 'icon-location',
+                     }]}
+                     action={<Button type={'outlined'}
+                                     color={'primary'}
+                                     icon={'icon-arrow-up-right'}/>}/>
       </Block_List>
 
       <Block_image_text
         contentBottom={true}
         images={[
-          { src: '/assets/img/ruslans-content/main-page-finance-and-sales.jpg' },
+          {src: '/assets/img/ruslans-content/main-page-finance-and-sales.jpg'},
         ]}
-        title={<Block_Head
-          title={'Финансы и продажи'} subtitle={'Финансы — это не просто цифры, а отражение доверия, устойчивости и роста. Мы выстраиваем прозрачные механизмы сотрудничества, чтобы каждая сделка приносила не только результат, но и уверенность в завтрашнем дне. В Sky Group цифры работают на вашу репутацию.'}></Block_Head>}
+        title={
+          <Block_Head
+            title={'Финансы и продажи'}
+            subtitle={'Финансы — это не просто цифры, а отражение доверия, устойчивости и роста. Мы выстраиваем прозрачные механизмы сотрудничества, чтобы каждая сделка приносила не только результат, но и уверенность в завтрашнем дне. В Skysoul Hotel Group цифры работают на вашу репутацию.'}
+          ></Block_Head>
+        }
+        content={
+          <>
+            <h3>Программа лояльности для инвесторов</h3>
+            <p>Мы разработали программу лояльности для собственников передавших лот в управление, а именно:</p>
+            <ul>
+              <li>Бесплатной проживание 28 дней в году на любом курорте.</li>
+              <li>Бесплатное посещение SPA.</li>
+              <li>Бесплатное пользование шезлонгами, зонтом, пляжным полотенцем.</li>
+              <li>Завтраки со скидкой 50%.</li>
+              <li>Химчистка и прчечная со скидкой 50%.</li>
+            </ul>
+            <p>Полный перечень программы лояльности доступен в документе по кнопке ниже.</p>
+            <Button type="filled"
+                    color="primary"
+                    link={'/assets/img/loyalty.pdf'}>Программа лояльности</Button>
+          </>
+        }
       />
 
-      <Calculator></Calculator>
+      {/*<Calculator></Calculator>*/}
 
       {/*
       <Block_List
@@ -140,33 +206,42 @@ export default function Home() {
       </Block_List>
       */}
 
-      <Info title={
-        <Block_Head
-          accentTitleBefore={'Партнёрство, <br>'}
-          title={'приносящее доход и уверенность'}
-          subtitle={'Партнёрство, которым можно гордиться: увеличивайте доходность, сохраняйте контроль и доверяйте экспертам. Ваш актив — наша ответственность, ваше доверие — наша мотивация.'}
-          action={
-            <>
-              <Button type="filled" color="primary" icon-arrow-right link={'/boiler-method.html/'}>
-                <span>Котловой метод</span>
-              </Button>
-              <Button type="outlined" color="secondary" className={'widsterForm'}>Оставить заявку</Button>
-            </>
-          }
-        >
-        </Block_Head>
-      }
-
-            images={['../../assets/img/ruslans-content/main-page-partners-3.jpg', '../../assets/img/ruslans-content/main-page-partners-2.jpg', '../../assets/img/ruslans-content/main-page-partners-1.jpg']}>
+      <Info
+        reversed={true}
+        title={
+          <Block_Head
+            accentTitleBefore={'Партнёрство, <br>'}
+            title={'приносящее доход и уверенность'}
+            subtitle={'Партнёрство, которым можно гордиться: увеличивайте доходность, сохраняйте контроль и доверяйте экспертам. Ваш актив — наша ответственность, ваше доверие — наша мотивация.'}
+            action={
+              <>
+                <Button type="filled"
+                        color="primary"
+                        icon-arrow-right
+                        link={'/boiler-method.html/'}>
+                  <span>Котловой метод</span>
+                </Button>
+                <Button type="outlined"
+                        color="secondary"
+                        className={'widsterForm'}>Оставить заявку</Button>
+              </>
+            }
+          >
+          </Block_Head>
+        }
+        images={['../../assets/img/ruslans-content/main-page-partners-3.jpg', '../../assets/img/ruslans-content/main-page-partners-2.jpg', '../../assets/img/ruslans-content/main-page-partners-1.jpg']}>
       </Info>
 
       <Block className={'block block_html-code content_table'}
              colorMode={'-dark-mode'}
 
              title={
-               <Block_Head accentTitleBefore={'Условия<br>'} title={'для собственников'} subtitle={'При сдаче в аренду жилья через управляющую компанию. '} caption={'Партнёрство, которым можно гордиться: увеличивайте доходность, сохраняйте контроль и доверяйте экспертам. Ваш актив — наша ответственность, ваше доверие — наша мотивация.'}></Block_Head>}>
-        <div class="block--content is_cascade">
-          <div class="is_cascade--table">
+               <Block_Head headingSize={'f-h3'}
+                           accentTitleBefore={'Сложности<br>'}
+                           title={'самостоятельного управления'}
+                           subtitle={'Доход ваш. Все заботы по управлению на нас. '}></Block_Head>}>
+        <div className="block--content is_cascade">
+          <div className="is_cascade--table">
             <table>
               <thead>
               <tr>
@@ -227,35 +302,52 @@ export default function Home() {
         </div>
       </Block>
 
-      <Block_image_text
-        images={[
-          { src: '../../assets/img/ruslans-content/main-page-pamyatka.jpg' },
-        ]}
-        title={<Block_Head
-          accentTitleBefore={'Памятка '}
-          title={'инвестору'} subtitle={'Мы подготовили подробную памятку, в которой собрали всю ключевую информацию о сотрудничестве с отельным оператором.'}></Block_Head>}
-        content={<>
-          <p>Мы подготовили подробную памятку, в которой собрали всю ключевую информацию о сотрудничестве с отельным
-            оператором.</p>
-          <p>В документе — принципы работы, финансовая модель, описание инфраструктуры и условий для собственников.</p>
-          <p>Памятка поможет вам:</p>
-          <ul>
-            <li>рассчитать доходность</li>
-            <li>понять, как устроено управление апартаментами</li>
-            <li>узнать, какие преимущества вы получите как партнёр</li>
-          </ul>
-          <div class="block--actions">
-            <Button type={'outlined'} color={'secondary'} icon={'icon-arrow-right'} className={'widsterForm'}>Передать в управление</Button>
+      {/*<Block_image_text*/}
+      {/*  images={[*/}
+      {/*    { src: '../../assets/img/ruslans-content/main-page-pamyatka.jpg' },*/}
+      {/*  ]}*/}
+      {/*  title={<Block_Head*/}
+      {/*    accentTitleBefore={'Памятка '}*/}
+      {/*    title={'инвестору'} subtitle={'В ближайшее время мы подготовим подробную памятку, в которой соберем всю ключевую информацию о сотрудничестве с отельным оператором.'}></Block_Head>}*/}
+      {/*  content={*/}
+      {/*    <>*/}
+      {/*      <p>В документе будут принципы работы, финансовая модель, описание инфраструктуры и условий для собственников.</p>*/}
+      {/*      <p>Памятка в будущем поможет вам:</p>*/}
+      {/*      <ul>*/}
+      {/*        <li>рассчитать доходность;</li>*/}
+      {/*        <li>понять, как устроено управление апартаментами;</li>*/}
+      {/*        <li>узнать, какие преимущества вы получите как партнёр.</li>*/}
+      {/*      </ul>*/}
+      {/*      <p>Пока памятка формируется, предлагаем вам получить консультацию, заполнив форму обратной связи.</p>*/}
+      {/*      <div class="block--actions">*/}
+      {/*        <Button type={'outlined'} color={'secondary'} icon={'icon-arrow-right'} className={'widsterForm'}>Задать вопрос</Button>*/}
+      {/*      </div>*/}
+      {/*    </>*/}
+      {/*  }*/}
+      {/*/>*/}
+
+      <section className="block block_html-code">
+        <div className="block--wrapper">
+          <div className="is_cascade">
+            <div style='text-align:center;'>
+              <h2>Конференция с СЕО Отельного оператора 16.12.2026</h2>
+              <iframe
+                src="https://rutube.ru/play/embed/3e090b891c16b64d2503eeafd6301276"
+                style="border: none; width: 1024px; max-width: 100%; aspect-ratio: 16 / 9;"
+                allow="clipboard-write; autoplay"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
-        </>}
-      />
+        </div>
+      </section>
 
       <Faq
         title={
           <Block_Head
-            accentTitleBefore={'Самые частые <br>'}
-            title={'вопросы  и ответы'}
-            subtitle={'Мы уже знаем, что вы хотели спросить.  Вот ответы, которые экономят ваше время'}
+            accentTitleBefore={'Часто задаваемые<br>'}
+            title={'вопросы'}
+            subtitle={'Здесь вы найдёте ответы на самые популярные вопросы. Если у вас остались сомнения — просто выберите интересующий пункт.'}
             headingSize={'f-h2'}
             action={
               <>
@@ -272,33 +364,47 @@ export default function Home() {
           ></Block_Head>
         }
       >
-        <div class="accordion">
-          <div class="accordion--button">
+        <div className="accordion">
+          <div className="accordion--button">
             <p class="accordion--button_text">Почему выбран котловой метод распределения дохода?</p>
-            <span class="icon-plus"></span>
+            <span className="icon-plus"></span>
           </div>
           <div className="accordion--content">
             <div className="is_cascade">
               <p>
-                Котловой метод позволяет обеспечить справедливое и стабильное распределение дохода между всеми участниками, независимо от индивидуальной загруженности конкретного номера. Эта модель нивелирует риски сезонности и простой, формируя единый пул доходов от всех лотов, переданных в управление, и обеспечивая предсказуемую доходность. Она используется большинством международных гостиничных операторов и соответствует требованиям российского законодательства в сфере доверительного управления недвижимостью. Котловой метод по своей природе позволяет инвестору владеть частью гостиничного бизнеса с профессиональным управлением.
+                Котловой метод позволяет обеспечить справедливое и стабильное распределение дохода между всеми
+                участниками, независимо от индивидуальной загруженности конкретного номера. Эта модель нивелирует риски
+                сезонности и простой, формируя единый пул доходов от всех лотов, переданных в управление, и обеспечивая
+                предсказуемую доходность. Она используется большинством международных гостиничных операторов и
+                соответствует требованиям российского законодательства в сфере доверительного управления недвижимостью.
+                Котловой метод по своей природе позволяет инвестору владеть частью гостиничного бизнеса с
+                профессиональным управлением.
               </p>
             </div>
           </div>
         </div>
-        <div class="accordion">
-          <div class="accordion--button">
-            <p class="accordion--button_text">Какие привилегии получают собственники, передавшие номер в управление отельному оператору?</p>
-            <span class="icon-plus"></span>
+        <div className="accordion">
+          <div className="accordion--button">
+            <p class="accordion--button_text">Какие привилегии получают собственники, передавшие номер в управление
+              отельному оператору?</p>
+            <span className="icon-plus"></span>
           </div>
           <div className="accordion--content">
             <div className="is_cascade">
               <ol>
-                <li>Доступ к бесплатному проживанию до 28 дней в году во всех отелях сети SKYSOUL HOTEL GROUP во всех локациях.<strong>*</strong></li>
-                <li>Полное освобождение от операционной, технической и рекламной деятельности, освобождение от претензионной работы.</li>
+                <li>Доступ к бесплатному проживанию до 28 дней в году во всех отелях сети SKYSOUL HOTEL GROUP во всех
+                  локациях.<strong>*</strong></li>
+                <li>Полное освобождение от операционной, технической и рекламной деятельности, освобождение от
+                  претензионной работы.
+                </li>
                 <li>Прозрачная отчётность и личный кабинет.</li>
                 <li>Приоритетное участие в программах лояльности и специальных предложениях.</li>
-                <li>Рост капитализации лота за счет включения в гостиничный продукт 4/5*, соответствующий классификации.</li>
-                <li>Юридическая защищённость и отсутствие претензий со стороны контролирующих органов (ФНС, МВД) благодаря централизованной модели.</li>
+                <li>Рост капитализации лота за счет включения в гостиничный продукт 4/5*, соответствующий
+                  классификации.
+                </li>
+                <li>Юридическая защищённость и отсутствие претензий со стороны контролирующих органов (ФНС, МВД)
+                  благодаря централизованной модели.
+                </li>
               </ol>
               <p>
                 <strong>*Включено в проживание в апартаменте:</strong>
@@ -327,7 +433,7 @@ export default function Home() {
           }
         ></Accordion>
       </Faq>
-      <Block_form></Block_form>
+      {/*<Block_form></Block_form>*/}
     </HeroLayout>
   );
 }

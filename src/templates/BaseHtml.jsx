@@ -16,6 +16,13 @@ export default function BaseHtml({ children, meta, colorMode = '', className, li
     {children}
     <script src="/assets/js/main.libs.js"></script>
     <script src="/assets/js/main.js"></script>
+
+    {/*удалить скрипт WINDSTER ниже с прода, добавлять через шаблон CMS*/}
+    <div
+      dangerouslySetInnerHTML={{
+        __html: `<script>(function(d, w){w.wwidget = 'bb9435b6f15e3c419394794ebb0589a8eaa577e6d7f730df85ea0469ef012a57'; var s = d.createElement('script'); s.async = true; s.src = 'https://widster.ru/embed/'+w.wwidget; s.charset = 'UTF-8'; d.currentScript.replaceWith(s);})(document, window);</script>`
+      }}
+    />
     </body>
     </html>
   );
